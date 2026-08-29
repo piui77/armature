@@ -3,15 +3,12 @@ import JSZip from "jszip";
 /**
  * Tutti i file del progetto, incorporati come testo al momento della build
  * grazie al glob "raw" di Vite: il sito stesso sa impacchettarsi.
+ *
+ * IMPORTANTE: la chiamata a import.meta.glob deve restare DIRETTA.
+ * Se la si assegna a una variabile, Vite non la riconosce piu' come
+ * trasformazione da compilare e il sito si blocca al caricamento.
  */
-const glob = (import.meta as unknown as {
-  glob: (
-    pattern: string[],
-    options: { query: string; import: string; eager: boolean }
-  ) => Record<string, string>;
-}).glob;
-
-const MODULES = glob(
+const MODULES = import.meta.glob(
   [
     "../index.html",
     "../package.json",
@@ -20,11 +17,10 @@ const MODULES = glob(
     "../README.md",
     "../AVVIA VESTIRE IL FERRO.bat",
     "../public/**/*.txt",
-    "../scripts/**/*.mjs",
     "./**/*.{ts,tsx,css}",
   ],
   { query: "?raw", import: "default", eager: true }
-);
+) as Record<string, string>;
 
 function normalize(path: string): string {
   // "../index.html" -> "index.html" · "./App.tsx" -> "src/App.tsx"
@@ -38,12 +34,17 @@ export interface ZipInfo {
 }
 
 export async function downloadProjectZip(): Promise<ZipInfo> {
+  const entries = Object.entries(MODULES);
+  if (entries.length === 0) {
+    throw new Error("Archivio non disponibile in questo ambiente.");
+  }
+
   const zip = new JSZip();
   const root = zip.folder("vestire-il-ferro");
   if (!root) throw new Error("Impossibile creare l'archivio");
 
   let count = 0;
-  for (const [rawPath, content] of Object.entries(MODULES)) {
+  for (const [rawPath, content] of entries) {
     root.file(normalize(rawPath), content);
     count += 1;
   }
@@ -63,7 +64,7 @@ export async function downloadProjectZip(): Promise<ZipInfo> {
       "Per renderle PERMANENTI e indipendenti da quel servizio,",
       "apri public/images/LEGGIMI.txt: trovi la tabella con i link",
       "da cui salvare ogni immagine e il nome da darle. Una volta",
-      "salvate in public/images/, il sito le userà in automatico",
+      "salvate in public/images/, il sito le usera' in automatico",
       "(prova prima la copia locale, poi il link esterno).",
       "",
       "Buona forgia!",
