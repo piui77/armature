@@ -42,8 +42,8 @@ export default function Nav() {
         <div className="flex items-center justify-between py-3">
           <a href="#top" className="group flex items-center gap-2.5" aria-label="Torna all'inizio">
             <Crest className="h-8 w-8 text-brass transition-transform duration-500 group-hover:rotate-[8deg]" />
-            <span className="font-display text-lg font-bold tracking-[0.22em] text-bone">
-              FERRAR<span className="text-brass">IA</span>
+            <span className="font-display text-lg font-bold tracking-[0.2em] text-bone">
+              VESTIRE <span className="text-brass">IL FERRO</span>
             </span>
           </a>
           <p className="hidden text-[0.62rem] uppercase tracking-[0.3em] text-faint sm:block">
