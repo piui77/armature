@@ -53,6 +53,37 @@ collegamento online originale. Quindi non serve alcuna configurazione: con la ca
 connessione. Se usi GitHub, carica la cartella `public/` nel repository per conservare le
 immagini al sicuro.
 
+## Aggiornare il repository GitHub
+
+Il repository di riferimento è `piui77/armature`. Per mantenerlo aggiornato:
+
+1. Scarica l'archivio aggiornato dal sito con il pulsante **«Scarica il progetto (.zip)»**
+   e decomprimilo.
+2. Sul repository: **Add file → Upload files**, trascina i file e conferma la sostituzione
+   di quelli esistenti.
+3. Elimina dal repository i file non più necessari, se presenti:
+   - `scripts/scarica-immagini.mjs`
+   - `scripts/scarica_immagini.py`
+   - `public/images/LEGGIMI.txt`
+4. Carica le 11 tavole dalla tua cartella locale `public/images/` nella cartella
+   `public/images/` del repository: così anche le immagini restano al sicuro su GitHub.
+
+## Pubblicare online con GitHub Pages
+
+Il progetto include `.github/workflows/deploy.yml`: a ogni aggiornamento del repository il
+sito viene compilato e pubblicato automaticamente su GitHub Pages, all'indirizzo
+`https://piui77.github.io/armature/`.
+
+Per attivarlo la prima volta:
+
+1. Nel repository vai su **Settings → Pages**.
+2. Alla voce **Source** scegli **GitHub Actions**.
+3. Al primo caricamento dei file, apri la scheda **Actions** del repository e segui
+   l'avanzamento; al termine il sito sarà online all'indirizzo indicato qui sopra.
+
+Nota: il percorso `/armature/` nel file `deploy.yml` deve coincidere con il nome del
+repository; se lo rinomini, aggiorna quel percorso.
+
 ## Risoluzione problemi
 
 - **Avvisi «deprecated» (uuid, recharts) durante `npm install`**: sono solo avvisi, non errori.
