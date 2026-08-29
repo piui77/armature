@@ -13,12 +13,16 @@ if %errorlevel% neq 0 (
 )
 
 if not exist node_modules (
-    echo [1/2] Prima esecuzione: installazione dei componenti necessari...
+    echo [1/3] Prima esecuzione: installazione dei componenti necessari...
     echo       (puo' richiedere qualche minuto, e' normale)
     call npm install
 )
 
-echo [2/2] Preparazione del sito...
+echo [2/3] Tavole illustrate: controllo e download in public\images...
+echo       (le immagini gia' presenti vengono saltate)
+call node scripts\scarica-immagini.mjs
+
+echo [3/3] Preparazione del sito...
 call npm run build
 
 echo.

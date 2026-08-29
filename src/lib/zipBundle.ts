@@ -20,6 +20,7 @@ const MODULES = glob(
     "../README.md",
     "../AVVIA VESTIRE IL FERRO.bat",
     "../public/**/*.txt",
+    "../scripts/**/*.mjs",
     "./**/*.{ts,tsx,css}",
   ],
   { query: "?raw", import: "default", eager: true }

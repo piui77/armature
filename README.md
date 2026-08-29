@@ -45,13 +45,20 @@ In alternativa, dalla cartella del progetto, senza dipendenze aggiuntive:
 ## Le immagini (tavole illustrate)
 
 Le 11 tavole sono caricate da un servizio esterno. Per renderle **permanenti** e indipendenti
-da quel servizio (ad esempio se i link venissero rimossi), apri `public/images/LEGGIMI.txt`:
-trovi la tabella con i link da cui salvare ogni immagine e il nome da darle.
+da quel servizio (ad esempio se i link venissero rimossi), dalla cartella del progetto esegui:
+
+    node scripts/scarica-immagini.mjs
+
+Lo script scarica tutte le tavole in `public/images/` con i nomi corretti, salta quelle già
+presenti e avvisa (proseguendo) se una scarica non riesce. Su Windows non serve nemmeno questo:
+il doppio clic su `AVVIA VESTIRE IL FERRO.bat` esegue lo scaricamento da solo al primo avvio.
+In alternativa, in `public/images/LEGGIMI.txt` trovi la tabella per il salvataggio manuale.
 
 Il sito usa il componente `SafeImg` (`src/lib/ui.tsx`): per ogni tavola prova **prima la copia
 locale** in `public/images/` (sia `.jpg` sia `.png`) e solo se non la trova ripiega sul link
 esterno. Quindi, una volta salvate le immagini in `public/images/`, non devi modificare alcun
-codice: il sito le userà in automatico e funzionerà anche senza connessione.
+codice: il sito le userà in automatico e funzionerà anche senza connessione. Se usi GitHub,
+carica anche la cartella `public/` nel repository per mettere le immagini al sicuro per sempre.
 
 ## Build di produzione
 
