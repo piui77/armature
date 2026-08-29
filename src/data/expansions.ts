@@ -1,0 +1,250 @@
+/* Espansioni: contenuti aggiuntivi sull'evoluzione dell'armatura medievale */
+
+export interface StageVerdict {
+  verdict: string;
+  note: string;
+}
+
+export interface Weapon {
+  id: string;
+  name: string;
+  period: string;
+  desc: string;
+  stages: {
+    maglia: StageVerdict;
+    transizione: StageVerdict;
+    piastra: StageVerdict;
+  };
+  response: string;
+}
+
+export const WEAPONS: Weapon[] = [
+  {
+    id: "spada",
+    name: "Spada d'arme",
+    period: "1000 – 1500",
+    desc: "L'arma simbolo del cavaliere: lunga quasi un metro, taglia di filo e di punta. Quando il ferro si fa specchio, impara la «mezza spada», impugnata quasi come una lancia corta per cercare i giunti.",
+    stages: {
+      maglia: { verdict: "Regge", note: "Gli anelli ribattuti fermano quasi ogni taglio; a soffrire è la carne sotto, per il trauma del colpo." },
+      transizione: { verdict: "Regge", note: "Lamine sparse e brigantina: la lama scivola sulle piastre e il duello diventa colpo d'incontro." },
+      piastra: { verdict: "Scivola", note: "Sull'acciaio liscio il filo non trova presa: la scherma si fa punta, leve e lotta — nasce la scuola della mezza spada." },
+    },
+    response: "L'armatura non rese inutile la spada: la costrinse a cambiare mestiere, dal taglio alla punta.",
+  },
+  {
+    id: "balestra",
+    name: "Balestra",
+    period: "1100 – 1500",
+    desc: "Il dardo pesante armato di leva o girella: meno ritmo dell'arco, ma una potenza che nessun braccio umano può tendere. Così temuta che il Concilio Lateranense del 1139 ne proibì l'uso fra cristiani.",
+    stages: {
+      maglia: { verdict: "Cede", note: "Il quadrello a corta gittata apre gli anelli: è la prima minaccia seria per il cavaliere dell'Anno Mille." },
+      transizione: { verdict: "Regge a distanza", note: "La coat of plates ferma il dardo a mezza gittata; da vicino è tutta un'altra storia." },
+      piastra: { verdict: "Respinge", note: "Nasce il collaudo «a prova di balestra»: se il petto regge il quadrello, la bottega ci mette il bollo." },
+    },
+    response: "Il bollo di collaudo: la prima «garanzia balistica» della storia europea.",
+  },
+  {
+    id: "arco",
+    name: "Arco lungo inglese",
+    period: "1300 – 1450",
+    desc: "Il tasso inglese teso oltre le cento libbre: una pioggia di frecce a punta bodkin scagliate in alto, a cercare il cielo scoperto dei cavalli e le spalle scoperte dei fanti.",
+    stages: {
+      maglia: { verdict: "Passa", note: "Le punte da guerra aprono la maglia leggera e trovano i punti non ribattuti: lo raccontano Crécy e Poitiers." },
+      transizione: { verdict: "Cerca le fessure", note: "Le lamine del torso reggono; il dardo impara a cercare giunti, gambe e cavalcature." },
+      piastra: { verdict: "Respinge", note: "L'acciaio milanese temprato spezza quasi ogni dardo, e i cronachisti inglesi se ne lamentano a lungo." },
+    },
+    response: "Superfici bombate e tempra dura: la risposta al longbow si vede ancora nei pettorali sopravvissuti.",
+  },
+  {
+    id: "mazza",
+    name: "Mazza e martello d'arme",
+    period: "1300 – 1500",
+    desc: "La risposta dei fanti al cavaliere: il trauma contundente non deve bucare il ferro, basta trasmetterlo. Alette e becchi concentrano tutto il colpo in un punto.",
+    stages: {
+      maglia: { verdict: "Stordisce", note: "Il colpo non taglia ma sfonda: ossa e organi sotto la maglia incassano tutto il peso dell'impatto." },
+      transizione: { verdict: "Stordisce", note: "Le prime piastre aiutano il torso, ma la mazza resta l'incubo di ogni mischia serrata." },
+      piastra: { verdict: "Ammacca", note: "La piastra si ammacca ma non si apre; l'elmo chiuso scarica i colpi sulla gorgiera e sulla corazza." },
+    },
+    response: "Piastre più spesse e bombate, elmi saldati al collare: il ferro impara a distribuire il colpo.",
+  },
+  {
+    id: "picca",
+    name: "Picca svizzera",
+    period: "1450 – 1550",
+    desc: "Cinque metri di frassino nei quadrati di mille uomini: non è un'arma, è una macchina che nessun ferro individuale può sfidare in campo aperto.",
+    stages: {
+      maglia: { verdict: "Fuori tempo", note: "Quando la picca domina, la maglia è già un ricordo — ma il principio è lo stesso: la punta lunga vince sugli anelli." },
+      transizione: { verdict: "Cede", note: "Nancy, 1477: le mezze armature borgognone si aprono sotto i quadrati svizzeri, e il duca Carlo resta sul campo." },
+      piastra: { verdict: "Cerca i giunti", note: "In mischia la picca passa dove la piastra finisce: viso, inguine, cavallo. L'arnese completo non basta più." },
+    },
+    response: "Nessun ferro individuale regge: nasce il corsaletto del fante e l'armatura si fa mezza armatura.",
+  },
+  {
+    id: "archibugio",
+    name: "Archibugio",
+    period: "1500 – 1600",
+    desc: "La palla di piombo scagliata a trecento metri al secondo: la prima minaccia che nessuno spessore ragionevole può più ignorare, e la più economica da mettere in mano a un contadino.",
+    stages: {
+      maglia: { verdict: "Fuori tempo", note: "La maglia esce di scena prima ancora del duello: non era la sua guerra." },
+      transizione: { verdict: "Fuori tempo", note: "Quando l'archibugio matura, la grande transizione è già compiuta da un secolo." },
+      piastra: { verdict: "Cedevole", note: "La piastra di campagna si apre; resiste solo la corazza ispessita «a prova», con il suo bollo ammaccato." },
+    },
+    response: "Il ferro arretra a petto e schiena, poi a sola corazza: Pavia 1525 lo scrive per sempre.",
+  },
+];
+
+export interface ArmingStep {
+  n: number;
+  title: string;
+  time: string;
+  text: string;
+}
+
+export const ARMING_STEPS: ArmingStep[] = [
+  {
+    n: 1,
+    title: "Gambeson e farsetto",
+    time: "~2 min",
+    text: "Il fondamento di tutto: lino imbottito e cucito fitto. Assorbe i colpi, isola dalla ruggine e dal sole, e porta i «punti», i lacci a cui si legherà l'intero arnese.",
+  },
+  {
+    n: 2,
+    title: "Calze e scarpe d'arme",
+    time: "~1 min",
+    text: "Le gambe si vestono di tela e cuoio; sopra si infilano le scarpe robuste su cui verranno allacciati i sabatoni.",
+  },
+  {
+    n: 3,
+    title: "Sabatoni",
+    time: "~1 min",
+    text: "Le piastre snodate sul piede, allacciate alla scarpa: prima i piedi, perché tutto il resto peserà su di loro.",
+  },
+  {
+    n: 4,
+    title: "Schinieri e ginocchielli",
+    time: "~2 min",
+    text: "Le due valve si chiudono sul polpaccio con la cerniera; il ginocchiello ad alette copre il lato esposto alla staffa e alle picche basse.",
+  },
+  {
+    n: 5,
+    title: "Cosciali e falda",
+    time: "~1 min e mezzo",
+    text: "I gusci delle cosce salgono fino ai fianchi, dove la falda fa da cintura all'arnese e da tetto ai tasselli che coprono l'inguine.",
+  },
+  {
+    n: 6,
+    title: "Corazza: petto e schiena",
+    time: "~2 min",
+    text: "Il momento decisivo: le cinghie si incrociano sulla schiena e il peso si ripartisce fra spalle e fianchi. Da qui in poi si respira «corazzati».",
+  },
+  {
+    n: 7,
+    title: "Braccia e spalle",
+    time: "~2 min",
+    text: "Bracciali, cubitiere, spallacci: si legano al farsetto con i punti. Lo spallaccio sinistro è maggiorato, dalla parte della lancia nemica.",
+  },
+  {
+    n: 8,
+    title: "Guanti e gorgiera",
+    time: "~1 min",
+    text: "Le decine di lamine delle dita, poi il collare che salda il capo al torso: la gola, l'ultimo varco, si chiude.",
+  },
+  {
+    n: 9,
+    title: "Elmo chiuso",
+    time: "~30 s",
+    text: "Per ultimo, sempre: ora il cavaliere vede, respira, combatte. Lo scudiero prova i rivetti, e l'uomo scompare nel ferro.",
+  },
+];
+
+export const ARMING_FOOTER =
+  "Con uno scudiero esperto: dodici minuti scarsi. Da soli, mezz'ora buona — e si arriva in campo già sudati.";
+
+export const COST_ROWS = [
+  {
+    item: "Usbergo del Duecento",
+    cost: "Una piccola fortuna",
+    note: "Si ereditava, si citava nei testamenti, si dava in dote: prima che un'arma, un capitale.",
+  },
+  {
+    item: "Arnese bianco milanese",
+    cost: "≈ un anno di salario artigiano",
+    note: "Un buon arnese di bottega rinomata valeva quanto la cavalcatura da guerra che avrebbe vestito.",
+  },
+  {
+    item: "Guarnitura di gala",
+    cost: "Quanto un piccolo podere",
+    note: "Acquaforte, oro e punzoni famati si pagavano come un'opera d'arte — perché ormai lo erano.",
+  },
+];
+
+export const ANNALS: { year: string; place: string; prefix?: string; text: string }[] = [
+  {
+    year: "1066",
+    place: "Hastings",
+    text: "Nasale e maglia corta decidono lo scontro: la freccia nell'occhio di Aroldo mostra dove il ferro non arriva.",
+  },
+  {
+    year: "1189",
+    place: "Assedio di Acri",
+    text: "Crociate: usberghi fino al ginocchio sotto il sole. Sopra il camaglio comincia a comparire il grande elmo.",
+  },
+  {
+    year: "1214",
+    place: "Bouvines",
+    text: "Il trionfo del cavaliere cucito nel ferro; l'araldica dipinge le insegne di chi l'elmo ormai nasconde.",
+  },
+  {
+    year: "1346",
+    place: "Crécy",
+    text: "Il longbow umilia la maglia davanti a tutta Europa: comincia l'età delle piastre.",
+  },
+  {
+    year: "1415",
+    place: "Agincourt",
+    text: "L'arnese è maturo, ma fango, caldo e archi piegano i francesi: il ferro non basta senza il campo.",
+  },
+  {
+    year: "1450",
+    place: "Milano",
+    prefix: "c. ",
+    text: "L'armatura bianca è compiuta: i Missaglia esportano in ogni corte d'Europa e firmano con la corona.",
+  },
+  {
+    year: "1477",
+    place: "Nancy",
+    text: "I quadrati svizzeri spezzano l'ultima cavalleria borgognona: il fante ora conta più del cavaliere.",
+  },
+  {
+    year: "1525",
+    place: "Pavia",
+    text: "Gli archibugi spagnoli aprono le corazze francesi e catturano un re: comincia il crepuscolo del ferro.",
+  },
+];
+
+export const EXTRA_GLOSSARY: { term: string; def: string }[] = [
+  {
+    term: "Gambeson",
+    def: "Giubba imbottita di strati di lino: assorbe i colpi, protegge dalla ruggine e dal sole. Si porta sempre, sotto tutto.",
+  },
+  {
+    term: "Cubitiera",
+    def: "Piastra del gomito, spesso ad alette: protegge l'interno del braccio nelle mischie strette attorno al cavallo.",
+  },
+  {
+    term: "Tasselli",
+    def: "Piastre sospese alla falda che coprono inguine e parte alta delle cosce restando mobili in sella.",
+  },
+  {
+    term: "Punzone",
+    def: "Il marchio battuto a freddo dall'armaiolo: garanzia di bottega e di tempra — per Milano, la celebre corona.",
+  },
+  {
+    term: "Brigantina",
+    def: "Corpetto di piccole lamine rivettate dentro tela o cuoio: economica, riparabile, amata da fanti e marinai.",
+  },
+  {
+    term: "Stechzeug",
+    def: "Armatura da giostra: pesantissima, quasi cieca, imbullonata alla sella. Non deve vincere: deve reggere.",
+  },
+];

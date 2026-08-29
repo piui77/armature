@@ -6,7 +6,10 @@ import Intermezzo from "./components/Intermezzo";
 import Eras from "./components/Eras";
 import Helmets from "./components/Helmets";
 import Anatomy from "./components/Anatomy";
+import Ballistic from "./components/Ballistic";
+import Annals from "./components/Annals";
 import Weights from "./components/Weights";
+import Arming from "./components/Arming";
 import Forge from "./components/Forge";
 import Myths from "./components/Myths";
 import Glossary from "./components/Glossary";
@@ -31,7 +34,10 @@ export default function App() {
         <Eras />
         <Helmets />
         <Anatomy />
+        <Ballistic />
+        <Annals />
         <Weights />
+        <Arming />
         <Forge />
         <Intermezzo
           image={IMG.joust}

@@ -6,10 +6,12 @@ const LINKS: [string, string, string][] = [
   ["#cronologia", "I", "Cronologia"],
   ["#elmi", "II", "Gli Elmi"],
   ["#anatomia", "III", "Anatomia"],
-  ["#pesi", "IV", "Pesi"],
-  ["#bottega", "V", "Bottega"],
-  ["#miti", "VI", "Miti"],
-  ["#glossario", "VII", "Glossario"],
+  ["#tiro", "IV", "Sotto tiro"],
+  ["#pesi", "V", "Pesi"],
+  ["#vestizione", "VI", "Vestizione"],
+  ["#bottega", "VII", "Bottega"],
+  ["#miti", "VIII", "Miti"],
+  ["#glossario", "IX", "Glossario"],
 ];
 
 export default function Nav() {

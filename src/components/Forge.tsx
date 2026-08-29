@@ -8,7 +8,7 @@ export default function Forge() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="lg:sticky lg:top-28">
-              <SectionHead kicker="V · La bottega" title="I sette gesti della forgia">
+              <SectionHead kicker="VII · La bottega" title="I sette gesti della forgia">
                 Dalla vena di ferro palustre al bollo della «prova»: un arnese nasceva in mesi di fuoco, martello e
                 segreto. Ogni bottega custodiva i propri — la tempra milanese non uscì mai dalle sue mura.
               </SectionHead>

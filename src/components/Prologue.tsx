@@ -29,7 +29,7 @@ export default function Prologue() {
         <div className="space-y-6 text-lg leading-relaxed text-mute lg:col-span-7 lg:pt-24">
           <Reveal>
             <p className="dropcap">
-              Per mille anni l'armatura fu la tecnologia più avanzata che un essere umano potesse indossare: metallurgia,
+              Per oltre mille anni l'armatura fu la tecnologia più avanzata che un essere umano potesse indossare: metallurgia,
               balistica, ergonomia e araldica cucite intorno a un solo corpo. Non fu mai soltanto difesa — fu status,
               ritratto, bottega, diplomazia. Fu il modo in cui un'epoca intera decise di tenere in vita i suoi uomini
               migliori.

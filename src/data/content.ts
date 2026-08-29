@@ -33,7 +33,7 @@ export const ERAS: Era[] = [
     image: IMG.era1,
     alt: "Guerriero germanico con spangenhelm e usbergo corto nella nebbia",
     paragraphs: [
-      "Quando l'Impero cade, la sua arte di vestire il soldato non muore. La lorica hamata — la maglia di anelli romana — passa di mano in mano: riparata, ritemprata, contesa. Per secoli resterà il tesoro di guerra per eccellenza: negli inventari carolingi una cotta di maglia vale più di quattro cavalli da guerra, e nei testamenti dei re franchi figura accanto alle terre.",
+      "Quando l'Impero cade, la sua arte di vestire il soldato non muore. La lorica hamata — la maglia di anelli romana — passa di mano in mano: riparata, ritemprata, contesa. Per secoli resterà il tesoro di guerra per eccellenza: negli inventari carolingi una cotta di maglia vale quanto più cavalli da guerra, e nei testamenti dei re franchi figura accanto alle terre.",
       "Il guerriero dell'alto medioevo combatte nel seguito del signore, a piedi o a cavallo: spangenhelm di lamelle ribattute, scudo rotondo di tiglio con umbone di ferro, lancia e spada a una mano. La protezione completa resta privilegio di pochissimi; per la maggioranza degli uomini ci sono cuoio, legno e coraggio.",
       "Eppure già in questa essenzialità qualcosa ribolle: i capitolari carolingi impongono a ogni uomo libero di possedere armi e protezione secondo il proprio censo, e le fucine dei monasteri tengono viva la maestria romana. L'armatura non è ancora moda né casta: è sopravvivenza, tramandata di padre in figlio come la terra.",
     ],
@@ -64,7 +64,7 @@ export const ERAS: Era[] = [
     alt: "Cavaliere del Duecento con elmo a pentola, usbergo lungo e scudo araldico",
     paragraphs: [
       "Con la staffa, la lancia in resta e il castello nasce una casta nuova: il miles. L'usbergo si allunga fino al ginocchio, le chausses di maglia vestono le gambe, il camaglio protegge il collo. A Bouvines come sotto le mura di Acri, il cavaliere è un uomo letteralmente cucito nel ferro: dodici-quindici chili di anelli ribattuti uno a uno, ventimila volte.",
-      "Sopra la maglia compare la soprasberga dipinta con le insegne: è la nascita dell'araldica, il codice che rende riconoscibile chi il casco nasconde. L'elmo a pentola trasforma il cavaliere in una fortezza quasi cieca, e sotto di lui anche il cavallo comincia a vestirsi di ferro e di stoffa.",
+      "Sopra la maglia compare la sopravveste dipinta con le insegne: è la nascita dell'araldica, il codice che rende riconoscibile chi il casco nasconde. L'elmo a pentola trasforma il cavaliere in una fortezza quasi cieca, e sotto di lui anche il cavallo comincia a vestirsi di ferro e di stoffa.",
       "E la guerra chiede sempre di più: le crociate riportano notizie delle lamelle orientali e insegnano il valore dell'imbottitura sotto il ferro; il torneo trasforma il combattimento in regola e spettacolo, e l'armatura diventa abito da esibire. Alla metà del Duecento un cavaliere completo porta oltre venti chili di ferro addosso — eppure galoppa, salta e combatte per un giorno intero.",
     ],
     changes: [
@@ -82,7 +82,7 @@ export const ERAS: Era[] = [
       "Chausses e camaglio di maglia",
       "Elmo a pentola (great helm)",
       "Scudo a mandorla araldico",
-      "Soprasberga dipinta",
+      "Sopravveste dipinta",
     ],
     note: "La maglia arresta il taglio: contro la punta, la mazza e la caduta serviranno le piastre.",
   },
@@ -169,9 +169,9 @@ export const ERAS: Era[] = [
     },
     pieces: [
       "Armatura scanalata",
-      "Celata con visiera a soffietto",
+      "Celata con visiera",
       "Sabatoni a zampa d'orso",
-      "Schiniere «a bocca di mucca»",
+      "Ginocchielli ad alette",
       "Stechzeug da giostra",
     ],
     note: "Ogni scanalatura è una trave a I in miniatura: più rigida, a parità di peso.",
@@ -292,7 +292,7 @@ export const PARTS: Part[] = [
     x: 50,
     y: 8.5,
     weight: "2,5 – 4 kg",
-    text: "Il cranio d'acciaio: la visiera ha fessure di pochi millimetri, quanto basta per vedere e respirare. Si indossa in tre pezzi — calotta, visiera, guanciali — e pesa meno di un moderno casco da motociclista, ma protegge dieci volte di più.",
+    text: "Il cranio d'acciaio: la visiera ha fessure di pochi millimetri, quanto basta per vedere e respirare. Si indossa in tre pezzi — calotta, visiera, guanciali — e con i suoi due-tre chili protegge da punta e taglio come nessun casco moderno deve più fare.",
   },
   {
     id: "gorgiera",
@@ -506,10 +506,10 @@ export const GLOSSARY: { term: string; def: string }[] = [
 ];
 
 export const STATS = [
-  { value: 1000, prefix: "", suffix: "", label: "anni di evoluzione continua della protezione personale" },
+  { value: 1100, prefix: "", suffix: "", label: "anni di evoluzione continua, dalla caduta di Roma al Seicento" },
   { value: 25, prefix: "", suffix: " kg", label: "il peso medio di un arnese completo, distribuito sul corpo" },
   { value: 250, prefix: "≈ ", suffix: "", label: "ore di lavoro di bottega per una sola armatura su misura" },
-  { value: 3000, prefix: "", suffix: "+", label: "anelli ribattuti a mano in un usbergo del Duecento" },
+  { value: 20000, prefix: "", suffix: "+", label: "anelli ribattuti a mano in un usbergo del Duecento" },
 ];
 
 export const MARQUEE_WORDS = ["Ferrum", "Honor", "Virtus", "Labor", "Ars", "Fides", "Bellum", "Pax"];
