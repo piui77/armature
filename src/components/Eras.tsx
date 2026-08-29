@@ -29,7 +29,7 @@ export default function Eras() {
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
         <SectionHead kicker="I · La cronologia" title="Sei epoche, un solo corpo d'acciaio">
           Dalla maglia di anelli ereditata da Roma fino alla corazza «a prova di palla»: ogni epoca aggiunge, toglie o
-          ridisegna, sotto la pressione di frecce, picche e archibugi.
+          ridisegna, sotto la pressione di frecce, picche e archibugi. Scorri: il numerale resta, l'epoca cambia.
         </SectionHead>
 
         <div className="lg:grid lg:grid-cols-12 lg:gap-16">
@@ -112,13 +112,40 @@ export default function Eras() {
 
                   <div className="md:col-span-3">
                     {e.paragraphs.map((p, pi) => (
-                      <Reveal key={pi} delay={pi * 110}>
+                      <Reveal key={pi} delay={pi * 100}>
                         <p className={`${pi > 0 ? "mt-5" : ""} text-base leading-relaxed text-mute md:text-lg`}>{p}</p>
                       </Reveal>
                     ))}
 
+                    {/* cosa cambia + sul campo */}
+                    <div className="mt-9 grid gap-6 sm:grid-cols-2">
+                      <Reveal delay={160}>
+                        <h4 className="flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-brass">
+                          <DiamondMark className="h-2 w-2" /> Cosa cambia
+                        </h4>
+                        <ul className="mt-4 space-y-2.5">
+                          {e.changes.map((c) => (
+                            <li key={c} className="group flex items-start gap-3">
+                              <svg viewBox="0 0 12 12" className="mt-1.5 h-2.5 w-2.5 shrink-0 text-steel transition-colors group-hover:text-brass" aria-hidden="true">
+                                <path d="M2 6h8M7 3l3 3-3 3" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                              </svg>
+                              <span className="text-[0.95rem] leading-snug text-bone/85">{c}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </Reveal>
+
+                      <Reveal delay={240}>
+                        <div className="h-full border-l-2 border-blood bg-blood/[0.07] p-5 transition-colors duration-300 hover:bg-blood/[0.12]">
+                          <h4 className="text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-[#c96a5a]">Sul campo</h4>
+                          <p className="mt-2 font-display text-sm font-bold uppercase tracking-[0.14em] text-bone">{e.context.label}</p>
+                          <p className="mt-2.5 text-[0.95rem] leading-relaxed text-mute">{e.context.text}</p>
+                        </div>
+                      </Reveal>
+                    </div>
+
                     <Reveal delay={200}>
-                      <h4 className="mt-8 flex items-center gap-3 text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-brass">
+                      <h4 className="mt-9 flex items-center gap-3 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-brass">
                         <DiamondMark className="h-2 w-2" /> Pezzi chiave
                       </h4>
                       <ul className="mt-4 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">

@@ -7,6 +7,9 @@ export const IMG = {
   era5: "https://image.qwenlm.ai/generated-images/9bf81ec0-0fd5-4939-8515-9b1ba34cc0d6/_result.png",
   era6: "https://image.qwenlm.ai/generated-images/dbb93332-4c7a-404b-9360-2d6e91ac2a80/_result.png",
   anatomy: "https://image.qwenlm.ai/generated-images/90fea5d3-4d51-4789-9ab5-0e7bfdbd7e80/_result.png",
+  workshop: "https://image.qwenlm.ai/generated-images/993587a3-57a9-439b-86f2-e7d7146073c4/_result.png",
+  mail: "https://image.qwenlm.ai/generated-images/29813111-b2ef-4b7a-955c-1493840a612a/_result.png",
+  joust: "https://image.qwenlm.ai/generated-images/4f025810-98a0-4bea-81ae-8672b4e7a53a/_result.png",
 };
 
 export interface Era {
@@ -16,6 +19,8 @@ export interface Era {
   image: string;
   alt: string;
   paragraphs: string[];
+  changes: string[];
+  context: { label: string; text: string };
   pieces: string[];
   note: string;
 }
@@ -30,7 +35,18 @@ export const ERAS: Era[] = [
     paragraphs: [
       "Quando l'Impero cade, la sua arte di vestire il soldato non muore. La lorica hamata — la maglia di anelli romana — passa di mano in mano: riparata, ritemprata, contesa. Per secoli resterà il tesoro di guerra per eccellenza: negli inventari carolingi una cotta di maglia vale più di quattro cavalli da guerra, e nei testamenti dei re franchi figura accanto alle terre.",
       "Il guerriero dell'alto medioevo combatte nel seguito del signore, a piedi o a cavallo: spangenhelm di lamelle ribattute, scudo rotondo di tiglio con umbone di ferro, lancia e spada a una mano. La protezione completa resta privilegio di pochissimi; per la maggioranza degli uomini ci sono cuoio, legno e coraggio.",
+      "Eppure già in questa essenzialità qualcosa ribolle: i capitolari carolingi impongono a ogni uomo libero di possedere armi e protezione secondo il proprio censo, e le fucine dei monasteri tengono viva la maestria romana. L'armatura non è ancora moda né casta: è sopravvivenza, tramandata di padre in figlio come la terra.",
     ],
+    changes: [
+      "La lorica segmentata scompare",
+      "La maglia ribattuta diventa tesoro",
+      "Il nasale protegge il volto",
+      "La staffa rifonda la cavalleria",
+    ],
+    context: {
+      label: "1066 · Hastings",
+      text: "Sull'arazzo di Bayeux ogni guerriero veste la maglia: è il primo ritratto collettivo dell'Europa corazzata — e sono tutti, quasi, uguali.",
+    },
     pieces: [
       "Spangenhelm di lamelle",
       "Usbergo corto di anelli ribattuti",
@@ -49,7 +65,18 @@ export const ERAS: Era[] = [
     paragraphs: [
       "Con la staffa, la lancia in resta e il castello nasce una casta nuova: il miles. L'usbergo si allunga fino al ginocchio, le chausses di maglia vestono le gambe, il camaglio protegge il collo. A Bouvines come sotto le mura di Acri, il cavaliere è un uomo letteralmente cucito nel ferro: dodici-quindici chili di anelli ribattuti uno a uno, ventimila volte.",
       "Sopra la maglia compare la soprasberga dipinta con le insegne: è la nascita dell'araldica, il codice che rende riconoscibile chi il casco nasconde. L'elmo a pentola trasforma il cavaliere in una fortezza quasi cieca, e sotto di lui anche il cavallo comincia a vestirsi di ferro e di stoffa.",
+      "E la guerra chiede sempre di più: le crociate riportano notizie delle lamelle orientali e insegnano il valore dell'imbottitura sotto il ferro; il torneo trasforma il combattimento in regola e spettacolo, e l'armatura diventa abito da esibire. Alla metà del Duecento un cavaliere completo porta oltre venti chili di ferro addosso — eppure galoppa, salta e combatte per un giorno intero.",
     ],
+    changes: [
+      "La maglia copre l'intero corpo",
+      "Il grande elmo chiude il viso",
+      "L'araldica nasce per riconoscersi",
+      "Il gambesone ammortizza sotto il ferro",
+    ],
+    context: {
+      label: "1214 · Bouvines",
+      text: "I cavalieri in arnese completo decidono la battaglia fra i re. Dopo quel giorno ogni signore conta i suoi uomini dalle armature, non dal numero.",
+    },
     pieces: [
       "Usbergo lungo con muffole",
       "Chausses e camaglio di maglia",
@@ -68,7 +95,18 @@ export const ERAS: Era[] = [
     paragraphs: [
       "Il Trecento è il secolo in cui l'armatura cambia più che nei cinque precedenti messi insieme. Le frecce di Crécy e le picche svizzere insegnano che la maglia non basta: sul torso si cuce la coat of plates, centinaia di lamine rivettate sotto stoffa, che poi si irrigidisce in brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
       "Le piastre conquistano il corpo una giuntura alla volta: spallacci, cubitiere, ginocchielli, i celebri guanti «a clessidra». Le corporazioni degli armorari si separano da quelle dei fabbri: nasce una professione nuova, insieme artigiana, ingegneristica e segreta.",
+      "Il campo di battaglia è il vero progettista: gli svizzeri in quadrato, con picca e alabarda, insegnano che nessuna maglia regge una formazione compatta; gli archi lunghi inglesi piovono punte bodkin pensate per forare. L'armatura risponde facendosi guscio liscio che devia tutto — e in una sola generazione il cavaliere medievale sparisce e nasce l'uomo d'acciaio.",
     ],
+    changes: [
+      "Le piastre si cuciono nella stoffa",
+      "Il bacinetto con visiera comanda",
+      "Braccia e gambe si incrostano d'acciaio",
+      "Il longbow accelera la corsa",
+    ],
+    context: {
+      label: "1346 · Crécy",
+      text: "Migliaia di frecce su un solo campo: da quel giorno ogni armaiolo d'Europa comincia a ragionare per lastre, non più per anelli.",
+    },
     pieces: [
       "Coat of plates",
       "Bacinetto con camaglio e ventaglia",
@@ -87,7 +125,18 @@ export const ERAS: Era[] = [
     paragraphs: [
       "Verso il 1420 il processo è compiuto: il cavaliere è chiuso da capo a piedi in un guscio d'acciaio lucidato a specchio — per questo si dice «armatura bianca», white harness. Milano ne è la capitale: le botteghe dei Missaglia esportano arnesi completi in ogni corte d'Europa, ciascuno firmato con il punzone della corona.",
       "La forma è pura balistica: superfici bombate che deviano punta e colpo, spallaccio sinistro maggiorato per reggere la lancia, corazza con cresta mediana e resta. L'acciaio milanese, temprato con bagni di cui si custodisce il segreto, respinge le frecce dei longbow inglesi — e i soldati inglesi lo sanno, e lo temono.",
+      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano lotti interi per gli eserciti; le corti europee mandano sarti con le misure dei propri gentiluomini, perché l'arnese si cuce addosso come un vestito. Per la prima volta la protezione è prodotta in serie — eppure resta pezzo per pezzo artigianale.",
     ],
+    changes: [
+      "L'arnese completo è compiuto",
+      "Rivetti scorrevoli: il ferro flette",
+      "Spallacci asimmetrici e resta",
+      "Lo scudo va in pensione",
+    ],
+    context: {
+      label: "c. 1450 · Milano",
+      text: "Le botteghe missagliesche consegnano lotti interi di arnesi ai condottieri: l'armatura diventa industria, firmata e garantita.",
+    },
     pieces: [
       "Corazza con cresta e resta",
       "Spallacci asimmetrici",
@@ -106,7 +155,18 @@ export const ERAS: Era[] = [
     paragraphs: [
       "Le botteghe di Norimberga, Augusta e Innsbruck rispondono a Milano con uno stile opposto: il gotico tedesco. Ogni piastra è percorsa da scanalature che funzionano come travi, più rigide a parità di peso; i bordi si accendono di cuspidi e ventagli, i sabatoni si allargano «a zampa d'orso», l'acciaio brunito alterna luci e ombre come una cattedrale.",
       "È anche l'età d'oro del torneo: nascono armature dedicate — lo Stechzeug per la giostra, pesantissimo e quasi cieco, il Rennzeug per la corsa — mentre sul campo la corazza leggera del fante annuncia già il futuro. Massimiliano I ne fa un manifesto: l'armatura come arte di Stato.",
+      "I maestri del tardo Quattrocento non firmano quasi mai, ma si riconoscono dallo stile: le creste affilate di Norimberga contro le rotondità lisce di Milano diventano due scuole che discutono in acciaio. Nasce il collezionismo: Massimiliano raduna a Innsbruck un'armeria che è un manifesto d'impero, e ogni principe ne vuole una.",
     ],
+    changes: [
+      "Le scanalature irrigidiscono la lastra",
+      "I bordi a spigolo deviano la punta",
+      "Il torneo ha armature proprie",
+      "Due scuole: Milano contro Germania",
+    ],
+    context: {
+      label: "1486 · Innsbruck",
+      text: "Massimiliano apre la sua armeria di corte: l'armatura scanalata diventa lo stile dell'Impero e il dono più ambito fra i principi.",
+    },
     pieces: [
       "Armatura scanalata",
       "Celata con visiera a soffietto",
@@ -125,7 +185,18 @@ export const ERAS: Era[] = [
     paragraphs: [
       "L'armatura massimiliana porta la scanalatura all'eccesso e apre la porta all'acquaforte: trofei incisi, grottesche alla romana, fondi d'oro — a Milano i Negroli sbalzano l'acciaio come fosse argento. L'armatura è ormai anche abito di corte, ritratto, dono diplomatico.",
       "Ma l'archibugio e la pistola a ruota riscrivono le regole. Le corazze si ispessiscono fino a fermare la palla: il collaudo «a prova» lascia un'ammaccatura orgogliosa sul petto. Poi il ferro arretra — resta la corazza, poi solo petto e schiena — e nel Seicento l'arnese completo è già ricordo. Ma il suo mito non smetterà più di combattere.",
+      "L'eredità non muore: la corazza resta in servizio nella cavalleria di ogni esercito fino alla Grande Guerra, e l'elmo — discendente diretto del bacinetto — torna a proteggere la fanteria nelle trincee. Nei musei del mondo gli arnesi stanno ancora ritti: testimoni silenziosi dell'epoca in cui l'Europa decise di vestire i suoi uomini d'acciaio.",
     ],
+    changes: [
+      "La «prova» d'archibugio si bolla",
+      "L'arnese si fa tre quarti",
+      "Incisione e oro: abito di corte",
+      "La corazza resiste fino alle trincee",
+    ],
+    context: {
+      label: "1525 · Pavia",
+      text: "Gli archibugieri spagnoli smontano la gendarmeria francese: in una sola mattina finisce l'epoca dell'arnese completo.",
+    },
     pieces: [
       "Armatura massimiliana",
       "Corazza a prova di palla",
@@ -134,6 +205,72 @@ export const ERAS: Era[] = [
       "Guarniture incise e dorate",
     ],
     note: "Il bollo della «prova» d'archibugio valeva una firma: quel petto aveva già vinto la sua battaglia.",
+  },
+];
+
+export interface HelmetDef {
+  id: string;
+  name: string;
+  period: string;
+  text: string;
+  fill: string;
+  strokes: string[];
+  extra?: string[];
+}
+
+export const HELMETS: HelmetDef[] = [
+  {
+    id: "nasale",
+    name: "Elmo a nasale",
+    period: "900 – 1100",
+    text: "Cupola di bande e lamelle con la barra di ferro che scende sul naso: l'erede diretto degli elmi germanici delle migrazioni. L'arazzo di Bayeux lo mostra identico su normanni e inglesi: il ferro era uguale per tutti, e bastava a fermare la spada.",
+    fill: "M28 72 C28 40 36 22 50 22 C64 22 72 40 72 72 Z",
+    strokes: ["M24 72 h52", "M24 80 h52", "M50 22 V72"],
+    extra: ["M30 80 h8 v20 h-8 Z"],
+  },
+  {
+    id: "pentola",
+    name: "Elmo a pentola",
+    period: "1200 – 1350",
+    text: "Una vera scatola d'acciaio calzata sopra il camaglio di maglia: fessure per vedere, fori per respirare, croce per ricordare. Nasconde il volto — e proprio per questo fa nascere l'araldica. Pesante e quasi cieco: in mischia si preferiva il più leggero cervelliere.",
+    fill: "M32 100 L32 28 C32 25 34 23 37 23 L69 23 C72 23 74 25 74 28 L74 100 Z",
+    strokes: ["M32 50 h20", "M32 34 h42", "M40 50 V34"],
+    extra: ["M36 62 a2 2 0 1 0 0.1 0", "M42 70 a2 2 0 1 0 0.1 0", "M36 78 a2 2 0 1 0 0.1 0"],
+  },
+  {
+    id: "bacinetto",
+    name: "Bacinetto",
+    period: "1350 – 1420",
+    text: "Calotta appuntita che fa scivolare i colpi, visiera incernierata «a muso di cane», camaglio di maglia al collo. È l'elmo della guerra dei Cent'anni, da Crécy ad Agincourt: pratico, prodotto in serie, portato dal fante come dal re.",
+    fill: "M68 74 C73 48 65 24 48 21 C36 19 28 30 27 42 L27 48 L19 58 L27 63 L25 72 C38 78 56 78 68 74 Z",
+    strokes: ["M27 46 L43 46", "M30 76 C42 82 56 81 66 76", "M33 84 l33 3", "M31 92 l37 3"],
+    extra: ["M56 62 a3 3 0 1 0 0.1 0"],
+  },
+  {
+    id: "armetto",
+    name: "Armetto",
+    period: "1420 – 1520",
+    text: "Chiude interamente il capo con visiera e guanciali incernierati alla calotta e barbotta sul mento: la risposta italiana al bisogno di protezione totale. È l'elmo del cavaliere in armatura bianca, quello che compare nei ritratti dei condottieri.",
+    fill: "M66 100 C72 64 66 26 48 23 C34 22 26 38 26 54 C26 60 24 68 20 74 C19 80 24 87 33 89 C40 93 54 94 62 91 L66 100 Z",
+    strokes: ["M26 52 L46 52", "M26 60 C34 64 46 64 54 61", "M33 89 C40 84 50 82 58 84"],
+    extra: ["M56 66 a3 3 0 1 0 0.1 0"],
+  },
+  {
+    id: "celata",
+    name: "Celata",
+    period: "1450 – 1510",
+    text: "Il becco tedesco con la lunga coda che scende sulla nuca, portata con la barbotta separata per la gola. Leggera, elegante, letale: è l'elmo più copiato del tardo Quattrocento e il diretto antenato degli elmi da combattimento moderni.",
+    fill: "M24 60 C24 38 36 22 52 22 C64 22 72 32 74 42 C76 52 82 62 88 70 L89 82 L81 81 C76 70 70 62 60 58 C48 54 32 56 24 60 Z",
+    strokes: ["M26 47 L46 47", "M24 60 C34 56 46 55 58 57"],
+  },
+  {
+    id: "borgognotta",
+    name: "Borgognotta",
+    period: "1520 – 1620",
+    text: "Volto aperto, cresta rialzata, guanciali a cerniera: è l'elmo dell'età della polvere, quando vedere e sentire contano più che chiudersi del tutto. Accompagna la corazza «a prova di palla» e sopravvive, in versioni da parata, fin dentro il Seicento.",
+    fill: "M72 56 C72 34 60 21 47 21 C36 21 28 30 27 42 L19 47 L27 50 L27 56 Z",
+    strokes: ["M33 58 C31 70 33 82 43 88 L50 88 C45 80 43 68 43 58", "M72 56 L74 68 L64 70 L64 56"],
+    extra: ["M44 22 C52 14 64 18 69 30 L65 32 C60 24 52 20 46 25 Z"],
   },
 ];
 

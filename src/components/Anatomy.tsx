@@ -9,7 +9,7 @@ export default function Anatomy() {
   return (
     <section id="anatomia" className="relative border-t border-iron">
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead kicker="II · Tavola anatomica" title="L'anatomia del cavaliere">
+        <SectionHead kicker="III · Tavola anatomica" title="L'anatomia del cavaliere">
           Un arnese bianco del Quattrocento, smontato voce per voce. Tocca i punti d'ottone sull'armatura — o scegli
           dalla lista — per leggere ogni pezzo come lo leggeva l'armaiolo.
         </SectionHead>

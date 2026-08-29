@@ -1,29 +1,50 @@
-import { FORGE_STEPS } from "../data/content";
-import { Reveal, SectionHead } from "../lib/ui";
+import { FORGE_STEPS, IMG } from "../data/content";
+import { Reveal, Rivets, SectionHead } from "../lib/ui";
 
 export default function Forge() {
   return (
     <section id="bottega" className="relative border-t border-iron">
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-4">
-            <SectionHead kicker="IV · La bottega" title="I sette gesti della forgia">
-              Dalla vena di ferro palustre al bollo della «prova»: un arnese nasceva in mesi di fuoco, martello e
-              segreto. Ogni bottega custodiva i propri — la tempra milanese non uscì mai dalle sue mura.
-            </SectionHead>
-            <Reveal delay={200}>
-              <div className="border border-iron bg-coal/60 p-6">
-                <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brass">La corporazione</p>
-                <p className="mt-3 text-sm leading-relaxed text-mute">
-                  Nel Trecento gli armorari si staccarono dai fabbri: la piastra non è un ferro battuto qualunque, è
-                  ingegneria del corpo. A Milano, Norimberga e Innsbruck le botteghe divennero dinastie — i Missaglia,
-                  i Negroli, gli Helmschmid — e i loro punzoni viaggiarono per tutta Europa.
-                </p>
-              </div>
-            </Reveal>
+          <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-28">
+              <SectionHead kicker="V · La bottega" title="I sette gesti della forgia">
+                Dalla vena di ferro palustre al bollo della «prova»: un arnese nasceva in mesi di fuoco, martello e
+                segreto. Ogni bottega custodiva i propri — la tempra milanese non uscì mai dalle sue mura.
+              </SectionHead>
+
+              <Reveal variant="left" delay={120}>
+                <figure className="plate-frame">
+                  <Rivets />
+                  <div className="kenburns overflow-hidden">
+                    <img
+                      src={IMG.workshop}
+                      alt="Armaiolo del Quattrocento che martella una corazza rovente sull'incudine, scintille nella bottega scura"
+                      loading="lazy"
+                      className="block aspect-[4/5] w-full object-cover"
+                    />
+                  </div>
+                  <figcaption className="flex items-center justify-between px-1 pt-3 text-[0.66rem] uppercase tracking-[0.2em] text-faint">
+                    <span>Tav. della bottega — l'armaiolo al lavoro</span>
+                    <span className="text-brass">c. 1470</span>
+                  </figcaption>
+                </figure>
+              </Reveal>
+
+              <Reveal delay={220}>
+                <div className="mt-7 border border-iron bg-coal/60 p-6">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brass">La corporazione</p>
+                  <p className="mt-3 text-sm leading-relaxed text-mute">
+                    Nel Trecento gli armorari si staccarono dai fabbri: la piastra non è un ferro battuto qualunque, è
+                    ingegneria del corpo. A Milano, Norimberga e Innsbruck le botteghe divennero dinastie — i Missaglia,
+                    i Negroli, gli Helmschmid — e i loro punzoni viaggiarono per tutta Europa.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
           </div>
 
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-7">
             <ol className="relative border-l border-iron pl-0">
               {FORGE_STEPS.map((step, i) => (
                 <Reveal key={step.numeral} as="li" delay={i * 90} className="relative">

@@ -4,11 +4,12 @@ import { Crest } from "../lib/ui";
 
 const LINKS: [string, string, string][] = [
   ["#cronologia", "I", "Cronologia"],
-  ["#anatomia", "II", "Anatomia"],
-  ["#pesi", "III", "Pesi"],
-  ["#bottega", "IV", "La Bottega"],
-  ["#miti", "V", "Miti"],
-  ["#glossario", "VI", "Glossario"],
+  ["#elmi", "II", "Gli Elmi"],
+  ["#anatomia", "III", "Anatomia"],
+  ["#pesi", "IV", "Pesi"],
+  ["#bottega", "V", "Bottega"],
+  ["#miti", "VI", "Miti"],
+  ["#glossario", "VII", "Glossario"],
 ];
 
 export default function Nav() {

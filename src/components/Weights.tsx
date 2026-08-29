@@ -48,7 +48,7 @@ export default function Weights() {
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <SectionHead kicker="III · La bilancia dell'armaiolo" title="Quanto pesava davvero?">
+            <SectionHead kicker="IV · La bilancia dell'armaiolo" title="Quanto pesava davvero?">
               La domanda che tutti fanno — e a cui tutti sbagliano risposta. Un arnese completo stava fra i 25 e i 30
               chili, distribuiti su tutto il corpo; soltanto l'armatura da giostra, che non doveva né correre né
               cadere, osava salire oltre i 40.
