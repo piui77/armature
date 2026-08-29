@@ -21,6 +21,18 @@ dalla caduta di Roma (476 d.C.) al crepuscolo degli arnesi bianchi (1600 d.C.).
 
 4. Apri nel browser l'indirizzo mostrato (di solito http://localhost:5173).
 
+## Scaricare l'archivio (.zip)
+
+Il sito include un pulsante **«Scarica il progetto (.zip)»** nel footer (dopo il glossario):
+premendolo, il sito stesso impacchetta tutto il codice sorgente e avvia il download
+dell'archivio `ferraria-armatura-medievale.zip`, pronto da decomprimere e avviare come sopra.
+
+In alternativa, dalla cartella del progetto, senza dipendenze aggiuntive:
+
+- **macOS / Linux**: `zip -r ferraria.zip . -x "node_modules/*" -x "dist/*"`
+- **Windows (PowerShell)**: `Compress-Archive -Path * -DestinationPath ferraria.zip`
+  (escludi poi a mano `node_modules` e `dist` se presenti)
+
 ## Build di produzione
 
    npm run build
@@ -42,4 +54,4 @@ La versione ottimizzata viene generata nella cartella `dist/`. Per servirla in l
 
 - `src/data/content.ts` — tutti i testi e i dati (epoche, elmi, anatomia, pesi, bottega, miti, glossario)
 - `src/components/` — le sezioni della pagina
-- `src/lib/` — hook (scroll reveal, count-up, scramble) e componenti UI riutilizzabili
+- `src/lib/` — hook (scroll reveal, count-up, scramble), componenti UI e il generatore dell'archivio zip (`zipBundle.ts`)
