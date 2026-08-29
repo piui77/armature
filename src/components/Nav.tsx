@@ -4,14 +4,18 @@ import { Crest } from "../lib/ui";
 
 const LINKS: [string, string, string][] = [
   ["#cronologia", "I", "Cronologia"],
-  ["#elmi", "II", "Gli Elmi"],
+  ["#elmi", "II", "Elmi"],
   ["#anatomia", "III", "Anatomia"],
-  ["#tiro", "IV", "Sotto tiro"],
-  ["#pesi", "V", "Pesi"],
-  ["#vestizione", "VI", "Vestizione"],
-  ["#bottega", "VII", "Bottega"],
-  ["#miti", "VIII", "Miti"],
-  ["#glossario", "IX", "Glossario"],
+  ["#tiro", "IV", "Tiro"],
+  ["#arsenale", "V", "Arsenale"],
+  ["#pesi", "VI", "Pesi"],
+  ["#vestizione", "VII", "Vestizione"],
+  ["#bottega", "VIII", "Bottega"],
+  ["#scuole", "IX", "Scuole"],
+  ["#cavallo", "X", "Cavallo"],
+  ["#vita", "XI", "Vita"],
+  ["#miti", "XII", "Miti"],
+  ["#glossario", "XIII", "Glossario"],
 ];
 
 export default function Nav() {
@@ -38,14 +42,14 @@ export default function Nav() {
             FERRAR<span className="text-brass">IA</span>
           </span>
         </a>
-        <div className="ml-auto flex items-center gap-1 overflow-x-auto whitespace-nowrap md:gap-2 [scrollbar-width:none]">
+        <div className="ml-auto flex items-center gap-1 overflow-x-auto whitespace-nowrap md:gap-1.5 [scrollbar-width:none]">
           {LINKS.map(([href, numeral, label]) => (
             <a
               key={href}
               href={href}
-              className="lnk px-2 py-1.5 font-display text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-mute transition-colors hover:text-bone md:text-xs"
+              className="lnk px-1.5 py-1.5 font-display text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-mute transition-colors hover:text-bone md:px-2 md:text-[0.68rem]"
             >
-              <span className="mr-1.5 text-brass/80">{numeral}.</span>
+              <span className="mr-1 text-brass/80">{numeral}.</span>
               {label}
             </a>
           ))}

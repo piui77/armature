@@ -8,7 +8,7 @@ export default function Myths() {
   return (
     <section id="miti" className="relative border-t border-iron bg-coal/40">
       <div className="mx-auto max-w-5xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead kicker="VIII · Il tribunale del mito" title="Sei accuse, un verdetto">
+        <SectionHead kicker="XII · Il tribunale del mito" title="Sei accuse, un verdetto">
           Molto di ciò che «tutti sanno» sull'armatura è ottocentesco, non medievale. Apriamo il processo: ogni accusa
           riceve il suo bollo, come la corazza riceveva la prova.
         </SectionHead>

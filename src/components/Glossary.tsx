@@ -1,30 +1,16 @@
 import { useState } from "react";
 import { GLOSSARY } from "../data/content";
-import { EXTRA_GLOSSARY } from "../data/expansions";
 import { downloadProjectZip } from "../lib/zipBundle";
+import Sources from "./Sources";
 import { Crest, Reveal, Rivets, SectionHead } from "../lib/ui";
 
 type ZipState = "idle" | "working" | "done" | "error";
 
-const TERMS = [...GLOSSARY, ...EXTRA_GLOSSARY];
-
-const SOURCES = [
+const SOURCES_LINKS = [
   { name: "Royal Armouries — Leeds", url: "https://royalarmouries.org" },
   { name: "The Met — Arms and Armor", url: "https://www.metmuseum.org/about-the-met/collection-areas/arms-and-armor" },
   { name: "Museo Stibbert — Firenze", url: "https://museostibbert.it" },
   { name: "Wallace Collection — Londra", url: "https://www.wallacecollection.org" },
-];
-
-const INDEX_LINKS: [string, string][] = [
-  ["#cronologia", "Cronologia"],
-  ["#elmi", "Gli Elmi"],
-  ["#anatomia", "Anatomia"],
-  ["#tiro", "Sotto tiro"],
-  ["#pesi", "Pesi"],
-  ["#vestizione", "Vestizione"],
-  ["#bottega", "La Bottega"],
-  ["#miti", "Miti"],
-  ["#glossario", "Glossario"],
 ];
 
 export default function Glossary() {
@@ -48,13 +34,13 @@ export default function Glossary() {
   return (
     <section id="glossario" className="relative border-t border-iron">
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead kicker="IX · Il lessico dell'acciaio" title="Glossario dell'armaiolo">
+        <SectionHead kicker="XIII · Il lessico dell'acciaio" title="Glossario dell'armaiolo">
           Diciotto parole per leggere un'armatura come la leggeva chi la forgiava. Chi le conosce tutte, in bottega ha
           già il martello in mano.
         </SectionHead>
 
         <dl className="grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-          {TERMS.map((g, i) => (
+          {GLOSSARY.map((g, i) => (
             <Reveal key={g.term} delay={(i % 3) * 90} className="group border-t border-iron pt-5">
               <dt className="flex items-center justify-between font-display text-base font-bold uppercase tracking-[0.18em] text-bone transition-colors duration-300 group-hover:text-brasslight">
                 {g.term}
@@ -66,57 +52,49 @@ export default function Glossary() {
         </dl>
       </div>
 
-      {/* banda download */}
-      <div className="border-t border-iron bg-coal/70">
-        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8">
+      <Sources />
+
+      {/* banda di download */}
+      <div className="border-t border-iron">
+        <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
           <Reveal>
-            <div className="plate-frame p-8 md:p-12">
+            <div className="relative border border-brass/40 bg-iron/30 px-7 py-9 md:px-12 md:py-12">
               <Rivets />
-              <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-                <div className="max-w-xl">
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brass">Colofone</p>
+              <div className="grid items-center gap-8 md:grid-cols-12">
+                <div className="md:col-span-8">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-brass">Per gli studiosi della forgia</p>
                   <h3 className="mt-3 font-display text-2xl font-bold text-bone md:text-3xl">Portati a casa la bottega</h3>
-                  <p className="mt-3 text-base leading-relaxed text-mute">
-                    Tutto il codice di questa pagina — testi, tavole, animazioni — in un unico archivio da aprire in
-                    locale con <span className="text-brasslight">npm install</span> e{" "}
-                    <span className="text-brasslight">npm run dev</span>.
+                  <p className="mt-3 max-w-xl text-base leading-relaxed text-mute">
+                    L'intero progetto — codice, testi e dati — si impacchetta in un archivio pronto da aprire sul tuo
+                    computer. Le immagini restano online; tutto il resto viaggia con te.
                   </p>
                 </div>
-                <div className="flex flex-col items-start gap-3 md:items-end">
+                <div className="md:col-span-4 md:text-right">
                   <button
                     onClick={handleDownload}
                     disabled={zipState === "working"}
-                    className={`group inline-flex items-center gap-3 border px-6 py-4 font-display text-xs font-bold uppercase tracking-[0.22em] transition-all duration-300 ${
+                    className={`group inline-flex items-center gap-3 border px-6 py-3.5 font-display text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 ${
                       zipState === "done"
                         ? "border-brass bg-brass text-ink"
-                        : zipState === "error"
-                          ? "border-blood text-[#c96a5a]"
-                          : "border-brass bg-brass/10 text-brasslight hover:bg-brass hover:text-ink"
-                    } disabled:cursor-wait disabled:opacity-80`}
+                        : "border-brass bg-brass/10 text-brasslight hover:bg-brass hover:text-ink"
+                    } ${zipState === "working" ? "cursor-wait opacity-70" : ""}`}
                   >
                     {zipState === "working" ? (
-                      "Preparo i file…"
+                      "Preparo l'archivio…"
                     ) : zipState === "done" ? (
-                      <>
-                        Fatto — {fileCount} file
-                        <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
-                          <path d="M2.5 8.5l4 4 7-8" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </>
+                      `✓ ${fileCount} file scaricati`
                     ) : zipState === "error" ? (
                       "Riprova"
                     ) : (
                       <>
-                        Scarica il progetto (.zip)
-                        <svg viewBox="0 0 16 16" className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-y-0.5" aria-hidden="true">
-                          <path d="M8 2v9M4.5 8L8 11.5 11.5 8M3 14h10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
+                          <path d="M8 2v8.5M4.5 7.5 8 11l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
+                        Scarica il progetto (.zip)
                       </>
                     )}
                   </button>
-                  <p className="text-[0.62rem] uppercase tracking-[0.24em] text-faint">
-                    Sorgenti completi · le tavole restano online
-                  </p>
+                  <p className="mt-3 text-[0.62rem] uppercase tracking-[0.2em] text-faint">zip generato al momento · solo file sorgente</p>
                 </div>
               </div>
             </div>
@@ -143,7 +121,7 @@ export default function Glossary() {
             <div className="md:col-span-4">
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brass">Armerie di riferimento</p>
               <ul className="mt-4 space-y-2.5">
-                {SOURCES.map((s) => (
+                {SOURCES_LINKS.map((s) => (
                   <li key={s.name}>
                     <a
                       href={s.url}
@@ -160,12 +138,25 @@ export default function Glossary() {
 
             <div className="md:col-span-3">
               <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-brass">Indice</p>
-              <ul className="mt-4 space-y-2.5">
-                {INDEX_LINKS.map(([href, label]) => (
+              <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5">
+                {[
+                  ["#cronologia", "Cronologia"],
+                  ["#elmi", "Gli Elmi"],
+                  ["#anatomia", "Anatomia"],
+                  ["#tiro", "Sotto tiro"],
+                  ["#arsenale", "L'arsenale"],
+                  ["#vestizione", "Vestizione"],
+                  ["#bottega", "Bottega"],
+                  ["#scuole", "Scuole"],
+                  ["#cavallo", "Cavallo"],
+                  ["#vita", "Vita nel ferro"],
+                  ["#miti", "Miti"],
+                  ["#glossario", "Glossario"],
+                ].map(([href, label]) => (
                   <li key={href}>
                     <a
                       href={href}
-                      className="lnk font-display text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-mute transition-colors hover:text-brasslight"
+                      className="lnk font-display text-[0.74rem] font-semibold uppercase tracking-[0.12em] text-mute transition-colors hover:text-brasslight"
                     >
                       {label}
                     </a>

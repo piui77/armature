@@ -7,10 +7,14 @@ import Eras from "./components/Eras";
 import Helmets from "./components/Helmets";
 import Anatomy from "./components/Anatomy";
 import Ballistic from "./components/Ballistic";
+import Arsenal from "./components/Arsenal";
 import Annals from "./components/Annals";
 import Weights from "./components/Weights";
 import Arming from "./components/Arming";
 import Forge from "./components/Forge";
+import Schools from "./components/Schools";
+import Horse from "./components/Horse";
+import Life from "./components/Life";
 import Myths from "./components/Myths";
 import Glossary from "./components/Glossary";
 import { IMG } from "./data/content";
@@ -35,10 +39,14 @@ export default function App() {
         <Helmets />
         <Anatomy />
         <Ballistic />
+        <Arsenal />
         <Annals />
         <Weights />
         <Arming />
         <Forge />
+        <Schools />
+        <Horse />
+        <Life />
         <Intermezzo
           image={IMG.joust}
           alt="Due cavalieri in armatura gotica completa che si affrontano in giostra, lance in frantumi"

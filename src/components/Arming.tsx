@@ -10,7 +10,7 @@ export default function Arming() {
   return (
     <section id="vestizione" className="relative border-t border-iron bg-coal/40">
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead kicker="VI · La vestizione" title="Dodici minuti per diventare cavaliere">
+        <SectionHead kicker="VII · La vestizione" title="Dodici minuti per diventare cavaliere">
           L'armatura non si «indossa»: si monta, pezzo per pezzo, nell'ordine giusto — e nell'ordine sbagliato non si
           monta affatto. Ecco la sequenza che ogni scudiero sapeva a memoria.
         </SectionHead>
