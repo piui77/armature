@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useScrollProgress } from "../lib/hooks";
+import { downloadProjectZip } from "../lib/zipBundle";
 import { Crest } from "../lib/ui";
 
 const LINKS: [string, string, string][] = [
@@ -21,6 +22,19 @@ const LINKS: [string, string, string][] = [
 export default function Nav() {
   const progress = useScrollProgress();
   const [scrolled, setScrolled] = useState(false);
+  const [zipState, setZipState] = useState<"idle" | "working" | "done">("idle");
+
+  const handleZip = async () => {
+    if (zipState === "working") return;
+    setZipState("working");
+    try {
+      await downloadProjectZip();
+      setZipState("done");
+      setTimeout(() => setZipState("idle"), 4500);
+    } catch {
+      setZipState("idle");
+    }
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -54,6 +68,31 @@ export default function Nav() {
             </a>
           ))}
         </div>
+        <button
+          onClick={handleZip}
+          disabled={zipState === "working"}
+          className={`inline-flex shrink-0 items-center gap-2 border px-3 py-2 font-display text-[0.62rem] font-bold uppercase tracking-[0.14em] transition-all duration-300 ${
+            zipState === "done"
+              ? "border-brass bg-brass text-ink"
+              : "border-brass/70 bg-brass/10 text-brasslight hover:bg-brass hover:text-ink"
+          }`}
+          title="Scarica tutti i file del sito in un archivio .zip"
+        >
+          <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
+            <path
+              d="M8 2v8.5M4.5 7.5 8 11l3.5-3.5M3 13.5h10"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span className="hidden sm:inline">
+            {zipState === "working" ? "Preparo…" : zipState === "done" ? "✓ Fatto" : "Scarica .zip"}
+          </span>
+          <span className="sm:hidden">Zip</span>
+        </button>
       </nav>
       <div
         className="absolute bottom-0 left-0 h-[2px] bg-brass transition-[width] duration-150 ease-out"
