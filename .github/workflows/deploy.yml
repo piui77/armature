@@ -2,7 +2,6 @@ name: Pubblica il sito su GitHub Pages
 
 on:
   push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
