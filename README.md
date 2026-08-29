@@ -60,6 +60,20 @@ esterno. Quindi, una volta salvate le immagini in `public/images/`, non devi mod
 codice: il sito le userà in automatico e funzionerà anche senza connessione. Se usi GitHub,
 carica anche la cartella `public/` nel repository per mettere le immagini al sicuro per sempre.
 
+## Risoluzione problemi
+
+- **Avvisi «deprecated» (uuid, recharts) durante `npm install`**: sono solo avvisi, non errori.
+  L'installazione è andata a buon fine e il sito funziona normalmente.
+- **«allow-scripts … esbuild … postinstall»** e poi `npm run dev` segnala un errore di esbuild:
+  il tuo npm blocca gli script di installazione. Esegui una volta:
+
+      npm approve-scripts esbuild
+      npm rebuild esbuild
+
+  poi riprova `npm run dev`. Il file `AVVIA VESTIRE IL FERRO.bat` esegue questi passaggi da solo.
+- **«moderate severity vulnerabilities»**: avviso generico di npm sugli strumenti di sviluppo;
+  per un sito personale in locale non richiede interventi.
+
 ## Build di produzione
 
    npm run build

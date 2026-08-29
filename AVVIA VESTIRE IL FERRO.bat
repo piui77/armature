@@ -16,6 +16,10 @@ if not exist node_modules (
     echo [1/3] Prima esecuzione: installazione dei componenti necessari...
     echo       (puo' richiedere qualche minuto, e' normale)
     call npm install
+    rem Se il tuo npm blocca gli script di installazione (allow-scripts),
+    rem consenti quello di esbuild e riprova la preparazione del binario.
+    call npm approve-scripts esbuild >nul 2>nul
+    call npm rebuild esbuild >nul 2>nul
 )
 
 echo [2/3] Tavole illustrate: controllo e download in public\images...
