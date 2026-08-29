@@ -52,7 +52,7 @@ export const ERAS: Era[] = [
       "Usbergo corto di anelli ribattuti",
       "Scudo rotondo umbonato",
       "Spada a una mano",
-      "Sax e scramasax",
+      "Sax (scramasax)",
     ],
     note: "Un usbergo poteva costare quanto una fattoria: si ereditava, si citava nei testamenti, si pagava come dote.",
   },
@@ -81,7 +81,7 @@ export const ERAS: Era[] = [
       "Usbergo lungo con muffole",
       "Chausses e camaglio di maglia",
       "Elmo a pentola (great helm)",
-      "Scudo a mandorla araldico",
+      "Scudo araldico a stufa",
       "Sopravveste dipinta",
     ],
     note: "La maglia arresta il taglio: contro la punta, la mazza e la caduta serviranno le piastre.",
@@ -155,7 +155,7 @@ export const ERAS: Era[] = [
     paragraphs: [
       "Le botteghe di Norimberga, Augusta e Innsbruck rispondono a Milano con uno stile opposto: il gotico tedesco. Ogni piastra è percorsa da scanalature che funzionano come travi, più rigide a parità di peso; i bordi si accendono di cuspidi e ventagli, i sabatoni si allargano «a zampa d'orso», l'acciaio brunito alterna luci e ombre come una cattedrale.",
       "È anche l'età d'oro del torneo: nascono armature dedicate — lo Stechzeug per la giostra, pesantissimo e quasi cieco, il Rennzeug per la corsa — mentre sul campo la corazza leggera del fante annuncia già il futuro. Massimiliano I ne fa un manifesto: l'armatura come arte di Stato.",
-      "I maestri del tardo Quattrocento non firmano quasi mai, ma si riconoscono dallo stile: le creste affilate di Norimberga contro le rotondità lisce di Milano diventano due scuole che discutono in acciaio. Nasce il collezionismo: Massimiliano raduna a Innsbruck un'armeria che è un manifesto d'impero, e ogni principe ne vuole una.",
+      "I maestri del tardo Quattrocento firmano di rado per esteso, ma imprimono i marchi di bottega e si riconoscono dallo stile: le creste affilate di Norimberga contro le rotondità lisce di Milano diventano due scuole che discutono in acciaio. Nasce il collezionismo: Massimiliano raduna a Innsbruck un'armeria che è un manifesto d'impero, e ogni principe ne vuole una.",
     ],
     changes: [
       "Le scanalature irrigidiscono la lastra",
@@ -164,7 +164,7 @@ export const ERAS: Era[] = [
       "Due scuole: Milano contro Germania",
     ],
     context: {
-      label: "1486 · Innsbruck",
+      label: "c. 1486 · Innsbruck",
       text: "Massimiliano apre la sua armeria di corte: l'armatura scanalata diventa lo stile dell'Impero e il dono più ambito fra i principi.",
     },
     pieces: [
@@ -185,7 +185,7 @@ export const ERAS: Era[] = [
     paragraphs: [
       "L'armatura massimiliana porta la scanalatura all'eccesso e apre la porta all'acquaforte: trofei incisi, grottesche alla romana, fondi d'oro — a Milano i Negroli sbalzano l'acciaio come fosse argento. L'armatura è ormai anche abito di corte, ritratto, dono diplomatico.",
       "Ma l'archibugio e la pistola a ruota riscrivono le regole. Le corazze si ispessiscono fino a fermare la palla: il collaudo «a prova» lascia un'ammaccatura orgogliosa sul petto. Poi il ferro arretra — resta la corazza, poi solo petto e schiena — e nel Seicento l'arnese completo è già ricordo. Ma il suo mito non smetterà più di combattere.",
-      "L'eredità non muore: la corazza resta in servizio nella cavalleria di ogni esercito fino alla Grande Guerra, e l'elmo — discendente diretto del bacinetto — torna a proteggere la fanteria nelle trincee. Nei musei del mondo gli arnesi stanno ancora ritti: testimoni silenziosi dell'epoca in cui l'Europa decise di vestire i suoi uomini d'acciaio.",
+      "L'eredità non muore: la corazza resta in servizio nella cavalleria di alcune nazioni fino alla Grande Guerra, e l'elmo d'acciaio — erede di celata e cappellina — torna a proteggere la fanteria nelle trincee. Nei musei del mondo gli arnesi stanno ancora ritti: testimoni silenziosi dell'epoca in cui l'Europa decise di vestire i suoi uomini d'acciaio.",
     ],
     changes: [
       "La «prova» d'archibugio si bolla",
