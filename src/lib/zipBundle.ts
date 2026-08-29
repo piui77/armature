@@ -18,6 +18,7 @@ const MODULES = glob(
     "../tsconfig.json",
     "../vite.config.js",
     "../README.md",
+    "../AVVIA FERRARIA.bat",
     "./**/*.{ts,tsx,css}",
   ],
   { query: "?raw", import: "default", eager: true }
