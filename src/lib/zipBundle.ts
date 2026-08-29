@@ -16,7 +16,6 @@ const MODULES = import.meta.glob(
     "../vite.config.js",
     "../README.md",
     "../AVVIA VESTIRE IL FERRO.bat",
-    "../public/**/*.txt",
     "./**/*.{ts,tsx,css}",
   ],
   { query: "?raw", import: "default", eager: true }
@@ -49,9 +48,9 @@ export async function downloadProjectZip(): Promise<ZipInfo> {
     count += 1;
   }
 
-  // Nota per chi apre l'archivio: come rendere le immagini permanenti.
+  // Nota per chi apre l'archivio.
   root.file(
-    "LEGGIMI-IMMAGINI.txt",
+    "LEGGIMI.txt",
     [
       "VESTIRE IL FERRO — L'Evoluzione dell'Armatura Medievale",
       "=======================================================",
@@ -60,12 +59,9 @@ export async function downloadProjectZip(): Promise<ZipInfo> {
       "  1. npm install",
       "  2. npm run dev  ->  apri http://localhost:5173",
       "",
-      "IMMAGINI: le 11 tavole sono caricate da un servizio esterno.",
-      "Per renderle PERMANENTI e indipendenti da quel servizio,",
-      "apri public/images/LEGGIMI.txt: trovi la tabella con i link",
-      "da cui salvare ogni immagine e il nome da darle. Una volta",
-      "salvate in public/images/, il sito le usera' in automatico",
-      "(prova prima la copia locale, poi il link esterno).",
+      "IMMAGINI: le tavole sono nella cartella public/images/.",
+      "Il sito usa prima la copia locale e ripiega sui collegamenti",
+      "online solo se un file manca: non serve alcuna configurazione.",
       "",
       "Buona forgia!",
     ].join("\n")

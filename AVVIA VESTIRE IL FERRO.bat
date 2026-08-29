@@ -21,7 +21,7 @@ exit /b 1
 
 :node_ok
 if exist node_modules goto dipendenze_ok
-echo [1/4] Prima esecuzione: installazione dei componenti necessari...
+echo [1/3] Prima esecuzione: installazione dei componenti necessari...
 echo       puo' richiedere qualche minuto, e' normale
 call npm install
 if %errorlevel% neq 0 goto errore
@@ -29,23 +29,11 @@ call npm approve-scripts esbuild >nul 2>nul
 call npm rebuild esbuild >nul 2>nul
 
 :dipendenze_ok
-if exist "public\images\tavola-elmo-e-corazza.jpg" goto immagini_ok
-if exist "public\images\tavola-elmo-e-corazza.png" goto immagini_ok
-echo [2/4] Scarico le tavole illustrate in public\images...
-echo       le immagini gia' presenti vengono saltate
-call node scripts\scarica-immagini.mjs
-if %errorlevel% neq 0 echo       Avviso: scarico non riuscito, il sito usera' i collegamenti online.
-goto dopo_immagini
-
-:immagini_ok
-echo [2/4] Tavole illustrate gia' presenti: salto lo scaricamento.
-
-:dopo_immagini
-echo [3/4] Preparazione del sito...
+echo [2/3] Preparazione del sito...
 call npm run build
 if %errorlevel% neq 0 goto errore
 
-echo [4/4] Avvio del server...
+echo [3/3] Avvio del server...
 echo.
 echo Sito pronto! Sto aprendo il browser su http://127.0.0.1:4173
 echo Lascia aperta questa finestra finche' navighi: chiudila per fermare il sito.

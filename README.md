@@ -44,21 +44,14 @@ In alternativa, dalla cartella del progetto, senza dipendenze aggiuntive:
 
 ## Le immagini (tavole illustrate)
 
-Le 11 tavole sono caricate da un servizio esterno. Per renderle **permanenti** e indipendenti
-da quel servizio (ad esempio se i link venissero rimossi), dalla cartella del progetto esegui:
-
-    node scripts/scarica-immagini.mjs
-
-Lo script scarica tutte le tavole in `public/images/` con i nomi corretti, salta quelle già
-presenti e avvisa (proseguendo) se una scarica non riesce. Su Windows non serve nemmeno questo:
-il doppio clic su `AVVIA VESTIRE IL FERRO.bat` esegue lo scaricamento da solo al primo avvio.
-In alternativa, in `public/images/LEGGIMI.txt` trovi la tabella per il salvataggio manuale.
+Le tavole sono salvate nella cartella `public/images/` e viaggiano insieme al progetto.
 
 Il sito usa il componente `SafeImg` (`src/lib/ui.tsx`): per ogni tavola prova **prima la copia
-locale** in `public/images/` (sia `.jpg` sia `.png`) e solo se non la trova ripiega sul link
-esterno. Quindi, una volta salvate le immagini in `public/images/`, non devi modificare alcun
-codice: il sito le userà in automatico e funzionerà anche senza connessione. Se usi GitHub,
-carica anche la cartella `public/` nel repository per mettere le immagini al sicuro per sempre.
+locale** in `public/images/` (sia `.jpg` sia `.png`) e solo se non la trova ripiega sul
+collegamento online originale. Quindi non serve alcuna configurazione: con la cartella
+`public/images/` presente il sito è indipendente dai servizi esterni e funziona anche senza
+connessione. Se usi GitHub, carica la cartella `public/` nel repository per conservare le
+immagini al sicuro.
 
 ## Risoluzione problemi
 
