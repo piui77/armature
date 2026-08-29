@@ -10,15 +10,30 @@ echo ================================================
 echo Cartella del progetto: %cd%
 echo.
 
-where node >nul 2>nul
-if %errorlevel% neq 0 (
-    echo [ERRORE] Node.js non risulta installato su questo computer.
-    echo Scaricalo gratuitamente da https://nodejs.org (versione 18 o superiore),
-    echo installalo e riprova a fare doppio clic su questo file.
-    echo.
-    pause
-    exit /b 1
-)
+rem --- Ricerca di Node.js: prima nel PATH, poi nelle posizioni comuni ---
+where node >nul 2>nul && goto :node_ok
+if exist "C:\Program Files\nodejs\node.exe" set "PATH=C:\Program Files\nodejs;%PATH%" && goto :node_ok
+if exist "%ProgramFiles%\nodejs\node.exe" set "PATH=%ProgramFiles%\nodejs;%PATH%" && goto :node_ok
+if exist "%LOCALAPPDATA%\Programs\nodejs\node.exe" set "PATH=%LOCALAPPDATA%\Programs\nodejs;%PATH%" && goto :node_ok
+if exist "%USERPROFILE%\scoop\apps\nodejs\current\node.exe" set "PATH=%USERPROFILE%\scoop\apps\nodejs\current;%PATH%" && goto :node_ok
+if exist "%LOCALAPPDATA%\Volta\bin\node.exe" set "PATH=%LOCALAPPDATA%\Volta\bin;%PATH%" && goto :node_ok
+set "NODEDIR="
+for /d %%v in ("%APPDATA%\nvm\v*") do if exist "%%~v\node.exe" set "NODEDIR=%%~v"
+if defined NODEDIR set "PATH=%NODEDIR%;%PATH%" && goto :node_ok
+
+echo [ERRORE] Node.js non risulta raggiungibile da questa finestra.
+echo Se non lo hai mai installato: scaricalo da https://nodejs.org (v. 18 o superiore)
+echo e riprova a fare doppio clic su questo file.
+echo.
+echo Se invece lo usi gia' nel terminale (npm funziona), avvialo da li':
+echo   npm run dev
+echo.
+pause
+exit /b 1
+
+:node_ok
+echo Node.js trovato. Avvio in corso...
+echo.
 
 if not exist node_modules (
     echo [1/4] Prima esecuzione: installazione dei componenti necessari...
