@@ -12,10 +12,11 @@ const LINKS: [string, string, string][] = [
   ["#vestizione", "VII", "Vestizione"],
   ["#bottega", "VIII", "Bottega"],
   ["#scuole", "IX", "Scuole"],
-  ["#cavallo", "X", "Cavallo"],
-  ["#vita", "XI", "Vita"],
-  ["#miti", "XII", "Miti"],
-  ["#glossario", "XIII", "Glossario"],
+  ["#garnitura", "X", "Garnitura"],
+  ["#cavallo", "XI", "Cavallo"],
+  ["#vita", "XII", "Vita"],
+  ["#miti", "XIII", "Miti"],
+  ["#glossario", "XIV", "Glossario"],
 ];
 
 export default function Nav() {

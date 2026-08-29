@@ -34,7 +34,7 @@ export default function Glossary() {
   return (
     <section id="glossario" className="relative border-t border-iron">
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
-        <SectionHead kicker="XIII · Il lessico dell'acciaio" title="Glossario dell'armaiolo">
+        <SectionHead kicker="XIV · Il lessico dell'acciaio" title="Glossario dell'armaiolo">
           Diciotto parole per leggere un'armatura come la leggeva chi la forgiava. Chi le conosce tutte, in bottega ha
           già il martello in mano.
         </SectionHead>
@@ -148,6 +148,7 @@ export default function Glossary() {
                   ["#vestizione", "Vestizione"],
                   ["#bottega", "Bottega"],
                   ["#scuole", "Scuole"],
+                  ["#garnitura", "Garnitura"],
                   ["#cavallo", "Cavallo"],
                   ["#vita", "Vita nel ferro"],
                   ["#miti", "Miti"],

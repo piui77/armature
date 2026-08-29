@@ -190,6 +190,7 @@ export const ERAS: Era[] = [
     changes: [
       "La «prova» d'archibugio si bolla",
       "L'arnese si fa tre quarti",
+      "La garnitura lo rende modulare",
       "Incisione e oro: abito di corte",
       "La corazza resiste fino alle trincee",
     ],

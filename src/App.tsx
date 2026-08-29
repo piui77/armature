@@ -13,6 +13,7 @@ import Weights from "./components/Weights";
 import Arming from "./components/Arming";
 import Forge from "./components/Forge";
 import Schools from "./components/Schools";
+import Garniture from "./components/Garniture";
 import Horse from "./components/Horse";
 import Life from "./components/Life";
 import Myths from "./components/Myths";
@@ -45,6 +46,7 @@ export default function App() {
         <Arming />
         <Forge />
         <Schools />
+        <Garniture />
         <Horse />
         <Life />
         <Intermezzo
