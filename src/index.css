@@ -1,1 +1,273 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ink: #0f0d0a;
+  --color-coal: #171410;
+  --color-iron: #262019;
+  --color-steel: #3a3227;
+  --color-bone: #ece3cf;
+  --color-mute: #a89e88;
+  --color-faint: #776e5a;
+  --color-brass: #c9a24b;
+  --color-brasslight: #eccf7e;
+  --color-blood: #8a3328;
+  --color-ember: #d96f32;
+
+  --font-display: "Cinzel", "Georgia", serif;
+  --font-body: "EB Garamond", "Georgia", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-brass);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel);
+  border: 2px solid var(--color-ink);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brass);
+}
+
+/* ---------- layered ambient background ---------- */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.055;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px color-mix(in srgb, var(--color-brass) 38%, transparent);
+}
+
+/* ---------- reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal-left {
+  transform: translateX(-36px);
+}
+.reveal-right {
+  transform: translateX(36px);
+}
+.reveal-scale {
+  transform: scale(0.955);
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- ken burns breathing ---------- */
+@keyframes kb-breathe {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.09) translate(-1.2%, 1.2%);
+  }
+}
+.kenburns img {
+  animation: kb-breathe 16s ease-in-out infinite alternate;
+}
+
+/* ---------- marquee ---------- */
+@keyframes marquee-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-slide 30s linear infinite;
+}
+
+/* ---------- swapped numeral / panel ---------- */
+@keyframes num-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.num-swap {
+  animation: num-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ---------- hotspot pulse ---------- */
+@keyframes ring-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  80% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.1);
+    opacity: 0;
+  }
+}
+.hotspot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1.5px solid var(--color-brass);
+  animation: ring-pulse 2.4s ease-out infinite;
+}
+.hotspot:hover::after,
+.hotspot.is-active::after {
+  animation: none;
+  opacity: 0;
+}
+
+/* ---------- scroll cue ---------- */
+@keyframes cue-drop {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.scroll-cue {
+  animation: cue-drop 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+/* ---------- drop cap ---------- */
+.dropcap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 4.4rem;
+  line-height: 0.82;
+  padding: 0.35rem 0.8rem 0 0;
+  color: var(--color-brass);
+}
+
+/* ---------- accordion ---------- */
+.acc-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.acc-panel.open {
+  grid-template-rows: 1fr;
+}
+.acc-panel > div {
+  overflow: hidden;
+}
+
+/* ---------- link underline ---------- */
+.lnk {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.35s ease, color 0.3s ease;
+}
+.lnk:hover {
+  background-size: 0% 1px;
+  background-position: 100% 100%;
+}
+
+/* ---------- framed plate with rivets ---------- */
+.plate-frame {
+  position: relative;
+  border: 1px solid var(--color-steel);
+  padding: 10px;
+  background: linear-gradient(160deg, #1b1712, #12100c);
+  box-shadow:
+    0 30px 60px -20px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(201, 162, 75, 0.08);
+}
+.plate-frame .rivet {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, #eccf7e, #8a6f2c 60%, #4a3a14);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ---------- forge row hover ---------- */
+.forge-row {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s;
+}
+.forge-row:hover {
+  transform: translateX(10px);
+  background-color: rgba(201, 162, 75, 0.05);
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .kenburns img,
+  .marquee-track,
+  .num-swap,
+  .hotspot::after,
+  .scroll-cue {
+    animation: none !important;
+  }
+  .acc-panel {
+    transition: none !important;
+  }
+  .forge-row {
+    transition: none !important;
+  }
+}
