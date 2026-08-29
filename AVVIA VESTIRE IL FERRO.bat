@@ -22,6 +22,14 @@ if not exist node_modules (
     call npm rebuild esbuild >nul 2>nul
 )
 
+rem Se esbuild risulta comunque mancante (errore ENOMATCH), sblocca gli
+rem script di installazione e reinstalla i componenti.
+if not exist node_modules\esbuild\bin\esbuild (
+    echo       esbuild mancante: sblocco gli script di installazione e reinstallo...
+    call npm config set allow-scripts true >nul 2>nul
+    call npm install
+)
+
 echo [2/3] Tavole illustrate: controllo e download in public\images...
 echo       (le immagini gia' presenti vengono saltate)
 call node scripts\scarica-immagini.mjs

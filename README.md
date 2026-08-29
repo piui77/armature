@@ -71,6 +71,14 @@ carica anche la cartella `public/` nel repository per mettere le immagini al sic
       npm rebuild esbuild
 
   poi riprova `npm run dev`. Il file `AVVIA VESTIRE IL FERRO.bat` esegue questi passaggi da solo.
+- **`npm approve-scripts esbuild` risponde ENOMATCH** (il componente non è proprio installato):
+  sblocca gli script e reinstalla:
+
+      npm config set allow-scripts true
+      npm install
+
+  Se ancora non basta, reinstallazione pulita: cancella la cartella `node_modules` e il file
+  `package-lock.json`, poi esegui di nuovo `npm install`.
 - **«moderate severity vulnerabilities»**: avviso generico di npm sugli strumenti di sviluppo;
   per un sito personale in locale non richiede interventi.
 
