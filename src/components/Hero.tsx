@@ -41,7 +41,7 @@ export default function Hero() {
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-mute md:text-xl">
             Undici secoli di acciaio indossato: dalla cotta di anelli dei guerrieri germanici alle lastre brunate delle
-            botteghe di Milano. Una cronaca dell'oggetto più sofisticato che il Medioevo abbia mai vestito.
+            botteghe di Milano. Una cronaca di uno degli oggetti più sofisticati che il Medioevo abbia mai vestito.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">

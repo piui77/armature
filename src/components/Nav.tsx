@@ -22,6 +22,7 @@ const LINKS: [string, string, string][] = [
 export default function Nav() {
   const progress = useScrollProgress();
   const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -33,39 +34,71 @@ export default function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 border-b transition-colors duration-500 ${
-        scrolled
+        scrolled || open
           ? "border-iron bg-ink/95 shadow-[0_10px_30px_-15px_rgba(0,0,0,0.8)]"
-          : "border-transparent bg-ink/70"
+          : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
-        {/* riga del marchio */}
-        <div className="flex items-center justify-between py-3">
-          <a href="#top" className="group flex items-center gap-2.5" aria-label="Torna all'inizio">
-            <Crest className="h-8 w-8 text-brass transition-transform duration-500 group-hover:rotate-[8deg]" />
-            <span className="font-display text-lg font-bold tracking-[0.2em] text-bone">
-              VESTIRE <span className="text-brass">IL FERRO</span>
-            </span>
-          </a>
-          <p className="hidden text-[0.62rem] uppercase tracking-[0.3em] text-faint sm:block">
-            Codice marziale · <span className="text-mute">476 – 1600 d.C.</span>
-          </p>
-        </div>
+      {/* riga del marchio */}
+      <nav className="mx-auto flex max-w-7xl items-center gap-4 px-5 py-3 md:px-8">
+        <a href="#top" className="group flex shrink-0 items-center gap-2.5" aria-label="Torna all'inizio">
+          <Crest className="h-8 w-8 text-brass transition-transform duration-500 group-hover:rotate-[8deg]" />
+          <span className="font-display text-lg font-bold tracking-[0.22em] text-bone">
+            VESTIRE <span className="text-brass">IL FERRO</span>
+          </span>
+        </a>
+        <span className="ml-auto hidden text-[0.62rem] uppercase tracking-[0.26em] text-faint md:block">
+          Codice marziale · 476–1600 d.C.
+        </span>
 
-        {/* riga delle sezioni: va a capo, sempre tutta visibile */}
-        <nav className="flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-iron/60 py-2 md:gap-x-5" aria-label="Sezioni della pagina">
+        {/* pulsante indice, solo mobile */}
+        <button
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? "Chiudi l'indice" : "Apri l'indice"}
+          className="ml-auto flex items-center gap-2 border border-iron px-3 py-2 font-display text-[0.68rem] font-bold uppercase tracking-[0.2em] text-brasslight transition-colors hover:border-brass/60 md:hidden"
+        >
+          Indice
+          <svg viewBox="0 0 16 16" className={`h-3.5 w-3.5 transition-transform duration-300 ${open ? "rotate-180" : ""}`} aria-hidden="true">
+            <path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </nav>
+
+      {/* riga delle sezioni, desktop */}
+      <div className="hidden border-t border-iron/60 md:block">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-1 gap-y-0.5 px-5 py-2 md:px-8">
           {LINKS.map(([href, numeral, label]) => (
             <a
               key={href}
               href={href}
-              className="lnk whitespace-nowrap py-0.5 font-display text-[0.58rem] font-semibold uppercase tracking-[0.12em] text-mute transition-colors hover:text-bone md:text-[0.66rem] md:tracking-[0.14em]"
+              className="lnk px-2 py-1 font-display text-[0.66rem] font-semibold uppercase tracking-[0.16em] text-mute transition-colors hover:text-bone lg:text-[0.7rem]"
             >
               <span className="mr-1 text-brass/80">{numeral}.</span>
               {label}
             </a>
           ))}
-        </nav>
+        </div>
       </div>
+
+      {/* pannello indice, mobile */}
+      {open && (
+        <div className="border-t border-iron bg-ink/98 md:hidden">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 px-5 py-4">
+            {LINKS.map(([href, numeral, label]) => (
+              <a
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="flex items-baseline gap-2.5 border-b border-iron/50 py-2.5 font-display text-[0.74rem] font-bold uppercase tracking-[0.16em] text-bone/90 transition-colors active:text-brasslight"
+              >
+                <span className="text-brass">{numeral}.</span>
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div
         className="absolute bottom-0 left-0 h-[2px] bg-brass transition-[width] duration-150 ease-out"

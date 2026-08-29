@@ -32,6 +32,14 @@ export default function Eras() {
           ridisegna, sotto la pressione di frecce, picche e archibugi. Scorri: il numerale resta, l'epoca cambia.
         </SectionHead>
 
+        <Reveal delay={150}>
+          <p className="mt-6 max-w-3xl border-l-2 border-steel pl-5 text-sm italic leading-relaxed text-faint">
+            Nota metodologica — le date indicano periodi di prevalenza, non confini rigidi: forme precedenti e
+            successive coesistettero per decenni, talvolta per secoli. L'arco 476–1600 è una cronologia convenzionale
+            dell'evoluzione dell'armatura europea, scelta per raccontare una trasformazione continua.
+          </p>
+        </Reveal>
+
         <div className="lg:grid lg:grid-cols-12 lg:gap-16">
           {/* colonna sticky con il numerale */}
           <aside className="hidden lg:col-span-4 lg:block">

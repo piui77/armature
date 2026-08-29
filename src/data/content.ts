@@ -93,7 +93,7 @@ export const ERAS: Era[] = [
     image: IMG.era3,
     alt: "Cavaliere del Trecento con bacinetto, ventaglia e coat of plates",
     paragraphs: [
-      "Il Trecento è il secolo in cui l'armatura cambia più che nei cinque precedenti messi insieme. Le frecce di Crécy e le picche svizzere insegnano che la maglia non basta: sul torso si cuce la coat of plates, centinaia di lamine rivettate sotto stoffa, che poi si irrigidisce in brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
+      "Il Trecento è il secolo in cui l'armatura cambia più che nei cinque precedenti messi insieme. Le frecce di Crécy e l'ascesa della fanteria compatta — i quadrati svizzeri di picche e alabarde — insegnano che la maglia non basta: sul torso si cuce la coat of plates, centinaia di lamine rivettate sotto stoffa, che poi si irrigidisce in brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
       "Le piastre conquistano il corpo una giuntura alla volta: spallacci, cubitiere, ginocchielli, i celebri guanti «a clessidra». Le corporazioni degli armorari si separano da quelle dei fabbri: nasce una professione nuova, insieme artigiana, ingegneristica e segreta.",
       "Il campo di battaglia è il vero progettista: gli svizzeri in quadrato, con picca e alabarda, insegnano che nessuna maglia regge una formazione compatta; gli archi lunghi inglesi piovono punte bodkin pensate per forare. L'armatura risponde facendosi guscio liscio che devia tutto — e in una sola generazione il cavaliere medievale sparisce e nasce l'uomo d'acciaio.",
     ],
@@ -124,8 +124,8 @@ export const ERAS: Era[] = [
     alt: "Condottiero in armatura bianca milanese completa nella bottega dell'armaiolo",
     paragraphs: [
       "Verso il 1420 il processo è compiuto: il cavaliere è chiuso da capo a piedi in un guscio d'acciaio lucidato a specchio — per questo si dice «armatura bianca», white harness. Milano ne è la capitale: le botteghe dei Missaglia esportano arnesi completi in ogni corte d'Europa, ciascuno firmato con il punzone della corona.",
-      "La forma è pura balistica: superfici bombate che deviano punta e colpo, spallaccio sinistro maggiorato per reggere la lancia, corazza con cresta mediana e resta. L'acciaio milanese, temprato con bagni di cui si custodisce il segreto, respinge le frecce dei longbow inglesi — e i soldati inglesi lo sanno, e lo temono.",
-      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano lotti interi per gli eserciti; le corti europee mandano sarti con le misure dei propri gentiluomini, perché l'arnese si cuce addosso come un vestito. Per la prima volta la protezione è prodotta in serie — eppure resta pezzo per pezzo artigianale.",
+      "La forma è pura balistica: superfici bombate che deviano punta e colpo, spallaccio sinistro maggiorato per reggere la lancia, corazza con cresta mediana e resta. L'acciaio milanese, temprato con bagni di cui si custodisce il segreto, a distanza di battaglia respinge spesso le frecce dei longbow: gli arcieri imparano ad accorciare il tiro e a cercare giunture, ascelle e visiere.",
+      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano lotti interi per gli eserciti; le corti europee mandano sarti con le misure dei propri gentiluomini, perché l'arnese si cuce addosso come un vestito. Per la prima volta la protezione è prodotta in serie organizzata — componenti standardizzati, divisione del lavoro, consegne a lotti — eppure ogni pezzo resta rifinito a mano.",
     ],
     changes: [
       "L'arnese completo è compiuto",

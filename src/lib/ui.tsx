@@ -38,8 +38,8 @@ export function SafeImg({
 }) {
   const mapped = LOCAL_MAP[src];
   const base = mapped ? mapped.replace(/\.(jpg|jpeg|png)$/i, "") : null;
-  // Ordine di tentativo: copia locale .jpg, copia locale .png, link esterno.
-  const candidates = base ? [`${base}.jpg`, `${base}.png`, src] : [src];
+  // Ordine di tentativo: copia locale .webp (leggera), .jpg, .png, link esterno.
+  const candidates = base ? [`${base}.webp`, `${base}.jpg`, `${base}.png`, src] : [src];
   const [idx, setIdx] = useState(0);
   const resolved = candidates[Math.min(idx, candidates.length - 1)];
   return (
