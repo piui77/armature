@@ -1,4 +1,4 @@
-import { Reveal } from "../lib/ui";
+import { Reveal, SafeImg } from "../lib/ui";
 
 export default function Intermezzo({
   image,
@@ -16,7 +16,7 @@ export default function Intermezzo({
   return (
     <section className="relative h-[64vh] min-h-[440px] overflow-hidden border-y border-iron md:h-[72vh]">
       <div className="kenburns absolute inset-0">
-        <img src={image} alt={alt} loading="lazy" className="h-full w-full object-cover" />
+        <SafeImg src={image} alt={alt} loading="lazy" className="h-full w-full object-cover" />
       </div>
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-ink via-ink/55 to-ink/15" />
       <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-ink/60" />

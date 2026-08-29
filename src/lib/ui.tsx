@@ -1,5 +1,57 @@
+import { useState } from "react";
 import type { CSSProperties, ReactNode } from "react";
 import { useInView } from "./hooks";
+import { IMG } from "../data/content";
+
+/**
+ * Corrispondenza fra le tavole e le loro copie locali (public/images/).
+ * Quando i file locali esistono, il sito li usa e non dipende più dai link esterni.
+ */
+const LOCAL_MAP: Record<string, string> = {
+  [IMG.hero]: "/images/tavola-elmo-e-corazza.jpg",
+  [IMG.era1]: "/images/epoca-1-eredita-di-roma.jpg",
+  [IMG.era2]: "/images/epoca-2-cavaliere-anno-mille.jpg",
+  [IMG.era3]: "/images/epoca-3-grande-transizione.jpg",
+  [IMG.era4]: "/images/epoca-4-armatura-bianca.jpg",
+  [IMG.era5]: "/images/epoca-5-gotico-fiammeggiante.jpg",
+  [IMG.era6]: "/images/epoca-6-crepuscolo-acciaio.jpg",
+  [IMG.anatomy]: "/images/anatomia-arnese-bianco.jpg",
+  [IMG.workshop]: "/images/bottega-del-forgiatore.jpg",
+  [IMG.mail]: "/images/macro-maglia-di-anelli.jpg",
+  [IMG.joust]: "/images/giostra-dei-cavalieri.jpg",
+};
+
+/**
+ * Immagine «al sicuro»: prova prima la copia locale in public/images/;
+ * se non c'è (o è corrotta) ripiega sul link esterno originale.
+ */
+export function SafeImg({
+  src,
+  alt,
+  className = "",
+  loading = "lazy",
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  loading?: "lazy" | "eager";
+}) {
+  const mapped = LOCAL_MAP[src];
+  const base = mapped ? mapped.replace(/\.(jpg|jpeg|png)$/i, "") : null;
+  // Ordine di tentativo: copia locale .jpg, copia locale .png, link esterno.
+  const candidates = base ? [`${base}.jpg`, `${base}.png`, src] : [src];
+  const [idx, setIdx] = useState(0);
+  const resolved = candidates[Math.min(idx, candidates.length - 1)];
+  return (
+    <img
+      src={resolved}
+      alt={alt}
+      loading={loading}
+      className={className}
+      onError={() => setIdx((i) => Math.min(i + 1, candidates.length - 1))}
+    />
+  );
+}
 
 type RevealVariant = "up" | "left" | "right" | "scale";
 

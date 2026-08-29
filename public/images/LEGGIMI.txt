@@ -1,0 +1,38 @@
+VESTIRE IL FERRO — Immagini del sito
+=====================================
+
+Le tavole del sito vengono caricate da un servizio esterno. Per renderle
+PERMANENTI e indipendenti da quel servizio, salva le 11 immagini qui sotto
+in QUESTA cartella (public/images/) con i nomi indicati, poi ricarica il sito.
+
+Il sito cerca PRIMA la copia locale: se il file esiste lo usa, altrimenti
+ripiega sul link esterno. Quindi non devi modificare alcun codice.
+
+COME SALVARE OGNI IMMAGINE
+  1. Apri il link nel browser.
+  2. Clic destro sull'immagine -> "Salva immagine come..."
+  3. Salvala in questa cartella con il nome esatto indicato sotto.
+
+TABELLA: nome da dare al file  <-  link da cui scaricarla
+------------------------------------------------------------------
+tavola-elmo-e-corazza.jpg       <- https://image.qwenlm.ai/generated-images/4e79017a-5eff-4c9c-94db-99972cbd39c8/_result.png
+epoca-1-eredita-di-roma.jpg     <- https://image.qwenlm.ai/generated-images/c667c5ee-ee78-4499-a210-bde41157a839/_result.png
+epoca-2-cavaliere-anno-mille.jpg <- https://image.qwenlm.ai/generated-images/a8cf2055-0923-446e-b782-5e55ef8146bf/_result.png
+epoca-3-grande-transizione.jpg  <- https://image.qwenlm.ai/generated-images/34f1a16a-806c-49ec-b787-26fb8be83795/_result.png
+epoca-4-armatura-bianca.jpg     <- https://image.qwenlm.ai/generated-images/6b8caf32-56e7-46b7-8440-dd8e5abbe70e/_result.png
+epoca-5-gotico-fiammeggiante.jpg <- https://image.qwenlm.ai/generated-images/9bf81ec0-0fd5-4939-8515-9b1ba34cc0d6/_result.png
+epoca-6-crepuscolo-acciaio.jpg  <- https://image.qwenlm.ai/generated-images/dbb93332-4c7a-404b-9360-2d6e91ac2a80/_result.png
+anatomia-arnese-bianco.jpg      <- https://image.qwenlm.ai/generated-images/90fea5d3-4d51-4789-9ab5-0e7bfdbd7e80/_result.png
+bottega-del-forgiatore.jpg      <- https://image.qwenlm.ai/generated-images/993587a3-57a9-439b-86f2-e7d7146073c4/_result.png
+macro-maglia-di-anelli.jpg      <- https://image.qwenlm.ai/generated-images/29813111-b2ef-4b7a-955c-1493840a612a/_result.png
+giostra-dei-cavalieri.jpg       <- https://image.qwenlm.ai/generated-images/4f025810-98a0-4bea-81ae-8672b4e7a53a/_result.png
+
+NOTA SUL FORMATO: i file originali sono .png. Salvali pure con l'estensione
+che preferisci (.jpg o .png): l'importante è il NOME del file (la parte prima
+del punto). Il sito prova automaticamente sia "nome.jpg" sia "nome.png"
+prima di ripiegare sul link esterno. Quindi "epoca-1-eredita-di-roma.png"
+funziona esattamente come "epoca-1-eredita-di-roma.jpg".
+
+Una volta salvate, se usi GitHub, fai "Add file -> Upload files" e carica
+anche la cartella public/: le immagini entreranno nel repository e saranno
+al sicuro per sempre.

@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title Ferraria - Server locale
+title Vestire il Ferro - Server locale
 cd /d "%~dp0"
 
 where node >nul 2>nul

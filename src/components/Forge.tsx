@@ -1,5 +1,5 @@
 import { FORGE_STEPS, IMG } from "../data/content";
-import { Reveal, Rivets, SectionHead } from "../lib/ui";
+import { Reveal, Rivets, SafeImg, SectionHead } from "../lib/ui";
 
 export default function Forge() {
   return (
@@ -17,7 +17,7 @@ export default function Forge() {
                 <figure className="plate-frame">
                   <Rivets />
                   <div className="kenburns overflow-hidden">
-                    <img
+                    <SafeImg
                       src={IMG.workshop}
                       alt="Armaiolo del Quattrocento che martella una corazza rovente sull'incudine, scintille nella bottega scura"
                       loading="lazy"

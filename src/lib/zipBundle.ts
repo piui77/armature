@@ -18,7 +18,8 @@ const MODULES = glob(
     "../tsconfig.json",
     "../vite.config.js",
     "../README.md",
-    "../AVVIA FERRARIA.bat",
+    "../AVVIA VESTIRE IL FERRO.bat",
+    "../public/**/*.txt",
     "./**/*.{ts,tsx,css}",
   ],
   { query: "?raw", import: "default", eager: true }
@@ -37,7 +38,7 @@ export interface ZipInfo {
 
 export async function downloadProjectZip(): Promise<ZipInfo> {
   const zip = new JSZip();
-  const root = zip.folder("ferraria-armatura-medievale");
+  const root = zip.folder("vestire-il-ferro");
   if (!root) throw new Error("Impossibile creare l'archivio");
 
   let count = 0;
@@ -46,20 +47,23 @@ export async function downloadProjectZip(): Promise<ZipInfo> {
     count += 1;
   }
 
-  // Nota per chi apre l'archivio: le immagini restano online.
+  // Nota per chi apre l'archivio: come rendere le immagini permanenti.
   root.file(
     "LEGGIMI-IMMAGINI.txt",
     [
-      "FERRARIA — L'Evoluzione dell'Armatura Medievale",
-      "================================================",
+      "VESTIRE IL FERRO — L'Evoluzione dell'Armatura Medievale",
+      "=======================================================",
       "",
       "Per avviare il sito:",
       "  1. npm install",
       "  2. npm run dev  ->  apri http://localhost:5173",
       "",
-      "Le 11 tavole illustrate sono caricate da URL online",
-      "(vedi src/data/content.ts, oggetto IMG): per una copia",
-      "100% offline salvale in public/images/ e aggiorna gli indirizzi.",
+      "IMMAGINI: le 11 tavole sono caricate da un servizio esterno.",
+      "Per renderle PERMANENTI e indipendenti da quel servizio,",
+      "apri public/images/LEGGIMI.txt: trovi la tabella con i link",
+      "da cui salvare ogni immagine e il nome da darle. Una volta",
+      "salvate in public/images/, il sito le userà in automatico",
+      "(prova prima la copia locale, poi il link esterno).",
       "",
       "Buona forgia!",
     ].join("\n")
@@ -75,7 +79,7 @@ export async function downloadProjectZip(): Promise<ZipInfo> {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "ferraria-armatura-medievale.zip";
+  a.download = "vestire-il-ferro.zip";
   document.body.appendChild(a);
   a.click();
   a.remove();

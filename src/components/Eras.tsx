@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ERAS } from "../data/content";
-import { DiamondMark, Reveal, Rivets, SectionHead } from "../lib/ui";
+import { DiamondMark, Reveal, Rivets, SafeImg, SectionHead } from "../lib/ui";
 
 export default function Eras() {
   const [active, setActive] = useState(0);
@@ -97,7 +97,7 @@ export default function Eras() {
                     <figure className="plate-frame group">
                       <Rivets />
                       <div className="kenburns overflow-hidden">
-                        <img
+                        <SafeImg
                           src={e.image}
                           alt={e.alt}
                           loading="lazy"

@@ -1,7 +1,7 @@
 import EmberCanvas from "./EmberCanvas";
 import { IMG } from "../data/content";
 import { useScramble } from "../lib/hooks";
-import { DiamondMark, Rivets } from "../lib/ui";
+import { DiamondMark, Rivets, SafeImg } from "../lib/ui";
 
 export default function Hero() {
   const line1 = useScramble("DI FERRO", 300);
@@ -77,7 +77,7 @@ export default function Hero() {
           <figure className="plate-frame">
             <Rivets />
             <div className="kenburns overflow-hidden">
-              <img
+              <SafeImg
                 src={IMG.hero}
                 alt="Corazza gotica in acciaio lucidato con elmo chiuso, illuminata da braci di forgia"
                 className="block aspect-[4/3] w-full object-cover lg:aspect-[5/4]"

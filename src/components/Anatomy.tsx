@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IMG, PARTS } from "../data/content";
-import { Reveal, Rivets, SectionHead } from "../lib/ui";
+import { Reveal, Rivets, SafeImg, SectionHead } from "../lib/ui";
 
 export default function Anatomy() {
   const [selected, setSelected] = useState(0);
@@ -19,7 +19,7 @@ export default function Anatomy() {
             <figure className="plate-frame">
               <Rivets />
               <div className="relative overflow-hidden">
-                <img
+                <SafeImg
                   src={IMG.anatomy}
                   alt="Armatura gotica completa del Quattrocento, vista frontale, su fondo scuro"
                   loading="lazy"

@@ -109,7 +109,7 @@ export default function Glossary() {
               <a href="#top" className="group inline-flex items-center gap-3">
                 <Crest className="h-9 w-9 text-brass transition-transform duration-500 group-hover:rotate-[8deg]" />
                 <span className="font-display text-xl font-bold tracking-[0.22em] text-bone">
-                  FERRAR<span className="text-brass">IA</span>
+                  VESTIRE <span className="text-brass">IL FERRO</span>
                 </span>
               </a>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-mute">
