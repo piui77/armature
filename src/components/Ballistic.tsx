@@ -9,9 +9,10 @@ const STAGES: { key: "maglia" | "transizione" | "piastra"; label: string; sub: s
 ];
 
 function chipColor(verdict: string): string {
-  if (/cede|passa/i.test(verdict)) return "border-blood/70 bg-blood/10 text-[#d07a69]";
-  if (/regge|respinge|scivola/i.test(verdict)) return "border-brass/70 bg-brass/10 text-brasslight";
-  return "border-ember/60 bg-ember/10 text-[#e8a06a]";
+  if (/fuori tempo/i.test(verdict)) return "border-steel bg-iron/50 text-mute";
+  if (/limitata/i.test(verdict)) return "border-blood/70 bg-blood/10 text-[#d07a69]";
+  if (/elevata/i.test(verdict)) return "border-brass/70 bg-brass/10 text-brasslight";
+  return "border-ember/60 bg-ember/10 text-[#e8a06a]"; // protezione condizionata
 }
 
 function WeaponIcon({ id, className = "h-6 w-6" }: { id: string; className?: string }) {
@@ -107,7 +108,12 @@ export default function Ballistic() {
             <div key={weapon.id} className="num-swap">
               <p className="max-w-2xl text-base leading-relaxed text-mute md:text-lg">{weapon.desc}</p>
 
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+              <p className="mt-6 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-faint">
+                Scala di protezione · elevata — condizionata — limitata · il risultato dipende da arma, distanza, angolo,
+                qualità del materiale e zona colpita
+              </p>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-3">
                 {STAGES.map((stage) => {
                   const v = weapon.stages[stage.key];
                   return (
