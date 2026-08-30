@@ -419,22 +419,22 @@ export const FORGE_STEPS: ForgeStep[] = [
   {
     numeral: "I",
     title: "Il minerale",
-    text: "Limonite e ferro di palude nei forni a bloomery: ne esce un bloom spugnoso di ferro e scoria, da battere e ribattere finché le impurità non se ne vanno.",
+    text: "Minerali di ferro — fra cui limonite e altri ossidi, ricavati anche da giacimenti di palude — venivano ridotti nei forni a bloomery: ne esce un bloom spugnoso di ferro e scoria, da battere e ribattere finché le impurità non se ne vanno.",
   },
   {
     numeral: "II",
     title: "La forgia",
-    text: "Carbone di faggio e mantici a doppio mantice: a milleduecento gradi il bloom diventa billetta, poi barra, poi lamiera sottile quanto serve alla piastra.",
+    text: "Carbone di faggio e mantici a doppio mantice portano il fuoco alle temperature necessarie: il bloom veniva consolidato a colpi di martello, eliminando progressivamente scorie e impurità, fino a ottenere masse e barre di metallo lavorabile, da assottigliare poi in lamiera.",
   },
   {
     numeral: "III",
     title: "Lo sbalzo",
-    text: "Migliaia di colpi di martello su incudini e forme di legno: la piastra nasce piatta e si curva «in rilievo», senza giunti né saldature. È il gesto che distingue l'armaiolo dal fabbro.",
+    text: "Migliaia di colpi di martello su incudini e forme di legno: la piastra nasce piatta e si curva «in rilievo». La forma viene ottenuta prevalentemente a martello, con tecniche diverse secondo il tipo di pezzo. È il gesto che distingue l'armaiolo dal fabbro.",
   },
   {
     numeral: "IV",
     title: "La tempra",
-    text: "Riscaldata al rosso ciliegia e immersa in acqua od olio: è il segreto milanese, custodito per generazioni, che rende l'acciaio duro quanto basta da spezzare le frecce.",
+    text: "Il trattamento termico poteva modificare durezza e tenacità dell'acciaio. Le tecniche variavano secondo materiale, periodo e officina: non esiste un'unica ricetta applicabile a tutte le armature. Quel che è certo è che una buona tempra rendeva la piastra capace di reggere i colpi.",
   },
   {
     numeral: "V",
@@ -449,7 +449,7 @@ export const FORGE_STEPS: ForgeStep[] = [
   {
     numeral: "VII",
     title: "La prova",
-    text: "Il collaudo a fuoco: un colpo di balestra o d'archibugio a distanza ravvicinata. Se il petto regge, il bollo della bottega ne risponde — per sempre.",
+    text: "Il collaudo a fuoco: tra Cinque e Seicento la piastra poteva essere provata con un'arma da fuoco; il segno lasciato dal proiettile diventava il cosiddetto proof mark, garanzia di qualità. Se il petto reggeva, il bollo della bottega ne rispondeva.",
   },
 ];
 
