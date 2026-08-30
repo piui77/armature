@@ -123,9 +123,9 @@ export const ERAS: Era[] = [
     image: IMG.era4,
     alt: "Condottiero in armatura bianca milanese completa nella bottega dell'armaiolo",
     paragraphs: [
-      "Verso il 1420 il processo è compiuto: il cavaliere è chiuso da capo a piedi in un guscio d'acciaio lucidato a specchio — per questo si dice «armatura bianca», white harness. Milano ne è la capitale: le botteghe dei Missaglia esportano arnesi completi in ogni corte d'Europa, ciascuno firmato con il punzone della corona.",
+      "Verso il 1420 il processo è compiuto: il cavaliere è chiuso da capo a piedi in un guscio d'acciaio lucidato a specchio — per questo si dice «armatura bianca», white harness. Milano diventa uno dei principali centri europei della produzione: le botteghe dei Missaglia esportano arnesi completi in ogni corte d'Europa, e molti pezzi recano marchi di bottega e segni di riconoscimento dell'armaiolo.",
       "La forma è pura balistica: superfici bombate che deviano punta e colpo, spallaccio sinistro maggiorato per reggere la lancia, corazza con cresta mediana e resta. L'acciaio milanese, temprato con bagni di cui si custodisce il segreto, a distanza di battaglia respinge spesso le frecce dei longbow: gli arcieri imparano ad accorciare il tiro e a cercare giunture, ascelle e visiere.",
-      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano lotti interi per gli eserciti; le corti europee mandano sarti con le misure dei propri gentiluomini, perché l'arnese si cuce addosso come un vestito. Per la prima volta la protezione è prodotta in serie organizzata — componenti standardizzati, divisione del lavoro, consegne a lotti — eppure ogni pezzo resta rifinito a mano.",
+      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano lotti interi per gli eserciti; le corti europee mandano sarti con le misure dei propri gentiluomini, perché l'arnese si cuce addosso come un vestito. La protezione può ormai essere prodotta anche in serie organizzata — componenti standardizzati, divisione del lavoro, consegne a lotti per le grandi commesse militari — accanto alla produzione su misura per la clientela più ricca: eppure ogni pezzo resta rifinito a mano.",
     ],
     changes: [
       "L'arnese completo è compiuto",
@@ -144,7 +144,7 @@ export const ERAS: Era[] = [
       "Guanti d'arme snodati",
       "Barda del cavallo",
     ],
-    note: "Il punzone dei Missaglia è fra i primi marchi di fabbrica della storia europea.",
+    note: "I marchi dei Missaglia sono fra i più riconoscibili esempi di identificazione di bottega nella produzione europea di armature.",
   },
   {
     numeral: "V",
@@ -153,19 +153,19 @@ export const ERAS: Era[] = [
     image: IMG.era5,
     alt: "Armatura gotica tedesca scanalata illuminata da braci",
     paragraphs: [
-      "Le botteghe di Norimberga, Augusta e Innsbruck rispondono a Milano con uno stile opposto: il gotico tedesco. Ogni piastra è percorsa da scanalature che funzionano come travi, più rigide a parità di peso; i bordi si accendono di cuspidi e ventagli, i sabatoni si allargano «a zampa d'orso», l'acciaio brunito alterna luci e ombre come una cattedrale.",
+      "Le botteghe di Norimberga, Augusta e Innsbruck rispondono a Milano con uno stile opposto: il gotico tedesco. Ogni piastra è percorsa da scanalature che funzionano come travi, aumentandone la rigidità senza appesantirla; i bordi si accendono di cuspidi e ventagli, i sabatoni si allargano «a zampa d'orso», l'acciaio brunito alterna luci e ombre come una cattedrale.",
       "È anche l'età d'oro del torneo: nascono armature dedicate — lo Stechzeug per la giostra, pesantissimo e quasi cieco, il Rennzeug per la corsa — mentre sul campo la corazza leggera del fante annuncia già il futuro. Massimiliano I ne fa un manifesto: l'armatura come arte di Stato.",
-      "I maestri del tardo Quattrocento firmano di rado per esteso, ma imprimono i marchi di bottega e si riconoscono dallo stile: le creste affilate di Norimberga contro le rotondità lisce di Milano diventano due scuole che discutono in acciaio. Nasce il collezionismo: Massimiliano raduna a Innsbruck un'armeria che è un manifesto d'impero, e ogni principe ne vuole una.",
+      "I maestri del tardo Quattrocento firmano di rado per esteso, ma imprimono i marchi di bottega e si riconoscono dallo stile: le creste affilate di Norimberga e le rotondità lisce di Milano diventano due linguaggi differenti, destinati però a influenzarsi e contaminarsi. Nasce il collezionismo: Massimiliano raduna a Innsbruck un'armeria che è un manifesto d'impero, e ogni principe ne vuole una.",
     ],
     changes: [
       "Le scanalature irrigidiscono la lastra",
       "I bordi a spigolo deviano la punta",
       "Il torneo ha armature proprie",
-      "Due scuole: Milano contro Germania",
+      "Due scuole che si influenzano",
     ],
     context: {
       label: "c. 1486 · Innsbruck",
-      text: "Massimiliano apre la sua armeria di corte: l'armatura scanalata diventa lo stile dell'Impero e il dono più ambito fra i principi.",
+      text: "Massimiliano I fa dell'armatura un manifesto d'impero: lo stile scanalato diventa il dono più ambito fra i principi.",
     },
     pieces: [
       "Armatura scanalata",
