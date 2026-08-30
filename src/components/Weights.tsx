@@ -8,6 +8,7 @@ function BarRow({
   label,
   sub,
   kg,
+  range,
   delay,
   inView,
   tone,
@@ -15,6 +16,7 @@ function BarRow({
   label: string;
   sub: string;
   kg: number;
+  range: string;
   delay: number;
   inView: boolean;
   tone: "brass" | "steel";
@@ -26,7 +28,7 @@ function BarRow({
           {label}
           <span className="ml-3 text-[0.64rem] font-normal tracking-[0.2em] text-faint">{sub}</span>
         </p>
-        <p className="font-display text-lg font-black tabular-nums text-brass">{kg} kg</p>
+        <p className="font-display text-lg font-black tabular-nums text-brass">{range}</p>
       </div>
       <div className="h-2.5 w-full border border-iron bg-ink">
         <div
@@ -75,7 +77,11 @@ export default function Weights() {
             <Reveal>
               <div ref={ref} className="space-y-7 border border-iron bg-ink/40 p-7 md:p-10">
                 <p className="text-[0.68rem] font-semibold uppercase tracking-[0.3em] text-faint">
-                  Peso dell'armamento completo · scala 0–45 kg
+                  Ordini di grandezza del peso · scala indicativa 0–45 kg
+                </p>
+                <p className="-mt-3 text-xs italic leading-relaxed text-faint">
+                  I pesi variano sensibilmente secondo epoca, esemplare e destinazione d'uso: qui contano gli ordini di
+                  grandezza, non il chilo in più o in meno.
                 </p>
                 {ARMOR_WEIGHTS.map((w, i) => (
                   <BarRow
@@ -83,6 +89,7 @@ export default function Weights() {
                     label={w.label}
                     sub={w.sub}
                     kg={w.kg}
+                    range={w.range}
                     delay={i * 130}
                     inView={inView}
                     tone="brass"
@@ -96,12 +103,13 @@ export default function Weights() {
                 </div>
 
                 {COMPARE_WEIGHTS.map((w, i) => (
-                  <BarRow key={w.label} label={w.label} sub={w.sub} kg={w.kg} delay={600 + i * 130} inView={inView} tone="steel" />
+                  <BarRow key={w.label} label={w.label} sub={w.sub} kg={w.kg} range={w.range} delay={600 + i * 130} inView={inView} tone="steel" />
                 ))}
 
                 <p className="border-t border-iron pt-5 text-sm italic leading-relaxed text-faint">
                   Lo Stechzeug da giostra era un attrezzo sportivo, non da guerra: quasi cieco, pesantissimo, pensato per
-                  un solo colpo di lancia — e per non far cadere mai chi lo portava.
+                  un solo colpo di lancia — e per non far cadere mai chi lo portava. Il peso, infatti, non indica la
+                  qualità: un'armatura da torneo è progettata per uno specifico tipo di combattimento, non per il campo.
                 </p>
               </div>
             </Reveal>

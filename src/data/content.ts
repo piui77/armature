@@ -391,21 +391,22 @@ export interface WeightRow {
   label: string;
   sub: string;
   kg: number;
+  range: string;
   notable?: boolean;
 }
 
 export const ARMOR_WEIGHTS: WeightRow[] = [
-  { label: "Usbergo di maglia", sub: "XII secolo", kg: 12 },
-  { label: "Armamento del cavaliere", sub: "XIII secolo", kg: 20 },
-  { label: "Armatura bianca milanese", sub: "circa 1450", kg: 27 },
-  { label: "Gotica da campo", sub: "circa 1490", kg: 28 },
-  { label: "Massimiliana", sub: "circa 1525", kg: 28 },
-  { label: "Stechzeug da giostra", sub: "circa 1510", kg: 42, notable: true },
+  { label: "Usbergo di maglia", sub: "XII secolo", kg: 12, range: "~10–15 kg" },
+  { label: "Armamento del cavaliere", sub: "XIII secolo", kg: 18, range: "molto variabile" },
+  { label: "Armatura bianca milanese", sub: "circa 1450", kg: 24, range: "~20–27 kg" },
+  { label: "Gotica da campo", sub: "circa 1490", kg: 25, range: "~20–30 kg" },
+  { label: "Massimiliana", sub: "circa 1525", kg: 28, range: "~25–30 kg" },
+  { label: "Stechzeug da giostra", sub: "circa 1510", kg: 42, range: "oltre 40 kg", notable: true },
 ];
 
 export const COMPARE_WEIGHTS: WeightRow[] = [
-  { label: "Pompiere in tenuta moderna", sub: "oggi", kg: 25 },
-  { label: "Soldato moderno equipaggiato", sub: "oggi", kg: 35 },
+  { label: "Pompiere in tenuta moderna", sub: "oggi", kg: 25, range: "~20–30 kg" },
+  { label: "Soldato moderno equipaggiato", sub: "oggi", kg: 35, range: "~30–40 kg" },
 ];
 
 export interface ForgeStep {
