@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Anteprima · Sei elmi ridisegnati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0f0d0a;
+    --coal: #171410;
+    --iron: #262019;
+    --steel: #3a3227;
+    --bone: #ece3cf;
+    --mute: #a89e88;
+    --faint: #776e5a;
+    --brass: #c9a24b;
+    --brasslight: #eccf7e;
+    --void: #0d0b08;
+    --steelbase: #2b251d;
+    --steellight: #41382b;
+    --steeldark: #191510;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--bone);
+    font-family: "EB Garamond", Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  /* sfondo ambientale */
+  body::before {
+    content: "";
+    position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(60vh 60vh at 85% -10%, rgba(201,162,75,0.07), transparent 60%),
+      radial-gradient(70vh 70vh at -10% 110%, rgba(217,111,50,0.06), transparent 60%);
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0; z-index: 50; pointer-events: none;
+    opacity: 0.05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 64px 24px 96px; }
+
+  header { margin-bottom: 56px; }
+  .kicker {
+    display: flex; align-items: center; gap: 14px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.34em; text-transform: uppercase; color: var(--brass);
+  }
+  .kicker::before { content: ""; width: 42px; height: 1px; background: var(--brass); }
+  h1 {
+    font-family: "Cinzel", Georgia, serif;
+    font-weight: 900;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.02;
+    margin-top: 20px;
+    letter-spacing: -0.01em;
+  }
+  h1 em { font-style: normal; color: var(--brass); }
+  .lede {
+    margin-top: 22px; max-width: 62ch;
+    font-size: 1.12rem; line-height: 1.65; color: var(--mute);
+  }
+  .badge {
+    display: inline-block; margin-top: 18px;
+    border: 1px solid var(--brass); color: var(--brasslight);
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase;
+    padding: 8px 16px; transform: rotate(-1.5deg);
+  }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 26px; }
+
+  .card {
+    position: relative;
+    border: 1px solid var(--steel);
+    background: linear-gradient(160deg, #1b1712, #12100c);
+    padding: 14px 14px 22px;
+    opacity: 0; transform: translateY(26px);
+    animation: rise 0.8s cubic-bezier(0.22,1,0.36,1) forwards;
+    transition: border-color 0.4s, transform 0.4s cubic-bezier(0.22,1,0.36,1);
+  }
+  .card:nth-child(1) { animation-delay: 0.05s; }
+  .card:nth-child(2) { animation-delay: 0.13s; }
+  .card:nth-child(3) { animation-delay: 0.21s; }
+  .card:nth-child(4) { animation-delay: 0.29s; }
+  .card:nth-child(5) { animation-delay: 0.37s; }
+  .card:nth-child(6) { animation-delay: 0.45s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .card:hover { border-color: rgba(201,162,75,0.55); transform: translateY(-4px); }
+  .card .rivet {
+    position: absolute; width: 7px; height: 7px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #eccf7e, #8a6f2c 60%, #4a3a14);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  }
+  .r1 { top: 6px; left: 6px; } .r2 { top: 6px; right: 6px; }
+  .r3 { bottom: 6px; left: 6px; } .r4 { bottom: 6px; right: 6px; }
+
+  .art {
+    background:
+      radial-gradient(60% 55% at 50% 42%, rgba(201,162,75,0.10), transparent 70%),
+      #14110d;
+    border: 1px solid rgba(58,50,39,0.6);
+    padding: 10px 18px 2px;
+  }
+  .art svg { display: block; width: 100%; height: auto; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1); }
+  .card:hover .art svg { transform: scale(1.05); }
+
+  .num {
+    position: absolute; top: 22px; right: 24px;
+    font-family: "Cinzel", serif; font-weight: 900; font-size: 2.6rem; line-height: 1;
+    color: transparent; -webkit-text-stroke: 1px rgba(201,162,75,0.35);
+  }
+  .meta { padding: 18px 10px 0; }
+  .meta h2 {
+    font-family: "Cinzel", serif; font-weight: 700; font-size: 1.28rem;
+    letter-spacing: 0.02em; color: var(--bone);
+  }
+  .meta .period {
+    margin-top: 4px;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--brass);
+  }
+  .meta p { margin-top: 12px; font-size: 1rem; line-height: 1.55; color: var(--mute); }
+
+  /* stili comuni dei disegni */
+  .b { fill: var(--steelbase); stroke: var(--brass); stroke-width: 1.6; stroke-linejoin: round; }
+  .shade { fill: var(--steeldark); opacity: 0.85; }
+  .light { fill: var(--steellight); opacity: 0.9; }
+  .ln { fill: none; stroke: var(--brass); stroke-width: 1.1; opacity: 0.85; }
+  .ln2 { fill: none; stroke: #6f5c33; stroke-width: 1; opacity: 0.8; }
+  .void { fill: var(--void); }
+  .dot { fill: var(--brasslight); }
+  .dotd { fill: #8a6f2c; }
+
+  footer {
+    margin-top: 64px; border-top: 1px solid var(--iron); padding-top: 28px;
+    display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: baseline;
+    font-size: 1.02rem; color: var(--mute);
+  }
+  footer strong { color: var(--brasslight); font-family: "Cinzel", serif; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; }
+  @media (prefers-reduced-motion: reduce) {
+    .card { animation: none; opacity: 1; transform: none; transition: none; }
+    .card:hover .art svg { transform: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="kicker">Anteprima · non ancora nel sito</p>
+    <h1>Sei elmi, <em>ridisegnati</em></h1>
+    <p class="lede">
+      Le sagome attuali sono piatti silhouettes a una via. Queste nuove tavole hanno profilo anatomico,
+      visiere e parti mobili, ombre e luci sul metallo, rivetti e fessure di vista — sempre nello stesso
+      linguaggio grafico del sito (ferro scuro, tratto d'ottone).
+    </p>
+    <span class="badge">Tavola di prova · in attesa del tuo giudizio</span>
+  </header>
+
+  <div class="grid">
+
+    <!-- 1 · NASALE -->
+    <article class="card">
+      <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+      <span class="num">I</span>
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Elmo a nasale">
+          <!-- cupola conica -->
+          <path class="b" d="M29 70 C29 43 39 21 52 19 C65 21 75 43 75 70 L75 76 L29 76 Z"/>
+          <path class="light" d="M35 68 C35 45 43 27 52 21 C47 29 41 47 41 68 Z"/>
+          <path class="shade" d="M62 24 C70 32 74 50 74 70 L74 76 L66 76 C67 56 66 36 62 24 Z"/>
+          <!-- costola mediana -->
+          <path class="ln" d="M52 19 L52 70"/>
+          <!-- fascia frontale -->
+          <path class="b" d="M27 70 L77 70 L77 79 L27 79 Z"/>
+          <circle class="dot" cx="33" cy="74.5" r="1.3"/>
+          <circle class="dotd" cx="41" cy="74.5" r="1.3"/>
+          <circle class="dot" cx="49" cy="74.5" r="1.3"/>
+          <circle class="dotd" cx="57" cy="74.5" r="1.3"/>
+          <circle class="dot" cx="65" cy="74.5" r="1.3"/>
+          <circle class="dotd" cx="72" cy="74.5" r="1.3"/>
+          <!-- nasale -->
+          <path class="b" d="M31 79 L31 95 C31 97 33 98 36 98 L38 98 C41 98 43 97 43 95 L43 79 Z"/>
+          <path class="ln2" d="M37 80 L37 96"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <h2>Elmo a nasale</h2>
+        <p class="period">900 – 1100</p>
+        <p>Cupola conica a bande con costola mediana, fascia frontale rivettata e barra nasale arrotondata.</p>
+      </div>
+    </article>
+
+    <!-- 2 · PENTOLA -->
+    <article class="card">
+      <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+      <span class="num">II</span>
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Elmo a pentola">
+          <path class="b" d="M31 92 L31 27 C31 23 34 20 38 20 L68 20 C72 20 75 23 75 27 L75 92 Z"/>
+          <path class="light" d="M31 30 L31 92 L38 92 L38 20 C34 20 31 23 31 27 Z"/>
+          <path class="shade" d="M66 20 L68 20 C72 20 75 23 75 27 L75 92 L66 92 Z"/>
+          <!-- piastra sommitale -->
+          <path class="ln" d="M31 33 L75 33"/>
+          <!-- fessura di vista -->
+          <path class="void" d="M31 42 L57 42 L57 47 L31 47 Z"/>
+          <!-- croce -->
+          <path class="ln" d="M43 24 L43 60"/>
+          <path class="ln" d="M31 44 L57 44" style="opacity:0"/>
+          <!-- fori di respiro -->
+          <circle class="dotd" cx="36" cy="58" r="1.2"/><circle class="dotd" cx="42" cy="58" r="1.2"/>
+          <circle class="dotd" cx="48" cy="58" r="1.2"/><circle class="dotd" cx="36" cy="64" r="1.2"/>
+          <circle class="dotd" cx="42" cy="64" r="1.2"/><circle class="dotd" cx="48" cy="64" r="1.2"/>
+          <circle class="dotd" cx="36" cy="70" r="1.2"/><circle class="dotd" cx="42" cy="70" r="1.2"/>
+          <circle class="dotd" cx="48" cy="70" r="1.2"/>
+          <!-- giunti di piastra e rivetti -->
+          <path class="ln2" d="M57 20 L57 92"/>
+          <path class="ln2" d="M31 80 L75 80"/>
+          <circle class="dot" cx="53" cy="37" r="1.2"/><circle class="dot" cx="53" cy="52" r="1.2"/>
+          <circle class="dot" cx="53" cy="66" r="1.2"/><circle class="dot" cx="53" cy="86" r="1.2"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <h2>Elmo a pentola</h2>
+        <p class="period">1200 – 1350</p>
+        <p>Cilindro d'acciaio con piastra sommitale, croce sul fronte, fessura di vista e griglia di fori di respiro.</p>
+      </div>
+    </article>
+
+    <!-- 3 · BACINETTO -->
+    <article class="card">
+      <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+      <span class="num">III</span>
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Bacinetto con camaglio">
+          <!-- camaglio di maglia -->
+          <path class="b" d="M60 60 C66 70 74 78 84 82 L80 92 C68 88 57 78 52 66 Z"/>
+          <circle class="dotd" cx="62" cy="70" r="1.1"/><circle class="dotd" cx="68" cy="75" r="1.1"/>
+          <circle class="dotd" cx="74" cy="80" r="1.1"/><circle class="dotd" cx="60" cy="77" r="1.1"/>
+          <circle class="dotd" cx="66" cy="82" r="1.1"/><circle class="dotd" cx="72" cy="86" r="1.1"/>
+          <circle class="dotd" cx="78" cy="84" r="1.1"/><circle class="dotd" cx="64" cy="63" r="1.1"/>
+          <!-- cupola appuntita -->
+          <path class="b" d="M30 62 C30 39 40 19 55 17 C70 19 80 41 80 60 L80 64 L30 64 Z"/>
+          <path class="light" d="M36 60 C36 42 44 25 55 19 C49 27 43 44 43 60 Z"/>
+          <path class="shade" d="M66 22 C74 30 79 46 79 60 L79 64 L70 64 C71 48 70 32 66 22 Z"/>
+          <!-- visiera a muso (hounskull) -->
+          <path class="b" d="M30 42 L13 53 L17 62 L30 64 Z"/>
+          <path class="void" d="M17 52 L30 47 L30 51 L18 55 Z"/>
+          <path class="ln2" d="M15 56 L29 60"/>
+          <!-- perno della visiera -->
+          <circle class="dot" cx="34" cy="45" r="1.6"/>
+          <!-- bordo e rivetti -->
+          <path class="ln2" d="M30 64 L80 64"/>
+          <circle class="dotd" cx="36" cy="60" r="1.1"/><circle class="dotd" cx="46" cy="60" r="1.1"/>
+          <circle class="dotd" cx="56" cy="60" r="1.1"/><circle class="dotd" cx="66" cy="60" r="1.1"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <h2>Bacinetto</h2>
+        <p class="period">1300 – 1400</p>
+        <p>Cupola appuntita con visiera «a muso» incernierata e camaglio di maglia che scende sulla nuca.</p>
+      </div>
+    </article>
+
+    <!-- 4 · ARMETTO -->
+    <article class="card">
+      <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+      <span class="num">IV</span>
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Armetto">
+          <!-- barbozza / bevor -->
+          <path class="b" d="M40 72 L40 82 C40 88 47 91 55 91 C63 91 68 87 68 80 L68 72 Z"/>
+          <path class="ln2" d="M40 78 L68 78"/>
+          <!-- calotta globulare -->
+          <path class="b" d="M34 58 C34 33 44 17 56 17 C70 17 80 33 80 53 C80 62 76 70 67 74 L45 74 C38 70 34 65 34 58 Z"/>
+          <path class="light" d="M40 56 C40 37 47 23 56 19 C50 26 45 40 45 56 C45 62 47 68 50 72 L45 72 C41 68 40 62 40 56 Z"/>
+          <path class="shade" d="M68 22 C76 30 80 42 80 53 C80 62 76 70 67 74 L60 74 C68 68 72 60 72 50 C72 39 71 29 68 22 Z"/>
+          <!-- fessura di vista -->
+          <path class="void" d="M36 45 C44 42 52 42 59 46 L59 50 C52 47 44 47 36 49 Z"/>
+          <!-- bordo della visiera -->
+          <path class="ln" d="M36 56 C45 59 56 59 64 53"/>
+          <path class="ln2" d="M38 36 C46 32 56 32 63 37"/>
+          <!-- perni e rivetti -->
+          <circle class="dot" cx="68" cy="47" r="1.7"/>
+          <circle class="dotd" cx="62" cy="62" r="1.2"/><circle class="dotd" cx="55" cy="64" r="1.2"/>
+          <circle class="dotd" cx="48" cy="63" r="1.2"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <h2>Armetto</h2>
+        <p class="period">1420 – 1520</p>
+        <p>Calotta aderente che fascia interamente il capo: visiera a fessura, perno laterale e barbozza separata.</p>
+      </div>
+    </article>
+
+    <!-- 5 · CELATA -->
+    <article class="card">
+      <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+      <span class="num">V</span>
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Celata">
+          <!-- barbozza separata -->
+          <path class="b" d="M24 62 C24 74 30 83 41 88 L54 90 L54 79 C44 77 35 70 33 61 Z"/>
+          <path class="ln2" d="M30 66 C33 74 40 80 48 83"/>
+          <!-- calotta con lunga coda -->
+          <path class="b" d="M24 52 C24 31 38 15 54 15 C70 15 81 27 84 42 L93 53 C95 57 92 61 88 58 L82 53 C82 61 76 66 67 66 L38 66 C30 64 24 59 24 52 Z"/>
+          <path class="light" d="M30 50 C30 34 40 20 54 17 C45 23 37 36 37 50 C37 56 39 61 43 64 L38 64 C32 62 30 57 30 50 Z"/>
+          <path class="shade" d="M66 17 C76 22 82 31 84 42 L91 51 C88 48 84 45 80 44 C80 34 75 24 66 17 Z"/>
+          <!-- cresta mediana -->
+          <path class="ln" d="M30 34 C42 20 62 18 79 33"/>
+          <!-- fessura di vista -->
+          <path class="void" d="M26 45 L44 41 L44 45 L27 49 Z"/>
+          <!-- bordo visiera e perno -->
+          <path class="ln2" d="M26 52 L44 49"/>
+          <circle class="dot" cx="58" cy="49" r="1.6"/>
+          <!-- rivetti del bordo -->
+          <circle class="dotd" cx="34" cy="61" r="1.1"/><circle class="dotd" cx="44" cy="62" r="1.1"/>
+          <circle class="dotd" cx="54" cy="62" r="1.1"/><circle class="dotd" cx="64" cy="60" r="1.1"/>
+          <circle class="dotd" cx="73" cy="56" r="1.1"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <h2>Celata</h2>
+        <p class="period">1440 – 1500</p>
+        <p>Calotta arretrata con la lunga coda che protegge la nuca, fessura di vista e barbozza separata per la gola.</p>
+      </div>
+    </article>
+
+    <!-- 6 · BORGOGNOTTA -->
+    <article class="card">
+      <span class="rivet r1"></span><span class="rivet r2"></span><span class="rivet r3"></span><span class="rivet r4"></span>
+      <span class="num">VI</span>
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="Borgognotta">
+          <!-- ventaglia / guardanuca -->
+          <path class="b" d="M70 62 C77 67 82 74 83 83 L74 85 C72 76 69 69 65 63 Z"/>
+          <path class="ln2" d="M69 66 C74 71 78 77 79 82"/>
+          <!-- guancia -->
+          <path class="b" d="M37 62 C34 74 37 85 45 92 L52 92 C47 84 45 73 46 62 Z"/>
+          <path class="ln2" d="M42 66 C41 75 42 83 46 89"/>
+          <circle class="dot" cx="45" cy="68" r="1.3"/>
+          <!-- calotta con cresta -->
+          <path class="b" d="M30 52 C30 31 41 15 56 15 C70 15 80 29 80 49 L80 57 C80 61 76 63 72 63 L37 63 C32 61 30 57 30 52 Z"/>
+          <path class="b" d="M42 17 C48 11 62 11 69 19 L66 26 C60 19 50 19 45 24 Z"/>
+          <path class="light" d="M35 50 C35 34 43 21 54 17 C46 24 40 36 40 50 C40 55 41 59 43 62 L37 62 C35 59 35 55 35 50 Z"/>
+          <path class="shade" d="M67 20 C75 26 80 37 80 49 L80 57 C80 61 76 63 72 63 L66 63 C71 60 73 55 73 48 C73 37 71 27 67 20 Z"/>
+          <!-- tesa frontale -->
+          <path class="b" d="M30 43 L17 49 C15 51 17 55 21 54 L32 51 Z"/>
+          <circle class="dotd" cx="24" cy="50.5" r="1.1"/><circle class="dotd" cx="29" cy="49" r="1.1"/>
+          <!-- apertura del volto -->
+          <path class="void" d="M31 52 C33 58 37 61 42 62 L37 62 C33 60 31 56 31 52 Z"/>
+          <!-- rivetti della cresta -->
+          <circle class="dotd" cx="50" cy="17" r="1.1"/><circle class="dotd" cx="57" cy="16.5" r="1.1"/>
+          <circle class="dotd" cx="63" cy="19" r="1.1"/>
+        </svg>
+      </div>
+      <div class="meta">
+        <h2>Borgognotta</h2>
+        <p class="period">1520 – 1620</p>
+        <p>Volto scoperto sotto la tesa, cresta rilevata sulla calotta, guance articolate e ventaglia sulla nuca.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <footer>
+    <div>
+      <strong>Come procedere</strong>
+      <p style="margin-top:8px">Se ti piacciono, dimmelo e sostituisco le sagome attuali nel sito (stessi testi, stesse schede).<br/>
+      Se qualche elmo non ti convince, dimmi quale e cosa cambieresti: lo ridisegno.</p>
+    </div>
+    <span style="font-size:10.5px; letter-spacing:0.26em; text-transform:uppercase; color:var(--faint)">Tavola di prova · MMXXVI</span>
+  </footer>
+
+</div>
+</body>
+</html>
