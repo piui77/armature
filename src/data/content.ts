@@ -33,15 +33,15 @@ export const ERAS: Era[] = [
     image: IMG.era1,
     alt: "Guerriero germanico con spangenhelm e usbergo corto nella nebbia",
     paragraphs: [
-      "Quando l'Impero cade, la sua arte di vestire il soldato non muore. La lorica hamata — la maglia di anelli romana — passa di mano in mano: riparata, ritemprata, contesa. Per secoli resterà il tesoro di guerra per eccellenza: negli inventari e nei testamenti dell'élite carolingia la maglia compare fra i beni militari di maggior valore, citata accanto alle terre.",
-      "Il guerriero dell'alto medioevo combatte nel seguito del signore, a piedi o a cavallo: spangenhelm costruiti con bande metalliche e piastre rivettate, scudo rotondo di tiglio con umbone di ferro, lancia e spada a una mano. La protezione completa resta privilegio di pochissimi; per la maggioranza degli uomini ci sono cuoio, legno e coraggio.",
-      "Eppure già in questa essenzialità qualcosa ribolle: i capitolari carolingi impongono a ogni uomo libero di possedere armi e protezione secondo il proprio censo, mentre le officine dei centri signorili, urbani e monastici conservano e trasformano le tecniche metallurgiche ereditate dall'antichità. L'armatura non è ancora moda né casta: è sopravvivenza, tramandata di padre in figlio come la terra.",
+      "Quando l'Impero cade, molte delle sue tradizioni militari non scompaiono. La lorica hamata — la maglia di anelli di tradizione romana — continua ad avere un ruolo nell'armamento dell'Europa altomedievale, accanto a forme di protezione sviluppate localmente. Per secoli la maglia resterà una delle principali protezioni dei guerrieri meglio equipaggiati, costosa e laboriosa da produrre, riparare e mantenere.",
+      "Il guerriero dell'alto medioevo combatte nel seguito del signore, a piedi o a cavallo: spangenhelm costruiti con bande metalliche e piastre rivettate, scudo rotondo di tiglio con umbone di ferro, lancia e spada a una mano. L'equipaggiamento più completo e costoso resta privilegio di una minoranza; per molti uomini le protezioni erano più limitate e potevano comprendere scudi, elmi e, secondo disponibilità e contesto, protezioni di maglia o scaglie.",
+      "Eppure già in questa essenzialità qualcosa ribolle: i capitolari carolingi regolano il servizio militare e l'equipaggiamento richiesto secondo lo status e le risorse degli uomini chiamati alle armi, mentre le officine e le attività metallurgiche dell'epoca conservano e trasformano tecniche di lavorazione del metallo ereditate dall'antichità e sviluppate nel nuovo contesto medievale. L'armatura non è ancora moda né casta: è sopravvivenza, tramandata di padre in figlio come la terra.",
     ],
     changes: [
       "La lorica segmentata esce dall'uso comune",
-      "La maglia ribattuta diventa tesoro",
+      "La maglia resta una protezione di grande valore",
       "Il nasale protegge il volto",
-      "La cavalleria pesante si organizza",
+      "La cavalleria montata acquista crescente importanza",
     ],
     context: {
       label: "1066 · Hastings",
@@ -49,12 +49,12 @@ export const ERAS: Era[] = [
     },
     pieces: [
       "Spangenhelm a bande e piastre",
-      "Usbergo corto di anelli ribattuti",
+      "Camicia di maglia (usbergo)",
       "Scudo rotondo umbonato",
       "Spada a una mano",
       "Sax (scramasax)",
     ],
-    note: "Un usbergo poteva costare quanto una fattoria: si ereditava, si citava nei testamenti, si pagava come dote.",
+    note: "Un usbergo richiedeva una grande quantità di lavoro e di metallo ed era quindi un equipaggiamento costoso, soprattutto per chi disponeva di risorse limitate.",
   },
   {
     numeral: "II",
