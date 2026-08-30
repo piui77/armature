@@ -225,7 +225,7 @@ export const WEAPONS: Weapon[] = [
     cat: "contundenti",
     period: "XIII–XV sec.",
     line: "Lo snodo porta il colpo dove la difesa non guarda.",
-    desc: "Un manico, una catena, una testa chiodata: il colpo arriva dove la parata non guarda. Arma di fanteria soprattutto, con versioni corte da cavallo. Difficile da parare, difficile anche da controllare: chi lo usa lo sa.",
+    desc: "Un manico, una catena, una testa chiodata: il colpo arriva dove la parata non guarda. Sotto questo nome convivono forme diverse, dai flagelli militari alle mazze articolate; arma soprattutto di fanteria, con versioni corte da cavallo. Difficile da parare, difficile anche da controllare: chi lo usa lo sa.",
     stats: [
       { label: "Lunghezza", value: "60–100 cm" },
       { label: "Peso", value: "1,5–3 kg" },
