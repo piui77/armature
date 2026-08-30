@@ -49,11 +49,11 @@ export const WEAPONS: Weapon[] = [
     period: "1300 – 1450",
     desc: "Il grande arco di tasso inglese, dalla potenza temibile: una pioggia di frecce scagliate in alto, a cercare cavalli, spalle scoperte e ogni varco dell'arnese.",
     stages: {
-      maglia: { verdict: "Protezione limitata", note: "Le punte da guerra, comprese le forme sottili dette bodkin, possono aprire la maglia leggera: lo raccontano Crécy e Poitiers." },
+      maglia: { verdict: "Protezione limitata", note: "Le frecce con punte da guerra potevano mettere in difficoltà la maglia e colpire le zone meno protette; l'efficacia dipendeva dalla distanza, dalla punta e dalle caratteristiche della protezione." },
       transizione: { verdict: "Protezione condizionata", note: "Le lamine del torso reggono; il tiro impara a cercare giunti, gambe e cavalcature." },
       piastra: { verdict: "Protezione condizionata", note: "Superfici curve e piastre di buona qualità deviano o arrestano molti dardi; restano vulnerabili giunti, aperture e zone meno protette." },
     },
-    response: "Superfici bombate e tempra dura: la risposta al longbow si vede ancora nei pettorali sopravvissuti.",
+    response: "Superfici curve e piastre di buona qualità contribuiscono a migliorare la resistenza dell'armatura contro i proiettili, pur lasciando vulnerabili giunti e aperture.",
   },
   {
     id: "mazza",
@@ -73,17 +73,17 @@ export const WEAPONS: Weapon[] = [
     period: "1450 – 1550",
     desc: "Lunghe aste di frassino nei quadrati di centinaia di uomini: non è un'arma, è una macchina che nessun ferro individuale può sfidare in campo aperto.",
     stages: {
-      maglia: { verdict: "Fuori tempo", note: "Quando la picca domina, la maglia è già un ricordo — ma il principio è lo stesso: la punta lunga vince sugli anelli." },
+      maglia: { verdict: "Fuori tempo", note: "Quando le grandi formazioni di picchieri acquistano importanza, la maglia non è più la principale protezione dei combattenti pesantemente armati, mentre la punta lunga rende particolarmente importante la protezione delle parti vulnerabili." },
       transizione: { verdict: "Protezione limitata", note: "Le formazioni di picchieri rendono sempre più difficile alla cavalleria ottenere il contatto: a Nancy, nel 1477, l'urto borgognone si spezza contro i quadrati svizzeri." },
-      piastra: { verdict: "Protezione condizionata", note: "In mischia la picca passa dove la piastra finisce: viso, inguine, cavallo. L'arnese completo non basta più." },
+      piastra: { verdict: "Protezione condizionata", note: "In mischia la picca può sfruttare le aperture dell'armatura e le zone meno protette, mentre l'armatura completa continua a offrire una protezione significativa." },
     },
-    response: "Nessun ferro individuale regge: nasce il corsaletto del fante e l'armatura si fa mezza armatura.",
+    response: "Le nuove tattiche della fanteria favoriscono equipaggiamenti più funzionali e relativamente leggeri, fra cui corsaletti e altre forme di protezione parziale.",
   },
   {
     id: "archibugio",
     name: "Archibugio",
     period: "1500 – 1600",
-    desc: "Un proiettile di piombo lanciato da un'arma da fuoco portatile: un'energia che cambia il rapporto fra protezione e mobilità, e l'arma più economica da mettere in mano a un contadino.",
+    desc: "Un proiettile di piombo lanciato da un'arma da fuoco portatile: un'energia che modifica progressivamente il rapporto fra protezione, mobilità e potenza di fuoco.",
     stages: {
       maglia: { verdict: "Fuori tempo", note: "La maglia esce di scena prima ancora del duello: non era la sua guerra." },
       transizione: { verdict: "Fuori tempo", note: "Quando l'archibugio matura, la grande transizione è già compiuta da un secolo." },
