@@ -254,7 +254,7 @@ export const WEAPONS: Weapon[] = [
     name: "Arco lungo inglese",
     cat: "distanza",
     period: "XIII–XVI sec.",
-    line: "Fino a duecento libbre di tasso: la pioggia che cerca le fessure.",
+    line: "Archi di tasso dalla grande potenza: una pioggia che cerca le fessure.",
     desc: "L'arco di tasso degli yeomen, teso quanto un uomo è forte. A Crécy, Poitiers e Agincourt le volée di frecce bodkin non sempre forano la piastra buona — ma uccidono i cavalli, stancano gli arnesi, costringono a chiudere le visiere.",
     stats: [
       { label: "Lunghezza", value: "1,8–2 m" },
