@@ -455,7 +455,7 @@ export const FORGE_STEPS: ForgeStep[] = [
 
 export interface Myth {
   claim: string;
-  verdict: "FALSO" | "PARZIALE";
+  verdict: "FALSO" | "PARZIALE" | "CORRETTO";
   text: string;
 }
 
@@ -463,41 +463,46 @@ export const MYTHS: Myth[] = [
   {
     claim: "Per salire a cavallo serviva la gru",
     verdict: "FALSO",
-    text: "I manuali cavallereschi e le prove dei rievocatori moderni mostrano cavalieri che saltano in sella di slancio, armatura completa e tutto. La gru è un'invenzione ottocentesca, alimentata dai romanzi cavallereschi e dalla penna di Mark Twain in «Un americano alla corte di re Artù».",
+    text: "L'armatura completa non richiedeva una gru per salire a cavallo: le articolazioni lasciavano un'ampia libertà di movimento e le fonti iconografiche e tecniche mostrano cavalieri capaci di montare autonomamente. L'immagine del cavaliere sollevato con l'argano appartiene soprattutto alla caricatura moderna dell'armatura, alimentata dai romanzi cavallereschi e dalla penna di Mark Twain.",
   },
   {
     claim: "Caduto a terra, non si rialzava più",
     verdict: "FALSO",
-    text: "Venticinque o trenta chili distribuiti su tutto il corpo sono poca cosa: i rievocatori corrono, rotolano e si rialzano senza aiuto. Lo zaino di un soldato moderno, tutto appeso alle spalle, è portato assai peggio.",
+    text: "Un'armatura completa distribuisce il proprio peso su tutto il corpo e lascia libere le principali articolazioni. Per questo un uomo addestrato poteva camminare, correre, inginocchiarsi e rialzarsi anche dopo essere caduto: il ferro era un peso importante, ma ben portato.",
   },
   {
     claim: "L'armatura impediva ogni movimento",
     verdict: "FALSO",
-    text: "Le articolazioni a rivetti scorrevoli permettono di inginocchiarsi, arrampicarsi, persino fare la capriola: lo dimostrano i trattati di scherma tedeschi del Quattrocento, dove i maestri duellano in arnese completo.",
+    text: "Un'armatura ben costruita non immobilizzava il corpo: le piastre erano collegate da cerniere, rivetti scorrevoli e parti sovrapposte che consentivano di piegare gli arti, salire a cavallo e combattere. La libertà di movimento era una caratteristica fondamentale della buona armatura, come mostrano i trattati di scherma del Quattrocento, dove i maestri duellano in arnese completo.",
   },
   {
     claim: "Le frecce del longbow la trapassavano",
     verdict: "PARZIALE",
-    text: "La maglia e gli acciai teneri potevano cedere; ma le corazze milanesi temprate, a distanza di battaglia, respingevano quasi ogni dardo. Le frecce impararono a cercare le fessure: visiera, ascelle, inguine.",
+    text: "La capacità di una freccia di penetrare una protezione dipendeva da distanza, angolo, tipo di punta e qualità dell'armatura. La maglia era particolarmente vulnerabile alla punta, mentre una buona piastra poteva arrestare o deviare molti colpi; restavano vulnerabili giunti, aperture e zone meno protette, che il tiro imparò a cercare.",
   },
   {
     claim: "Morivano arrostiti dentro il ferro",
     verdict: "PARZIALE",
-    text: "Il caldo era il vero nemico, specie sotto il sole: ad Agincourt il fango e l'afa piegarono più uomini delle spade. Ma l'imbottitura, le fessure di ventilazione e le pause d'arme mitigavano il forno.",
+    text: "Il caldo poteva essere un problema serio, soprattutto durante marce e combattimenti prolungati sotto il sole. Ma l'armatura non era una scatola ermetica: lasciava aperture per la ventilazione e il movimento, e veniva indossata sopra strati tessili che aiutavano a gestire il contatto con il metallo. Le pause d'arme facevano il resto.",
   },
   {
     claim: "Sparì perché le spade divennero migliori",
     verdict: "FALSO",
-    text: "A ritirarla furono archibugi, picche ed eserciti di massa. La corazza «a prova di palla» resistette a lungo; poi l'armatura si fece tre quarti, poi corazza sola, e nel Seicento uscì dal campo — ma non dalla memoria.",
+    text: "Non furono le spade a farla scomparire. La trasformazione della guerra — armi da fuoco, formazioni di picchieri, eserciti permanenti, costi crescenti — ridusse progressivamente l'utilità di proteggere tutto il corpo. La corazza sopravvisse invece a lungo come protezione specializzata di cavalleria e fanteria, ben oltre il Seicento in molti contesti.",
+  },
+  {
+    claim: "Un arnese completo era un lusso per pochi",
+    verdict: "CORRETTO",
+    text: "Questo luogo comune ha un solido fondo di verità: il costo di un'armatura completa era enorme e variava secondo qualità, decorazione e bottega. Molti combattenti si accontentavano di protezioni parziali, e gli arnesi passavano di mano in mano, venivano riparati, adattati e tramandati come beni di famiglia.",
   },
 ];
 
 export const GLOSSARY: { term: string; def: string }[] = [
-  { term: "Usbergo", def: "Cotta di maglia lunga fino al ginocchio, tessuta di decine di migliaia di anelli ribattuti uno a uno." },
-  { term: "Camaglio", def: "Tendaggio di maglia che scende dall'elmo su collo e spalle; nel Trecento si aggancia al bacinetto con vervelle." },
-  { term: "Ventaglia", def: "Piastra mobile del bacinetto che ruota a proteggere il volto; può aprirsi a libro per respirare fuori battaglia." },
-  { term: "Bacinetto", def: "Elmo trecentesco aderente al capo, spesso con visiera «a muso di cane» che devia i colpi lontano dal viso." },
-  { term: "Celata", def: "Elmo quattrocentesco con visiera, il preferito dai cavalieri italiani; la versione da fante lascia scoperto il viso." },
+  { term: "Usbergo", def: "Indumento di maglia che protegge il torso e può scendere fino alle cosce o alle ginocchia, secondo epoca e tipologia; i modelli maggiori riunivano decine di migliaia di anelli ribattuti uno a uno." },
+  { term: "Camaglio", def: "Protezione di maglia per collo, gola e spalle, collegata all'elmo o indossata con la protezione del capo; nel Trecento si aggancia al bacinetto con le vervelle." },
+  { term: "Ventaglia", def: "Protezione mobile del volto applicata al bacinetto; a seconda delle configurazioni si solleva, ruota o si apre per respirare fuori battaglia." },
+  { term: "Bacinetto", def: "Elmo trecentesco aderente al capo, spesso con visiera «a muso di cane», la cui forma appuntita contribuisce a proteggere il volto e a deviare alcuni colpi." },
+  { term: "Celata", def: "Elmo quattrocentesco molto diffuso in Italia e nell'Europa centrale, con calotta arretrata e spesso una protezione allungata della nuca; la versione da fante lascia scoperto il viso." },
   { term: "Armetto", def: "Elmo chiuso rinascimentale: avvolge tutto il capo e si apre a libro, con guanciali incernierati alla calotta." },
   { term: "Gorgiera", def: "Collare di piastre sovrapposte che difende gola e collo, saldando l'elmo alla corazza." },
   { term: "Corazza", def: "Il torso dell'arnese: petto e schiena in acciaio bombato, spesso con cresta mediana deviatrice." },
