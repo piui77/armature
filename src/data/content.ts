@@ -33,22 +33,22 @@ export const ERAS: Era[] = [
     image: IMG.era1,
     alt: "Guerriero germanico con spangenhelm e usbergo corto nella nebbia",
     paragraphs: [
-      "Quando l'Impero cade, la sua arte di vestire il soldato non muore. La lorica hamata — la maglia di anelli romana — passa di mano in mano: riparata, ritemprata, contesa. Per secoli resterà il tesoro di guerra per eccellenza: negli inventari carolingi una cotta di maglia vale quanto più cavalli da guerra, e nei testamenti dei re franchi figura accanto alle terre.",
-      "Il guerriero dell'alto medioevo combatte nel seguito del signore, a piedi o a cavallo: spangenhelm di lamelle ribattute, scudo rotondo di tiglio con umbone di ferro, lancia e spada a una mano. La protezione completa resta privilegio di pochissimi; per la maggioranza degli uomini ci sono cuoio, legno e coraggio.",
-      "Eppure già in questa essenzialità qualcosa ribolle: i capitolari carolingi impongono a ogni uomo libero di possedere armi e protezione secondo il proprio censo, e le fucine dei monasteri tengono viva la maestria romana. L'armatura non è ancora moda né casta: è sopravvivenza, tramandata di padre in figlio come la terra.",
+      "Quando l'Impero cade, la sua arte di vestire il soldato non muore. La lorica hamata — la maglia di anelli romana — passa di mano in mano: riparata, ritemprata, contesa. Per secoli resterà il tesoro di guerra per eccellenza: negli inventari e nei testamenti dell'élite carolingia la maglia compare fra i beni militari di maggior valore, citata accanto alle terre.",
+      "Il guerriero dell'alto medioevo combatte nel seguito del signore, a piedi o a cavallo: spangenhelm costruiti con bande metalliche e piastre rivettate, scudo rotondo di tiglio con umbone di ferro, lancia e spada a una mano. La protezione completa resta privilegio di pochissimi; per la maggioranza degli uomini ci sono cuoio, legno e coraggio.",
+      "Eppure già in questa essenzialità qualcosa ribolle: i capitolari carolingi impongono a ogni uomo libero di possedere armi e protezione secondo il proprio censo, mentre le officine dei centri signorili, urbani e monastici conservano e trasformano le tecniche metallurgiche ereditate dall'antichità. L'armatura non è ancora moda né casta: è sopravvivenza, tramandata di padre in figlio come la terra.",
     ],
     changes: [
-      "La lorica segmentata scompare",
+      "La lorica segmentata esce dall'uso comune",
       "La maglia ribattuta diventa tesoro",
       "Il nasale protegge il volto",
-      "La staffa rifonda la cavalleria",
+      "La cavalleria pesante si organizza",
     ],
     context: {
       label: "1066 · Hastings",
-      text: "Sull'arazzo di Bayeux ogni guerriero veste la maglia: è il primo ritratto collettivo dell'Europa corazzata — e sono tutti, quasi, uguali.",
+      text: "L'arazzo di Bayeux è una delle più importanti testimonianze dell'armamento dell'XI secolo: la maglia compare con grande frequenza fra i combattenti meglio equipaggiati.",
     },
     pieces: [
-      "Spangenhelm di lamelle",
+      "Spangenhelm a bande e piastre",
       "Usbergo corto di anelli ribattuti",
       "Scudo rotondo umbonato",
       "Spada a una mano",
@@ -63,14 +63,14 @@ export const ERAS: Era[] = [
     image: IMG.era2,
     alt: "Cavaliere del Duecento con elmo a pentola, usbergo lungo e scudo araldico",
     paragraphs: [
-      "Con la staffa, la lancia in resta e il castello nasce una casta nuova: il miles. L'usbergo si allunga fino al ginocchio, le chausses di maglia vestono le gambe, il camaglio protegge il collo. A Bouvines come sotto le mura di Acri, il cavaliere è un uomo letteralmente cucito nel ferro: dodici-quindici chili di anelli ribattuti uno a uno, ventimila volte.",
-      "Sopra la maglia compare la sopravveste dipinta con le insegne: è la nascita dell'araldica, il codice che rende riconoscibile chi il casco nasconde. L'elmo a pentola trasforma il cavaliere in una fortezza quasi cieca, e sotto di lui anche il cavallo comincia a vestirsi di ferro e di stoffa.",
-      "E la guerra chiede sempre di più: le crociate riportano notizie delle lamelle orientali e insegnano il valore dell'imbottitura sotto il ferro; il torneo trasforma il combattimento in regola e spettacolo, e l'armatura diventa abito da esibire. Alla metà del Duecento un cavaliere completo porta oltre venti chili di ferro addosso — eppure galoppa, salta e combatte per un giorno intero.",
+      "Con la diffusione della cavalleria pesante, della lancia in resta e di nuove forme di organizzazione signorile prende forma, a poco a poco, l'élite militare dei milites. L'usbergo si allunga fino al ginocchio, le chausses di maglia vestono le gambe, il camaglio protegge il collo. A Bouvines come sotto le mura di Acri, il cavaliere è un uomo letteralmente cucito nel ferro: decine di migliaia di anelli, ciascuno chiuso e rivettato a mano.",
+      "Sopra la maglia compare la sopravveste dipinta con le insegne: è un passo verso l'araldica, il codice che renderà riconoscibile chi il casco nasconde. L'elmo a pentola trasforma il cavaliere in una fortezza quasi cieca, e sotto di lui anche il cavallo comincia a vestirsi di ferro e di stoffa.",
+      "E la guerra chiede sempre di più: le crociate riportano notizie delle lamelle orientali e insegnano il valore dell'imbottitura sotto il ferro; il torneo trasforma il combattimento in regola e spettacolo, e l'armatura diventa abito da esibire. L'equipaggiamento di un cavaliere ben armato può raggiungere un peso considerevole, ma la sua composizione varia molto secondo epoca, luogo e rango — e anche sotto quel peso il cavaliere resta un combattente mobile.",
     ],
     changes: [
       "La maglia copre l'intero corpo",
       "Il grande elmo chiude il viso",
-      "L'araldica nasce per riconoscersi",
+      "I segni araldici si diffondono",
       "Il gambesone ammortizza sotto il ferro",
     ],
     context: {
@@ -93,9 +93,9 @@ export const ERAS: Era[] = [
     image: IMG.era3,
     alt: "Cavaliere del Trecento con bacinetto, ventaglia e coat of plates",
     paragraphs: [
-      "Il Trecento è il secolo in cui l'armatura cambia più che nei cinque precedenti messi insieme. Le frecce di Crécy e l'ascesa della fanteria compatta — i quadrati svizzeri di picche e alabarde — insegnano che la maglia non basta: sul torso si cuce la coat of plates, centinaia di lamine rivettate sotto stoffa, che poi si irrigidisce in brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
-      "Le piastre conquistano il corpo una giuntura alla volta: spallacci, cubitiere, ginocchielli, i celebri guanti «a clessidra». Le corporazioni degli armorari si separano da quelle dei fabbri: nasce una professione nuova, insieme artigiana, ingegneristica e segreta.",
-      "Il campo di battaglia è il vero progettista: gli svizzeri in quadrato, con picca e alabarda, insegnano che nessuna maglia regge una formazione compatta; gli archi lunghi inglesi piovono punte bodkin pensate per forare. L'armatura risponde facendosi guscio liscio che devia tutto — e in una sola generazione il cavaliere medievale sparisce e nasce l'uomo d'acciaio.",
+      "Il Trecento è il secolo in cui l'armatura cambia più che nei cinque precedenti messi insieme. Le esperienze dei conflitti del Trecento — dagli arcieri inglesi di Crécy agli scontri sempre più duri fra fanteria organizzata e cavalleria — mostrano i limiti della sola maglia: sul torso si cuce la coat of plates, numerose lamine metalliche rivettate sotto una copertura di stoffa o di cuoio, e da questa famiglia di protezioni si sviluppano diverse forme di corazza, fra cui la brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
+      "Le piastre conquistano il corpo una giuntura alla volta: spallacci, cubitiere, ginocchielli, i celebri guanti «a clessidra». La lavorazione dell'armamento difensivo si fa sempre più specializzata: nascono botteghe e corporazioni dedicate, una professione nuova, insieme artigiana, ingegneristica e segreta.",
+      "Il campo di battaglia è il vero progettista: le formazioni compatte di picche e alabarde insegnano che nessuna maglia regge un urto organizzato; gli archi lunghi inglesi sottopongono le protezioni a una nuova pressione balistica, soprattutto nelle parti meno coperte. L'armatura risponde estendendo le piastre e modellandole in forme capaci di distribuire e, quando possibile, deviare l'energia dei colpi: nel giro di alcune generazioni il cavaliere cambia volto, dalla maglia prevalente alle grandi lastre.",
     ],
     changes: [
       "Le piastre si cuciono nella stoffa",
