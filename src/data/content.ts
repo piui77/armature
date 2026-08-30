@@ -174,7 +174,7 @@ export const ERAS: Era[] = [
       "Ginocchielli ad alette",
       "Stechzeug da giostra",
     ],
-    note: "Ogni scanalatura è una trave a I in miniatura: più rigida, a parità di peso.",
+    note: "Ogni scanalatura funziona come una trave in miniatura: irrigidisce la lamiera senza appesantirla sensibilmente.",
   },
   {
     numeral: "VI",
