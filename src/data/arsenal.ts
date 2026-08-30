@@ -28,7 +28,7 @@ export const WEAPONS: Weapon[] = [
     id: "spada-una-mano",
     name: "Spada a una mano",
     cat: "lame",
-    period: "sempre, V–XVI sec.",
+    period: "V–XVI sec., con forme molto diverse secondo epoca e area",
     line: "La compagna di ogni cavaliere, anche quando tutto il resto pesa.",
     desc: "L'arma da fianco per eccellenza: la porta il re, il cavaliere, lo scudiero. La sua forma evolve con l'armatura — la classificazione di Oakeshott (tipi X–XX) legge un millennio di lame attraverso la loro sezione e la loro punta.",
     stats: [
@@ -44,8 +44,8 @@ export const WEAPONS: Weapon[] = [
     name: "Spada lunga",
     cat: "lame",
     period: "XIV–XVI sec.",
-    line: "L'arma della scuola tedesca: due mani, mezza spada, gioco stretto.",
-    desc: "Bastarda quanto basta per stare alla cintura e lunga quanto basta per le due mani. Nei trattati della scuola di Liechtenauer la si impugna «a mezza spada» — una mano sulla lama — per guidare la punta nelle fessure dell'arnese nemico.",
+    line: "Due mani, mezza spada, gioco stretto: al cuore delle grandi scuole schermistiche.",
+    desc: "Abbastanza lunga per le due mani, ancora portata al fianco. Nei trattati del Quattrocento — la tradizione di Liechtenauer fra le più note — è spesso impugnata «a mezza spada», con una mano sulla lama, per guidare la punta verso le aperture. I nomi moderni (longsword, bastard sword) variano per epoca e area, e non sono sinonimi perfetti.",
     stats: [
       { label: "Lunghezza", value: "110–130 cm" },
       { label: "Peso", value: "1,3–1,8 kg" },
@@ -59,8 +59,8 @@ export const WEAPONS: Weapon[] = [
     name: "Spadone a due mani",
     cat: "lame",
     period: "fine XV–XVI sec.",
-    line: "Lunga quanto un uomo: serve ad aprire i varchi fra le picche.",
-    desc: "Zweihänder e montante: non è l'arma del cavaliere in sella, ma del fante scelto che taglia le aste delle picche e protegge le insegne. I Doppelsöldner, pagati il doppio, lo impugnano in prima fila.",
+    line: "Lunga quanto un uomo: una delle risposte al bosco di picche.",
+    desc: "Zweihänder e montante: non è l'arma del cavaliere in sella, ma del fante specializzato, impiegata fra l'altro per disturbare le formazioni di picche e per la guardia delle insegne. Fra i lanzichenecchi a paga doppia (Doppelsöldner) vi erano portatori di spadone, ma il legame fra paga e arma non era automatico.",
     stats: [
       { label: "Lunghezza", value: "150–180 cm" },
       { label: "Peso", value: "2–3,5 kg" },
@@ -75,7 +75,7 @@ export const WEAPONS: Weapon[] = [
     cat: "lame",
     period: "XII–XV sec.",
     line: "Un solo filo, lama larga: il taglio che non chiede permesso.",
-    desc: "La lama a un filo, curva o dritta, amata da fanti e uomini d'arme: concentra il peso verso la punta e taglia come un'ascia con l'eleganza di una spada. Il messer tedesco ne è il cugino borghese.",
+    desc: "La lama a un filo, curva o dritta, amata da fanti e uomini d'arme: concentra il peso verso la punta e unisce la potenza di taglio di un'ascia alla maneggevolezza di una spada.",
     stats: [
       { label: "Lunghezza", value: "75–90 cm" },
       { label: "Peso", value: "0,9–1,3 kg" },
@@ -89,8 +89,8 @@ export const WEAPONS: Weapon[] = [
     name: "Daga a rondelle e misericordia",
     cat: "lame",
     period: "XIII–XVI sec.",
-    line: "L'ultimo argomento: entra dove l'armatura ha una fessura.",
-    desc: "La daga a rondelle, con i dischi che proteggono la mano, è l'arma del gioco stretto; la misericordia, sottile come un punteruolo, dà il «colpo di grazia» attraverso la visiera o le ascelle di chi è già a terra.",
+    line: "L'arma del gioco stretto, dove la protezione ha un'apertura.",
+    desc: "La daga a rondelle, con i dischi che proteggono la mano, è l'arma del gioco stretto; la misericordia, dalla lama stretta e appuntita, era adatta al combattimento ravvicinato e poteva essere impiegata contro le aperture della protezione.",
     stats: [
       { label: "Lunghezza", value: "30–50 cm" },
       { label: "Peso", value: "0,3–0,5 kg" },
@@ -105,14 +105,14 @@ export const WEAPONS: Weapon[] = [
     cat: "inastate",
     period: "sempre — «in resta» dal XII sec.",
     line: "Il motivo per cui esiste il cavaliere.",
-    desc: "Con la lancia in resta, l'urto non è più del braccio ma del cavallo intero: centinaia di chili lanciati al galoppo convergono in una punta. È l'arma che decide Hastings, Bouvines, le cariche di tutta la cavalleria europea.",
+    desc: "Con la lancia in resta, l'urto non è più del solo braccio: parte dell'impulso di cavallo e cavaliere si trasferisce al bersaglio concentrandosi sulla punta. Fu una delle armi fondamentali della cavalleria pesante europea, da Hastings a Bouvines.",
     stats: [
       { label: "Lunghezza", value: "3–4 m" },
       { label: "Peso", value: "2–3 kg (in resta)" },
       { label: "La porta", value: "il cavaliere in carica" },
     ],
     antiArmor: 4,
-    note: "In resta moltiplica la massa del cavallo: quando arriva, l'armatura conta fino a un certo punto.",
+    note: "In resta trasferisce alla punta parte della massa in movimento del cavallo: per questo l'armatura da cavaliere si fa via via più spessa.",
   },
   {
     id: "lancia-giostra",
@@ -120,7 +120,7 @@ export const WEAPONS: Weapon[] = [
     cat: "inastate",
     period: "XIV–XVI sec.",
     line: "Coronella spuntata e legno che si spezza: la guerra per finta.",
-    desc: "Progettata al contrario di quella da guerra: punta a coronella che non fora, legno leggero o cavo che si frantuma all'impatto per assorbire l'urto. Sullo Stechzeug lascia il segno — ma non la ferita.",
+    desc: "Progettata al contrario di quella da guerra: punta a coronella che non fora, e aste spesso progettate per spezzarsi o assorbire parte dell'urto. Sullo Stechzeug lascia il segno — ma non la ferita.",
     stats: [
       { label: "Lunghezza", value: "3,5–4,5 m" },
       { label: "Punta", value: "coronella spuntata" },
@@ -135,7 +135,7 @@ export const WEAPONS: Weapon[] = [
     cat: "inastate",
     period: "XIV–XVI sec.",
     line: "Ascia, punta e uncino in un'asta sola: l'argomento svizzero.",
-    desc: "Taglia come un'ascia, fora come una lancia, uncina come un rampino. Con le alabarde i cantoni svizzeri battono la cavalleria asburgica a Sempach (1386): da allora nessun cavaliere può più ignorare la fanteria.",
+    desc: "Taglia come un'ascia, fora come una lancia, uncina come un rampino. Le formazioni svizzere la impiegarono in combinazione con le picche: a Sempach (1386) e poi altrove, la fanteria organizzata dimostrò di poter affrontare anche la cavalleria pesante.",
     stats: [
       { label: "Asta", value: "1,8–2,5 m" },
       { label: "Testa", value: "2–3 kg" },
