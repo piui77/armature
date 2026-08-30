@@ -63,9 +63,9 @@ export const ERAS: Era[] = [
     image: IMG.era2,
     alt: "Cavaliere del Duecento con elmo a pentola, usbergo lungo e scudo araldico",
     paragraphs: [
-      "Con la diffusione della cavalleria pesante, della lancia in resta e di nuove forme di organizzazione signorile prende forma, a poco a poco, l'élite militare dei milites. L'usbergo si allunga fino al ginocchio, le chausses di maglia vestono le gambe, il camaglio protegge il collo. A Bouvines come sotto le mura di Acri, il cavaliere è un uomo letteralmente cucito nel ferro: decine di migliaia di anelli, ciascuno chiuso e rivettato a mano.",
+      "Con il consolidarsi della cavalleria armata e di nuove forme di organizzazione signorile prende forma, a poco a poco, l'élite militare dei milites. L'usbergo si allunga fino al ginocchio, le chausses di maglia vestono le gambe, il camaglio protegge il collo. A Bouvines come sotto le mura di Acri, il cavaliere è protetto da un lungo usbergo di maglia: migliaia di anelli, ciascuno lavorato e assemblato a mano.",
       "Sopra la maglia compare la sopravveste dipinta con le insegne: è un passo verso l'araldica, il codice che renderà riconoscibile chi il casco nasconde. L'elmo a pentola trasforma il cavaliere in una fortezza quasi cieca, e sotto di lui anche il cavallo comincia a vestirsi di ferro e di stoffa.",
-      "E la guerra chiede sempre di più: le crociate riportano notizie delle lamelle orientali e insegnano il valore dell'imbottitura sotto il ferro; il torneo trasforma il combattimento in regola e spettacolo, e l'armatura diventa abito da esibire. L'equipaggiamento di un cavaliere ben armato può raggiungere un peso considerevole, ma la sua composizione varia molto secondo epoca, luogo e rango — e anche sotto quel peso il cavaliere resta un combattente mobile.",
+      "E la guerra chiede sempre di più: le esperienze militari e il crescente uso di protezioni tessili mostrano il valore dell'imbottitura sotto il ferro; il torneo trasforma il combattimento in regola e spettacolo, e l'armatura diventa abito da esibire. L'equipaggiamento di un cavaliere ben armato può raggiungere un peso considerevole, ma la sua composizione varia molto secondo epoca, luogo e rango — e anche sotto quel peso il cavaliere resta un combattente mobile.",
     ],
     changes: [
       "La maglia copre l'intero corpo",
@@ -75,7 +75,7 @@ export const ERAS: Era[] = [
     ],
     context: {
       label: "1214 · Bouvines",
-      text: "I cavalieri in arnese completo decidono la battaglia fra i re. Dopo quel giorno ogni signore conta i suoi uomini dalle armature, non dal numero.",
+      text: "A Bouvines i cavalieri pesantemente equipaggiati combattono al centro dello scontro fra gli eserciti dei sovrani. La loro armatura, costituita soprattutto da maglia, elmo e scudo, rappresenta il vertice dell'equipaggiamento militare dell'epoca.",
     },
     pieces: [
       "Usbergo lungo con muffole",
@@ -84,7 +84,7 @@ export const ERAS: Era[] = [
       "Scudo araldico a stufa",
       "Sopravveste dipinta",
     ],
-    note: "La maglia arresta il taglio: contro la punta, la mazza e la caduta serviranno le piastre.",
+    note: "La maglia offre un'eccellente protezione contro i tagli, ma non elimina la vulnerabilità alle punte, agli urti e ai traumi: per questo nel tempo verrà integrata con protezioni più rigide.",
   },
   {
     numeral: "III",
@@ -93,9 +93,9 @@ export const ERAS: Era[] = [
     image: IMG.era3,
     alt: "Cavaliere del Trecento con bacinetto, ventaglia e coat of plates",
     paragraphs: [
-      "Il Trecento è il secolo in cui l'armatura cambia più che nei cinque precedenti messi insieme. Le esperienze dei conflitti del Trecento — dagli arcieri inglesi di Crécy agli scontri sempre più duri fra fanteria organizzata e cavalleria — mostrano i limiti della sola maglia: sul torso si cuce la coat of plates, numerose lamine metalliche rivettate sotto una copertura di stoffa o di cuoio, e da questa famiglia di protezioni si sviluppano diverse forme di corazza, fra cui la brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
-      "Le piastre conquistano il corpo una giuntura alla volta: spallacci, cubitiere, ginocchielli, i celebri guanti «a clessidra». La lavorazione dell'armamento difensivo si fa sempre più specializzata: nascono botteghe e corporazioni dedicate, una professione nuova, insieme artigiana, ingegneristica e segreta.",
-      "Il campo di battaglia è il vero progettista: le formazioni compatte di picche e alabarde insegnano che nessuna maglia regge un urto organizzato; gli archi lunghi inglesi sottopongono le protezioni a una nuova pressione balistica, soprattutto nelle parti meno coperte. L'armatura risponde estendendo le piastre e modellandole in forme capaci di distribuire e, quando possibile, deviare l'energia dei colpi: nel giro di alcune generazioni il cavaliere cambia volto, dalla maglia prevalente alle grandi lastre.",
+      "Il Trecento è un secolo di profonde sperimentazioni nell'armatura europea. Le esperienze dei conflitti del Trecento — dagli arcieri inglesi di Crécy agli scontri sempre più duri fra fanteria organizzata e cavalleria — mostrano i limiti della sola maglia: sul torso si cuce la coat of plates, numerose lamine metalliche rivettate sotto una copertura di stoffa o di cuoio, e nel corso del secolo si sviluppano diverse forme di protezione del torso, tra cui le successive forme di brigantina. Il bacinetto con ventaglia mobile rimpiazza il vecchio elmo a pentola.",
+      "Le piastre conquistano il corpo una giuntura alla volta: spallacci, cubitiere, ginocchielli, i celebri guanti «a clessidra». La lavorazione dell'armamento difensivo si fa sempre più specializzata: si sviluppano botteghe e corporazioni di artigiani esperti nella produzione di elmi e protezioni a piastre.",
+      "Il campo di battaglia è il vero progettista: le armi da lancio e le nuove forme di combattimento della fanteria sottopongono le protezioni a nuove esigenze; gli archi lunghi inglesi rappresentano una delle pressioni cui l'armatura deve rispondere, insieme alle balestre e alle armi da asta. L'armatura risponde estendendo le piastre e modellandole in forme capaci di distribuire e, quando possibile, deviare l'energia dei colpi: nel giro di alcune generazioni il cavaliere cambia volto, dalla maglia prevalente alle grandi lastre.",
     ],
     changes: [
       "Le piastre si cuciono nella stoffa",
@@ -105,7 +105,7 @@ export const ERAS: Era[] = [
     ],
     context: {
       label: "1346 · Crécy",
-      text: "Migliaia di frecce su un solo campo: da quel giorno ogni armaiolo d'Europa comincia a ragionare per lastre, non più per anelli.",
+      text: "Crécy mostra con particolare evidenza le nuove esigenze del combattimento: l'armatura continua così ad integrare la maglia con protezioni a piastre sempre più estese.",
     },
     pieces: [
       "Coat of plates",
@@ -114,7 +114,7 @@ export const ERAS: Era[] = [
       "Guanti a clessidra",
       "Brigantina",
     ],
-    note: "Nessun altro secolo trasforma l'armatura quanto il Trecento: si entra in maglia, si esce in piastra.",
+    note: "Nel Trecento la maglia e le piastre convivono: l'armatura si evolve progressivamente verso il completo harness a piastre del secolo successivo.",
   },
   {
     numeral: "IV",
@@ -123,19 +123,19 @@ export const ERAS: Era[] = [
     image: IMG.era4,
     alt: "Condottiero in armatura bianca milanese completa nella bottega dell'armaiolo",
     paragraphs: [
-      "Verso il 1420 il processo è compiuto: il cavaliere è chiuso da capo a piedi in un guscio d'acciaio lucidato a specchio — per questo si dice «armatura bianca», white harness. Milano diventa uno dei principali centri europei della produzione: le botteghe dei Missaglia esportano arnesi completi in ogni corte d'Europa, e molti pezzi recano marchi di bottega e segni di riconoscimento dell'armaiolo.",
-      "La forma è pura balistica: superfici bombate che deviano punta e colpo, spallaccio sinistro maggiorato per reggere la lancia, corazza con cresta mediana e resta. L'acciaio milanese, temprato con bagni di cui si custodisce il segreto, a distanza di battaglia respinge spesso le frecce dei longbow: gli arcieri imparano ad accorciare il tiro e a cercare giunture, ascelle e visiere.",
-      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano lotti interi per gli eserciti; le corti europee mandano sarti con le misure dei propri gentiluomini, perché l'arnese si cuce addosso come un vestito. La protezione può ormai essere prodotta anche in serie organizzata — componenti standardizzati, divisione del lavoro, consegne a lotti per le grandi commesse militari — accanto alla produzione su misura per la clientela più ricca: eppure ogni pezzo resta rifinito a mano.",
+      "Verso il 1420 il processo è compiuto: il cavaliere è chiuso da capo a piedi in un guscio d'acciaio lucidato a specchio — per questo si dice «armatura bianca», white harness. Milano diventa uno dei principali centri europei della produzione: le botteghe dei Missaglia raggiungono una notevole fama internazionale e i loro manufatti sono documentati presso importanti corti e committenti europei.",
+      "La forma risponde anche a esigenze balistiche: superfici curve aiutano a deviare alcuni colpi, mentre le diverse piastre vengono modellate per proteggere il corpo mantenendo la mobilità. Le qualità dell'acciaio e la conformazione delle piastre migliorano la protezione contro numerosi tipi di colpo; le parti meno protette e le giunture rimangono comunque punti vulnerabili.",
+      "Cambia anche l'economia: l'armatura diventa un'ordinazione con tempi di consegna, contratti e penali. I duchi milanesi commissionano grandi quantità di armature per i propri eserciti, mentre per i committenti di alto rango gli arnesi vengono adattati alle misure del singolo destinatario. La produzione può ormai essere organizzata su larga scala per soddisfare grandi commesse, accanto alla produzione su misura destinata alla clientela più ricca; molte lavorazioni e rifiniture restano comunque eseguite artigianalmente.",
     ],
     changes: [
       "L'arnese completo è compiuto",
       "Rivetti scorrevoli: il ferro flette",
       "Spallacci asimmetrici e resta",
-      "Lo scudo va in pensione",
+      "Lo scudo perde importanza sul campo",
     ],
     context: {
       label: "c. 1450 · Milano",
-      text: "Le botteghe missagliesche consegnano lotti interi di arnesi ai condottieri: l'armatura diventa industria, firmata e garantita.",
+      text: "Le grandi botteghe italiane possono ricevere importanti commesse militari: la produzione dell'armatura assume una dimensione organizzata e commerciale sempre più rilevante.",
     },
     pieces: [
       "Corazza con cresta e resta",
@@ -153,12 +153,12 @@ export const ERAS: Era[] = [
     image: IMG.era5,
     alt: "Armatura gotica tedesca scanalata illuminata da braci",
     paragraphs: [
-      "Le botteghe di Norimberga, Augusta e Innsbruck rispondono a Milano con uno stile opposto: il gotico tedesco. Ogni piastra è percorsa da scanalature che funzionano come travi, aumentandone la rigidità senza appesantirla; i bordi si accendono di cuspidi e ventagli, i sabatoni si allargano «a zampa d'orso», l'acciaio brunito alterna luci e ombre come una cattedrale.",
-      "È anche l'età d'oro del torneo: nascono armature dedicate — lo Stechzeug per la giostra, pesantissimo e quasi cieco, il Rennzeug per la corsa — mentre sul campo la corazza leggera del fante annuncia già il futuro. Massimiliano I ne fa un manifesto: l'armatura come arte di Stato.",
-      "I maestri del tardo Quattrocento firmano di rado per esteso, ma imprimono i marchi di bottega e si riconoscono dallo stile: le creste affilate di Norimberga e le rotondità lisce di Milano diventano due linguaggi differenti, destinati però a influenzarsi e contaminarsi. Nasce il collezionismo: Massimiliano raduna a Innsbruck un'armeria che è un manifesto d'impero, e ogni principe ne vuole una.",
+      "Le botteghe dell'area germanica, fra Norimberga, Augusta e Innsbruck, sviluppano nel tardo Quattrocento forme proprie di armatura gotica, mentre gli armaioli italiani continuano a sviluppare la tradizione delle grandi botteghe dell'Italia settentrionale. Le piastre possono essere modellate con nervature e scanalature che contribuiscono alla rigidità della superficie e diventano anche un importante elemento decorativo; i bordi si accendono di cuspidi e ventagli, i sabatoni si allargano «a zampa d'orso», l'acciaio brunito alterna luci e ombre come una cattedrale.",
+      "È anche l'età d'oro del torneo: nascono armature dedicate — lo Stechzeug per la giostra, pesantissimo e quasi cieco, il Rennzeug per la corsa — mentre sul campo continuano a diffondersi equipaggiamenti più semplici e funzionali per fanti e combattenti di rango inferiore. Massimiliano I contribuisce a trasformare l'armatura in uno strumento di rappresentazione del potere, oltre che in un equipaggiamento militare.",
+      "I maestri del tardo Quattrocento firmano di rado per esteso, ma imprimono i marchi di bottega e si riconoscono dallo stile: le caratteristiche delle produzioni germaniche e italiane diventano progressivamente riconoscibili come stili regionali distinti, pur continuando a influenzarsi reciprocamente. Le armature assumono inoltre un crescente valore rappresentativo e collezionistico: Massimiliano I utilizza armi, armature e tornei anche per costruire un'immagine pubblica del proprio potere.",
     ],
     changes: [
-      "Le scanalature irrigidiscono la lastra",
+      "Le nervature irrigidiscono la lastra",
       "I bordi a spigolo deviano la punta",
       "Il torneo ha armature proprie",
       "Due scuole che si influenzano",
@@ -174,7 +174,7 @@ export const ERAS: Era[] = [
       "Ginocchielli ad alette",
       "Stechzeug da giostra",
     ],
-    note: "Ogni scanalatura funziona come una trave in miniatura: irrigidisce la lamiera senza appesantirla sensibilmente.",
+    note: "Le nervature e le scanalature possono aumentare la rigidità della lamiera e contribuiscono anche all'aspetto caratteristico delle armature tardo-gotiche.",
   },
   {
     numeral: "VI",
@@ -183,9 +183,9 @@ export const ERAS: Era[] = [
     image: IMG.era6,
     alt: "Armatura massimiliana con flautature fitte e decori dorati in un'armeria rinascimentale",
     paragraphs: [
-      "L'armatura massimiliana porta la scanalatura all'eccesso e apre la porta all'acquaforte: trofei incisi, grottesche alla romana, fondi d'oro — a Milano i Negroli sbalzano l'acciaio come fosse argento. L'armatura è ormai anche abito di corte, ritratto, dono diplomatico.",
-      "Ma l'archibugio e la pistola a ruota riscrivono le regole. Le corazze si ispessiscono fino a fermare la palla: il collaudo «a prova» lascia un'ammaccatura orgogliosa sul petto. Poi il ferro arretra — resta la corazza, poi solo petto e schiena — e nel Seicento l'arnese completo è già ricordo. Ma il suo mito non smetterà più di combattere.",
-      "L'eredità non muore: la corazza resta in servizio nella cavalleria di alcune nazioni fino alla Grande Guerra, e l'elmo d'acciaio — erede di celata e cappellina — torna a proteggere la fanteria nelle trincee. Nei musei del mondo gli arnesi stanno ancora ritti: testimoni silenziosi dell'epoca in cui l'Europa decise di vestire i suoi uomini d'acciaio.",
+      "Nel primo Cinquecento lo stile massimiliano porta la decorazione a scanalature a un alto livello di elaborazione e si affianca a nuove forme di decorazione, come l'incisione e l'acquaforte: trofei incisi, grottesche alla romana, fondi d'oro — a Milano i Negroli sbalzano l'acciaio come fosse argento. L'armatura è ormai anche abito di corte, ritratto, dono diplomatico.",
+      "Ma la diffusione delle armi da fuoco modifica progressivamente le esigenze dell'armatura. Le corazze vengono rese più spesse e robuste e alcune vengono sottoposte alla cosiddetta «prova» contro le armi da fuoco, lasciando sul metallo il caratteristico segno del collaudo. Nel corso del XVI secolo l'armatura completa viene progressivamente semplificata e sostituita, per molti impieghi militari, da protezioni più ridotte come le armature a tre quarti e le corazze per il torso. Ma il suo mito non smetterà più di combattere.",
+      "L'eredità non muore: corazze e piastre continuano ad essere utilizzate in diverse forme dalla cavalleria anche nei secoli successivi, mentre nel Novecento l'elmo d'acciaio torna ad avere un ruolo importante nella protezione della fanteria. Nei musei del mondo gli arnesi stanno ancora ritti: testimoni silenziosi dell'epoca in cui l'Europa decise di vestire i suoi uomini d'acciaio.",
     ],
     changes: [
       "La «prova» d'archibugio si bolla",
@@ -196,7 +196,7 @@ export const ERAS: Era[] = [
     ],
     context: {
       label: "1525 · Pavia",
-      text: "Gli archibugieri spagnoli smontano la gendarmeria francese: in una sola mattina finisce l'epoca dell'arnese completo.",
+      text: "La battaglia di Pavia mostra con particolare evidenza l'efficacia combinata delle armi da fuoco portatili e delle nuove tattiche di fanteria contro la cavalleria pesante; l'armatura completa, tuttavia, continuerà ad essere utilizzata per molti decenni.",
     },
     pieces: [
       "Armatura massimiliana",
@@ -205,7 +205,7 @@ export const ERAS: Era[] = [
       "Borgognotta",
       "Guarniture incise e dorate",
     ],
-    note: "Il bollo della «prova» d'archibugio valeva una firma: quel petto aveva già vinto la sua battaglia.",
+    note: "Il bollo della «prova» d'archibugio attestava la resistenza della corazza al collaudo con un'arma da fuoco.",
   },
 ];
 
