@@ -504,18 +504,18 @@ export const GLOSSARY: { term: string; def: string }[] = [
   { term: "Bacinetto", def: "Elmo trecentesco aderente al capo, spesso con visiera «a muso di cane», la cui forma appuntita contribuisce a proteggere il volto e a deviare alcuni colpi." },
   { term: "Celata", def: "Elmo quattrocentesco molto diffuso in Italia e nell'Europa centrale, con calotta arretrata e spesso una protezione allungata della nuca; la versione da fante lascia scoperto il viso." },
   { term: "Armetto", def: "Elmo chiuso rinascimentale: avvolge tutto il capo e si apre a libro, con guanciali incernierati alla calotta." },
-  { term: "Gorgiera", def: "Collare di piastre sovrapposte che difende gola e collo, saldando l'elmo alla corazza." },
-  { term: "Corazza", def: "Il torso dell'arnese: petto e schiena in acciaio bombato, spesso con cresta mediana deviatrice." },
-  { term: "Resta", def: "Gancio imbullonato al petto che regge il peso della lancia in carica, scaricandolo sull'arnese intero." },
+  { term: "Gorgiera", def: "Collare di piastre sovrapposte che protegge gola e collo e completa il raccordo fra la protezione del capo e la corazza." },
+  { term: "Corazza", def: "Il torso dell'arnese: petto e schiena in acciaio bombato, spesso modellati con nervature o superfici curve che aumentano la rigidità e possono favorire la deviazione dei colpi." },
+  { term: "Resta", def: "Gancio fissato alla corazza che sostiene la lancia da giostra o da carica e ne trasferisce parte del peso e della spinta alla corazza stessa." },
   { term: "Falda", def: "Fascia di piastre ai fianchi da cui pendono i tasselli che proteggono inguine e cosce." },
   { term: "Sabatoni", def: "Piastre snodate che vestono il piede; nel gotico tedesco si allargano «a zampa d'orso»." },
-  { term: "Brunitura", def: "Ossidazione controllata che annerisce l'acciaio, lo mimetizza e lo difende dalla ruggine." },
+  { term: "Brunitura", def: "Finitura superficiale che scurisce o annerisce l'acciaio mediante trattamenti controllati, scelta per l'aspetto e, in alcuni procedimenti, per una maggiore resistenza alla corrosione." },
 ];
 
 export const STATS = [
-  { value: 1100, prefix: "", suffix: "", label: "anni di evoluzione continua, dalla caduta di Roma al Seicento" },
-  { value: 25, prefix: "", suffix: " kg", label: "il peso medio di un arnese completo, distribuito sul corpo" },
-  { value: 250, prefix: "≈ ", suffix: "", label: "ore di lavoro di bottega per una sola armatura su misura" },
+  { value: 1100, prefix: "oltre ", suffix: "", label: "anni di evoluzione e trasformazione dell'arnese, dalla caduta di Roma al Seicento" },
+  { value: 30, prefix: "20–", suffix: " kg", label: "l'ordine di grandezza di molte armature complete da campo, distribuite sul corpo" },
+  { value: 250, prefix: "≈ ", suffix: "", label: "ore di bottega stimate per un arnese complesso su misura, fra molti artigiani" },
   { value: 20000, prefix: "", suffix: "+", label: "anelli ribattuti a mano in un usbergo del Duecento" },
 ];
 
