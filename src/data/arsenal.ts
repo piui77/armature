@@ -19,7 +19,7 @@ export interface Weapon {
   line: string;
   desc: string;
   stats: { label: string; value: string }[];
-  antiArmor: number; // 1–5: efficacia contro l'armatura
+  antiArmor: number; // 1–5: utilità contro avversari protetti (scala indicativa)
   note: string;
 }
 
@@ -157,7 +157,7 @@ export const WEAPONS: Weapon[] = [
       { label: "La porta", value: "uomini d'arme appiedati" },
     ],
     antiArmor: 5,
-    note: "Il becco concentra l'urto in pochi millimetri: abbastanza per piegare la piastra e suonare chi c'è dentro.",
+    note: "Il becco concentra l'energia dell'impatto su un'area molto ridotta e può ammaccare la piastra, trasmettendo parte dell'urto a chi la indossa.",
   },
   {
     id: "picca",
@@ -224,7 +224,7 @@ export const WEAPONS: Weapon[] = [
     name: "Mazzafrusto",
     cat: "contundenti",
     period: "XIII–XV sec.",
-    line: "La testa gira attorno allo scudo — e anche attorno alla guardia.",
+    line: "Lo snodo porta il colpo dove la difesa non guarda.",
     desc: "Un manico, una catena, una testa chiodata: il colpo arriva dove la parata non guarda. Arma di fanteria soprattutto, con versioni corte da cavallo. Difficile da parare, difficile anche da controllare: chi lo usa lo sa.",
     stats: [
       { label: "Lunghezza", value: "60–100 cm" },

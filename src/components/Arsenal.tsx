@@ -166,8 +166,8 @@ function ArmoryIcon({ id, className = "h-7 w-7" }: { id: string; className?: str
 
 function ArmorMeter({ value }: { value: number }) {
   return (
-    <div className="flex items-center gap-2" aria-label={`Efficacia contro l'arnese: ${value} su 5`}>
-      <span className="text-[0.64rem] font-semibold uppercase tracking-[0.24em] text-faint">Contro l'arnese</span>
+    <div className="flex items-center gap-2" aria-label={`Utilità contro avversari protetti: ${value} su 5 (scala indicativa)`}>
+      <span className="text-[0.64rem] font-semibold uppercase tracking-[0.2em] text-faint">Contro avversari protetti</span>
       <span className="flex gap-1.5">
         {[1, 2, 3, 4, 5].map((i) => (
           <span
@@ -198,7 +198,9 @@ export default function Arsenal() {
       <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32">
         <SectionHead kicker="V · L'arsenale" title="Le armi di chi vestiva il ferro">
           Ventidue strumenti fra lame, inastate, percussione, tiro e difesa. Ognuno è descritto nel suo rapporto con
-          l'armatura: cosa doveva aprirla, cosa la accompagnava, cosa finì per renderla superflua.
+          l'armatura: cosa doveva aprirla, cosa la accompagnava, cosa finì per renderla superflua. Misure e pesi sono
+          indicativi, ricavati dagli esemplari sopravvissuti; la scala misura l'utilità contro avversari protetti, non
+          la capacità di superare il ferro.
         </SectionHead>
 
         {/* filtri */}
