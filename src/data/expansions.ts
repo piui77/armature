@@ -85,11 +85,11 @@ export const WEAPONS: Weapon[] = [
     period: "1500 – 1600",
     desc: "Un proiettile di piombo lanciato da un'arma da fuoco portatile: un'energia che modifica progressivamente il rapporto fra protezione, mobilità e potenza di fuoco.",
     stages: {
-      maglia: { verdict: "Fuori tempo", note: "La maglia esce di scena prima ancora del duello: non era la sua guerra." },
+      maglia: { verdict: "Fuori tempo", note: "Nel XVI secolo la maglia continua ad essere utilizzata in alcune parti dell'armatura, ma perde progressivamente il ruolo centrale che aveva avuto nei secoli precedenti." },
       transizione: { verdict: "Fuori tempo", note: "Quando l'archibugio matura, la grande transizione è già compiuta da un secolo." },
       piastra: { verdict: "Protezione condizionata", note: "Le piastre sottili diventano insufficienti: si sviluppano corazze più spesse e rinforzi, provate col tiro e segnate dal bollo di collaudo." },
     },
-    response: "Il ferro arretra a petto e schiena, poi a sola corazza: Pavia 1525 è uno degli episodi simbolici di questa svolta.",
+    response: "Nel corso del XVI secolo le protezioni complete vengono progressivamente ridotte per molti impieghi militari, mentre corazze e rinforzi per il torso acquistano maggiore importanza; Pavia 1525 è uno degli episodi che mostrano questa trasformazione.",
   },
 ];
 
@@ -105,7 +105,7 @@ export const ARMING_STEPS: ArmingStep[] = [
     n: 1,
     title: "Gambeson e farsetto",
     time: "~2 min",
-    text: "Il fondamento di tutto: lino imbottito e cucito fitto. Assorbe i colpi, isola dalla ruggine e dal sole, e porta i «punti», i lacci a cui si legherà l'intero arnese.",
+    text: "Il fondamento dell'abbigliamento d'arme: un indumento imbottito che può assorbire parte degli urti, migliorare il comfort sotto l'armatura e fornire i punti di attacco per alcune parti dell'arnese.",
   },
   {
     n: 2,
@@ -123,7 +123,7 @@ export const ARMING_STEPS: ArmingStep[] = [
     n: 4,
     title: "Schinieri e ginocchielli",
     time: "~2 min",
-    text: "Le due valve si chiudono sul polpaccio con la cerniera; il ginocchiello ad alette copre il lato esposto alla staffa e alle picche basse.",
+    text: "Gli schinieri proteggono il polpaccio e possono essere articolati o chiusi con cerniere e cinghie; il ginocchiello con alette amplia la protezione attorno all'articolazione.",
   },
   {
     n: 5,
@@ -141,7 +141,7 @@ export const ARMING_STEPS: ArmingStep[] = [
     n: 7,
     title: "Braccia e spalle",
     time: "~2 min",
-    text: "Bracciali, cubitiere, spallacci: si legano al farsetto con i punti. Lo spallaccio sinistro è maggiorato, dalla parte della lancia nemica.",
+    text: "Bracciali, cubitiere e spallacci completano la protezione delle braccia; in molte armature lo spallaccio sinistro può essere più sviluppato, soprattutto in relazione alle esigenze del combattimento a cavallo e alla protezione contro le armi avversarie.",
   },
   {
     n: 8,
@@ -153,28 +153,28 @@ export const ARMING_STEPS: ArmingStep[] = [
     n: 9,
     title: "Elmo chiuso",
     time: "~30 s",
-    text: "Per ultimo, sempre: ora il cavaliere vede, respira, combatte. Lo scudiero prova i rivetti, e l'uomo scompare nel ferro.",
+    text: "Di norma per ultimo: l'elmo completa la protezione della testa. Lo scudiero verifica le chiusure e l'assetto dell'armatura prima che il combattente sia pronto.",
   },
 ];
 
 export const ARMING_FOOTER =
-  "Con uno scudiero esperto: dodici minuti scarsi. Da soli, mezz'ora buona — e si arriva in campo già sudati.";
+  "Con uno scudiero esperto l'armatura poteva essere indossata in tempi relativamente brevi; da soli l'operazione richiedeva più tempo e risultava molto più complessa.";
 
 export const COST_ROWS = [
   {
     item: "Usbergo del Duecento",
-    cost: "Una piccola fortuna",
-    note: "Si ereditava, si citava nei testamenti, si dava in dote: prima che un'arma, un capitale.",
+    cost: "Un equipaggiamento costoso",
+    note: "La produzione richiedeva molto lavoro e materiale, rendendo l'usbergo un bene costoso per chi disponeva di risorse limitate.",
   },
   {
     item: "Arnese bianco milanese",
-    cost: "≈ un anno di salario artigiano",
-    note: "Un buon arnese di bottega rinomata valeva quanto la cavalcatura da guerra che avrebbe vestito.",
+    cost: "Un bene di alto valore",
+    note: "Un arnese di buona qualità rappresentava un investimento importante, particolarmente per i committenti di alto rango.",
   },
   {
     item: "Guarnitura di gala",
-    cost: "Quanto un piccolo podere",
-    note: "Acquaforte, oro e punzoni famati si pagavano come un'opera d'arte — perché ormai lo erano.",
+    cost: "Un bene di lusso",
+    note: "Decorazioni incise, dorature e lavorazioni raffinate potevano aumentare considerevolmente il valore di un'armatura destinata alla rappresentanza o alla corte.",
   },
 ];
 
@@ -182,22 +182,22 @@ export const ANNALS: { year: string; place: string; prefix?: string; text: strin
   {
     year: "1066",
     place: "Hastings",
-    text: "Nasale e maglia corta decidono lo scontro: la freccia nell'occhio di Aroldo mostra dove il ferro non arriva.",
+    text: "Elmi con nasale e protezioni di maglia caratterizzano l'equipaggiamento dei combattenti meglio armati rappresentati nell'Arazzo di Bayeux; la scena della freccia che colpisce l'occhio di Aroldo appartiene invece alla rappresentazione iconografica della battaglia.",
   },
   {
     year: "1189",
     place: "Assedio di Acri",
-    text: "Crociate: usberghi fino al ginocchio sotto il sole. Sopra il camaglio comincia a comparire il grande elmo.",
+    text: "Durante le Crociate l'usbergo lungo protegge ampie parti del corpo; nel corso del XII secolo compaiono e si diffondono forme di elmo sempre più avvolgenti, fino al successivo grande elmo.",
   },
   {
     year: "1214",
     place: "Bouvines",
-    text: "Il trionfo del cavaliere cucito nel ferro; l'araldica dipinge le insegne di chi l'elmo ormai nasconde.",
+    text: "Bouvines mostra l'importanza della cavalleria pesantemente equipaggiata nel combattimento del primo Duecento; gli scudi e le insegne contribuiscono inoltre all'identificazione dei combattenti.",
   },
   {
     year: "1346",
     place: "Crécy",
-    text: "Il longbow umilia la maglia davanti a tutta Europa: comincia l'età delle piastre.",
+    text: "Crécy mostra le nuove esigenze imposte alle protezioni dal combattimento a distanza; nel XIV secolo la maglia continua a convivere con protezioni a piastre sempre più estese.",
   },
   {
     year: "1415",
