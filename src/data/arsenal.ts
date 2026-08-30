@@ -262,7 +262,7 @@ export const WEAPONS: Weapon[] = [
       { label: "Lo porta", value: "yeomen e arcieri inglesi" },
     ],
     antiArmor: 3,
-    note: "Raramente fora la piastra temprata a distanza: vince logorando chi c'è dentro, un minuto alla volta.",
+    note: "Le superfici curve delle piastre contribuiscono alla loro capacità di deviare alcuni colpi, mentre la qualità del materiale e lo spessore influenzano la resistenza ai proiettili.",
   },
   {
     id: "balestra",

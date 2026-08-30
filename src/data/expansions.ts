@@ -47,7 +47,7 @@ export const WEAPONS: Weapon[] = [
     id: "arco",
     name: "Arco lungo inglese",
     period: "1300 – 1450",
-    desc: "Il grande arco di tasso inglese, dalla potenza temibile: una pioggia di frecce scagliate in alto, a cercare cavalli, spalle scoperte e ogni varco dell'arnese.",
+    desc: "Il grande arco di tasso inglese, una potente arma da tiro impiegata in grandi volée, capace di sottoporre uomini e cavalli a un intenso tiro a distanza.",
     stages: {
       maglia: { verdict: "Protezione limitata", note: "Le frecce con punte da guerra potevano mettere in difficoltà la maglia e colpire le zone meno protette; l'efficacia dipendeva dalla distanza, dalla punta e dalle caratteristiche della protezione." },
       transizione: { verdict: "Protezione condizionata", note: "Le lamine del torso reggono; il tiro impara a cercare giunti, gambe e cavalcature." },
