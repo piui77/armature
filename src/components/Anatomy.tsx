@@ -86,7 +86,8 @@ export default function Anatomy() {
               </div>
               <p className="mt-8 border-l-2 border-steel pl-5 text-sm italic leading-relaxed text-faint">
                 Sommati, i pezzi restano sotto i trenta chili — e nessun pezzo pesa su un solo punto: l'arnese intero
-                «galleggia» sul corpo come un'impalcatura.
+                «galleggia» sul corpo come un'impalcatura. I pesi indicati sono valori indicativi ricavati da
+                esemplari storici e possono variare sensibilmente secondo epoca, tipologia e destinazione d'uso.
               </p>
             </Reveal>
           </div>
