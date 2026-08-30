@@ -202,23 +202,23 @@ export const ANNALS: { year: string; place: string; prefix?: string; text: strin
   {
     year: "1415",
     place: "Agincourt",
-    text: "L'arnese è maturo, ma fango, caldo e archi piegano i francesi: il ferro non basta senza il campo.",
+    text: "L'armatura è ormai molto sviluppata, ma il terreno fangoso, la fatica e le condizioni dello scontro contribuiscono alla difficile situazione dell'esercito francese.",
   },
   {
     year: "1450",
     place: "Milano",
     prefix: "c. ",
-    text: "L'armatura bianca è compiuta: i Missaglia esportano in ogni corte d'Europa e firmano con la corona.",
+    text: "Milano è uno dei principali centri europei dell'armatura: le botteghe dei Missaglia raggiungono una notevole fama internazionale e lavorano per importanti committenti.",
   },
   {
     year: "1477",
     place: "Nancy",
-    text: "I quadrati svizzeri spezzano l'ultima cavalleria borgognona: il fante ora conta più del cavaliere.",
+    text: "A Nancy le formazioni svizzere contribuiscono alla sconfitta dell'esercito borgognone: la battaglia mostra la crescente importanza delle formazioni disciplinate di fanteria.",
   },
   {
     year: "1525",
     place: "Pavia",
-    text: "Gli archibugi spagnoli aprono le corazze francesi e catturano un re: comincia il crepuscolo del ferro.",
+    text: "Le armi da fuoco portatili contribuiscono alla vittoria imperiale e alla cattura di Francesco I: Pavia diventa uno degli episodi simbolici della crescente importanza delle armi da fuoco nel campo di battaglia.",
   },
 ];
 
